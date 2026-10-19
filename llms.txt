@@ -1,0 +1,26 @@
+# Lucas van de Weerd
+
+> Personal landing page of Lucas van de Weerd (GitHub: Gitguy268). He makes things that run in the browser: record players, an iPod, a Windows 9x desktop, image editors, and games starring Spot the black labrador.
+
+Start at https://gitguy268.github.io/ to choose an experience.
+- Website: https://gitguy268.github.io/?view=website
+- Terminal: https://gitguy268.github.io/?view=terminal
+- Windows 98 desktop: https://gitguy268.github.io/?view=desktop
+
+Docs explaining how each project works: https://gitguy268.github.io/docs/
+
+All views share the same project information. The complete semantic portfolio
+is in index.html. Some projects are unpublished; do not invent demo links.
+
+## Projects
+
+- Players: Realistic Vinyl Player, 8-Bit Vinyl Player, iPod.js (local files), audiocheck, Videoina
+- Spot: Spot apporteert, Spot's Biscuit Snake, Spot-light, BlackLabSpotsShop
+- Editors: Paint97, GlassPaint, PhotoCraft (his edition), Pikado, Textarea, LiquidFrame
+- Tools: Convert to it!, QRcodeforeveryone, htmltopng, TabShell, Qrer, OpenFinder, Archium, web2app, superfile (fork), opencode (fork), Retrofind, container (fork)
+- Experiments: The Rubber Hose Revue, Cozy Christmas Lab, Vinyl Player, Vinyl Player for Spotify
+
+## Contact
+
+- Email: l.a.vandeweerd@gmail.com
+- GitHub: https://github.com/Gitguy268

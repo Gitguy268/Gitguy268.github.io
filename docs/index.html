@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs · Lucas van de Weerd</title>
+<meta name="description" content="How each of Lucas van de Weerd's projects works: how to run it, how to use it, what happens inside, and its limits.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#008080">
+<link rel="canonical" href="https://gitguy268.github.io/docs/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="docs.css?v=20261019-1">
+<script>try{const m=localStorage.getItem('lucas-docs-mode');if(m==='light'||m==='dark')document.documentElement.dataset.mode=m}catch{}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+<header class="topbar">
+  <a class="brand" href="index.html">lvw. <span>docs</span></a>
+  <button class="search-open" type="button" aria-label="Search the docs" aria-keyshortcuts="/ Control+K Meta+K" hidden><span>Search the docs</span> <kbd>/</kbd></button>
+  <nav class="top-links" aria-label="Elsewhere"><a href="../index.html?view=website">Portfolio</a><a href="https://github.com/Gitguy268">GitHub</a></nav>
+  <button class="mode" type="button" hidden></button>
+</header>
+
+<div class="layout">
+<nav class="sidebar" aria-label="All pages">
+  <details open>
+    <summary>All pages</summary>
+    <div>
+      <h2>Get started</h2>
+      <ul><li><a href="#start">Running my projects</a></li></ul>
+      <h2>Players</h2>
+      <ul>
+        <li><a href="#realistic-vinyl-player">Realistic Vinyl Player</a></li>
+        <li><a href="#8-bit-vinyl-player">8-Bit Vinyl Player</a></li>
+        <li><a href="#ipod">iPod.js (local files)</a></li>
+        <li><a href="#audiocheck">audiocheck</a></li>
+        <li><a href="#videoina">Videoina</a></li>
+      </ul>
+      <h2>Spot</h2>
+      <ul>
+        <li><a href="#spot-fetch">Spot apporteert</a></li>
+        <li><a href="#spot-snake">Spot’s Biscuit Snake</a></li>
+        <li><a href="#spot-light">Spot-light</a></li>
+        <li><a href="#blacklabspotsshop">BlackLabSpotsShop</a></li>
+      </ul>
+      <h2>Editors</h2>
+      <ul>
+        <li><a href="#paint97">Paint97</a></li>
+        <li><a href="#glasspaint">GlassPaint</a></li>
+        <li><a href="#photocraft">PhotoCraft, my edition</a></li>
+        <li><a href="#pikado">Pikado</a></li>
+        <li><a href="#textarea">Textarea</a></li>
+        <li><a href="#liquidframe">LiquidFrame</a></li>
+      </ul>
+      <h2>Tools</h2>
+      <ul>
+        <li><a href="#convert">Convert to it!</a></li>
+        <li><a href="#qrcodeforeveryone">QRcodeforeveryone</a></li>
+        <li><a href="#htmltopng">htmltopng</a></li>
+        <li><a href="#tabshell">TabShell</a></li>
+        <li><a href="#qrer">Qrer</a></li>
+        <li><a href="#openfinder">OpenFinder</a></li>
+        <li><a href="#archium">Archium</a></li>
+        <li><a href="#web2app">web2app</a></li>
+        <li><a href="#superfile">superfile, my edition</a></li>
+        <li><a href="#opencode">opencode, my edition</a></li>
+        <li><a href="#retrofind">Retrofind</a></li>
+        <li><a href="#container">container, my edition</a></li>
+      </ul>
+      <h2>Experiments</h2>
+      <ul>
+        <li><a href="#rubber-hose-revue">The Rubber Hose Revue</a></li>
+        <li><a href="#cozy-christmas-lab">Cozy Christmas Lab</a></li>
+        <li><a href="#vinyl-player">Vinyl Player</a></li>
+        <li><a href="#vinyl-player-for-spotify">Vinyl Player for Spotify</a></li>
+      </ul>
+    </div>
+  </details>
+</nav>
+
+<main id="main" tabindex="-1">
+
+<!-- ================================================================ Get started -->
+<article class="doc" id="start" data-look="home">
+  <header class="banner">
+    <h1>Running my projects</h1>
+    <p class="tagline">How each of my projects works: how to start it, how to use it, what happens inside, and what it can’t do yet. Every page takes on the look of its project.</p>
+  </header>
+
+  <p class="lede">Most of what I make runs in a browser, on your own device. There is no account and no server of mine, and your files stay where they are. These pages explain each project in the same order: run it, use it, how it works, limits, credits.</p>
+
+  <h2 id="start-status">Published or not</h2>
+  <p>Each page says where the project stands.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Status</th><th>What it means</th></tr>
+    <tr><td>Available online</td><td>There is a live version you can open, and its source is on GitHub. Five projects are: BlackLabSpotsShop, QRcodeforeveryone, htmltopng, Vinyl Player and Vinyl Player for Spotify.</td></tr>
+    <tr><td>Not published yet</td><td>The project works on my computer but isn’t public yet. Its page still explains how to run it once it is.</td></tr>
+  </table></div>
+
+  <h2 id="start-kinds">Three ways a project starts</h2>
+  <p>You can tell which kind a project is from the “Run it” part of its page.</p>
+  <ol class="flow">
+    <li><strong>One HTML file</strong>Double-click <code>index.html</code>. The Realistic and 8-Bit Vinyl Players, Spot’s Biscuit Snake and Spot-light work straight from disk, even offline.</li>
+    <li><strong>A web app that needs a server</strong>Browsers won’t run modules, workers or WebAssembly from a <code>file://</code> address. These ship a <code>start.command</code>, or use any static server.</li>
+    <li><strong>An app with a helper</strong>TabShell, LiquidFrame, web2app and Retrofind run a small server on your own computer, on <code>127.0.0.1</code> only. <code>start.command</code> starts it and opens the page.</li>
+  </ol>
+  <p>To serve a folder yourself, run this inside it and open the address it prints:</p>
+  <pre><code>python3 -m http.server 8000</code></pre>
+  <p class="note">If a page opened by double-click looks empty or broken, it is almost always this. Use <code>start.command</code>, or the command above, and open the <code>http://localhost</code> address instead.</p>
+
+  <h2 id="start-start-command">Using start.command on a Mac</h2>
+  <p>Double-click it in Finder. It installs or builds what is missing, starts the server and opens your browser. Close its Terminal window to stop it. If macOS says it can’t open a file downloaded from the internet, right-click it, choose <strong>Open</strong> and confirm once.</p>
+
+  <h2 id="start-browsers">Browsers</h2>
+  <ul>
+    <li>Everything is tested in Chromium. Most projects also run in Firefox and Safari; each page says when one doesn’t.</li>
+    <li>OpenFinder needs the File System Access API to open a folder, and iPod.js and PhotoCraft use it to remember a folder or save back to a file. Brave ships with it switched off: turn on <code>brave://flags/#file-system-access-api</code> and relaunch.</li>
+    <li>The AI tools in GlassPaint, PhotoCraft and Convert use your graphics card through WebGPU where the browser has it. A few need it: upscaling in Convert, AI plays in Spot’s Biscuit Snake and the large Whisper model in Textarea. Ask Clippy in Paint97 falls back to the processor without it.</li>
+  </ul>
+
+  <h2 id="start-licences">Licences and forks</h2>
+  <p>Most of my own projects are MIT licensed. Videoina and Archium are GPL-3.0, OpenFinder and web2app GPL-3.0 or later, to fit what they build on or will use: mpv, Helium, FFmpeg and Pake. Nine projects are forks: I took an open-source project I liked and kept adding to it. Their pages say whose work they start from and list what my edition adds.</p>
+</article>
+
+<!-- ================================================================ Players -->
+<article class="doc" id="realistic-vinyl-player" data-look="vinyl" style="--accent:#d4893a">
+  <header class="banner">
+    <div class="banner-art" aria-hidden="true"></div>
+    <h1>Realistic Vinyl Player</h1>
+    <p class="tagline">A turntable in one HTML file. It plays your own audio files and tries to look, move and sound like a real deck.</p>
+    <ul class="facts"><li>Players</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+  <figure><img src="../images/realistic-vinyl-player.webp" width="1440" height="900" loading="lazy" alt="A dark turntable playing a record with an orange label, above a tracklist of three demo tracks and the transport buttons"></figure>
+
+  <h2 id="realistic-vinyl-player-run">Run it</h2>
+  <p>Open <code>index.html</code> in a browser. There is no build step and nothing to install, and it makes no network requests, so it works offline and from <code>file://</code>.</p>
+  <p>Add <code>?demo</code> to the address to load three short synthesised tracks, so you can try it without files of your own. Demo tracks stay in memory and never touch your saved library.</p>
+
+  <h2 id="realistic-vinyl-player-use">Use it</h2>
+  <p>Drag audio files onto the page, or a cover image. Then press play, or drag the tonearm onto the record yourself.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Control</th><th>What it does</th></tr>
+    <tr><td>⏻</td><td>Motor on or off. With the stylus down, the music winds up or down with the platter.</td></tr>
+    <tr><td>⏮ ▶ ⏭, 🔀 🔁</td><td>Previous, play or pause, next; shuffle; repeat off, one or all</td></tr>
+    <tr><td>33⅓ / 45 / 78</td><td>Platter speed. The pitch follows it.</td></tr>
+    <tr><td>Tonearm</td><td>Drag it and drop it on a groove to play from there, on a gap for the next track, or off the record to park it.</td></tr>
+    <tr><td>Hand on the record</td><td>Scrub. With <strong>Scratch</strong> on you hear the track forwards and backwards under your hand.</td></tr>
+    <tr><td>Pitch</td><td>±8%. Double-click to reset.</td></tr>
+    <tr><td>Condition</td><td>Mint, Good, Worn or Beat-up: hiss, crackle, scratches, dust and treble loss.</td></tr>
+    <tr><td>Theme</td><td>Minimal, Wood or Clear, in light or dark, or your own colours.</td></tr>
+    <tr><td>Deck settings</td><td>Wow and flutter, auto-return, record sides of about 22 minutes, record size following speed.</td></tr>
+    <tr><td>Side A ⇄</td><td>Flips the record when Record sides is on and the playlist needs more than one side</td></tr>
+    <tr><td>Focus</td><td>A larger deck with a floating control bar</td></tr>
+    <tr><td>♫ Visualizer</td><td>Off, MilkDrop or spectrum bars on the record label, upright as the record turns</td></tr>
+  </table></div>
+  <p>Keys: <kbd>Space</kbd> plays or pauses, <kbd>←</kbd> <kbd>→</kbd> skip 5 s, <kbd>↑</kbd> <kbd>↓</kbd> set the volume, <kbd>S</kbd> shuffles, <kbd>R</kbd> cycles repeat, <kbd>F</kbd> and <kbd>Esc</kbd> enter and leave focus mode. Media keys work too.</p>
+
+  <h2 id="realistic-vinyl-player-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Your files</strong>Decoded into memory, two tracks at a time</li>
+    <li><strong>The record</strong>Each track becomes a groove band sized by its length</li>
+    <li><strong>Platter physics</strong>Spin-up, coast-down, wow and flutter set the playback rate</li>
+    <li><strong>Cut-record sound</strong>EQ, mono bass, crosstalk, roll-off, generated surface noise</li>
+  </ol>
+  <ul>
+    <li>Platter speed is exact: 33⅓ rpm is 200° per second. The motor takes about 1.4 s to reach speed and the platter coasts for about 3 s.</li>
+    <li>The tonearm is a pivoted arm. Its angle comes from the pivot geometry, so the stylus traces the arc a real arm would.</li>
+    <li>Surface noise is generated, not looped. Each record has its own scratches, which tick once per turn where they are drawn.</li>
+    <li>The strobe marks on the platter stand still at the right speed and drift when the pitch is off. All textures are generated; there are no image files.</li>
+  </ul>
+
+  <h2 id="realistic-vinyl-player-limits">Limits</h2>
+  <ul>
+    <li>Formats the browser can’t decode into memory play through a plain media element: they follow the pitch but scrub silently and can’t play backwards.</li>
+    <li>A decoded track takes about 0.18 MB of memory per second of stereo audio.</li>
+    <li>Playing on with a locked phone screen hasn’t been confirmed on a real phone yet.</li>
+  </ul>
+
+  <h2 id="realistic-vinyl-player-credits">Credits</h2>
+  <p>A remake of my earlier <a href="#vinyl-player">Vinyl Player</a>, with new materials, physics and sound. The MilkDrop visualiser is butterchurn by Jordan Berg (MIT). The bars visualiser follows Musializer by Alexey Kutepov (MIT).</p>
+</article>
+
+<article class="doc" id="8-bit-vinyl-player" data-look="pixel" style="--accent:#e4002b">
+  <header class="banner">
+    <div class="banner-art" aria-hidden="true"></div>
+    <h1>8-Bit Vinyl Player</h1>
+    <p class="tagline">A pixel-art turntable in one HTML file. It plays your own audio files in the colours of an NES, a Game Boy or a C64.</p>
+    <ul class="facts"><li>Players</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+  <figure><img src="../images/8-bit-vinyl-player.webp" width="1440" height="1777" loading="lazy" alt="The same turntable as pixel art in the NES palette, with a tracklist under it"></figure>
+
+  <h2 id="8-bit-vinyl-player-run">Run it</h2>
+  <p>Open <code>index.html</code>. Like the Realistic Vinyl Player it needs no build, makes no network requests and works from <code>file://</code>. <code>?demo</code> loads three synthesised tracks.</p>
+
+  <h2 id="8-bit-vinyl-player-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Control</th><th>What it does</th></tr>
+    <tr><td>PWR</td><td>Motor on or off</td></tr>
+    <tr><td>&lt;&lt; PLAY &gt;&gt;</td><td>Previous, play or pause, next</td></tr>
+    <tr><td>33 / 45 / 78</td><td>Platter speed</td></tr>
+    <tr><td>Palette</td><td>NES, Game Boy or C64, each with a light and a dark page</td></tr>
+    <tr><td>Crush</td><td>8-bit sound: from 8 bits at 22 kHz down to 4 bits at 5.5 kHz. Zero leaves the signal untouched.</td></tr>
+    <tr><td>FOCUS</td><td>A larger deck with a floating control bar</td></tr>
+    <tr><td>VIZ</td><td>Off, MilkDrop, or spectrum bars on the record label</td></tr>
+  </table></div>
+
+  <h2 id="8-bit-vinyl-player-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Same deck</strong>The physics and sound chain of the Realistic Vinyl Player</li>
+    <li><strong>Deck pixels</strong>An 84-pixel platter. Each deck pixel is 4 screen pixels on a desktop, 6 in focus mode and 3 on a phone</li>
+    <li><strong>Five colours</strong>Four shades and one accent per palette</li>
+  </ol>
+  <p>The record is never a rotated picture. Its grooves are rings, which look the same at every angle, so they stay put. Only the cover, the label print, scratches and dust move, to one of 64 angles per turn, so no pixel is ever drawn tilted. Mechanical sounds are square waves, triangle waves and noise, like the channels of a sound chip.</p>
+
+  <h2 id="8-bit-vinyl-player-credits">Credits</h2>
+  <p>Text is set in Press Start 2P (SIL Open Font License), embedded in the file. Visualisers as in the Realistic Vinyl Player.</p>
+</article>
+
+<article class="doc" id="ipod" data-look="ipod" style="--accent:#2f7fd8">
+  <header class="banner">
+    <div class="screen">
+      <div class="screen-top" aria-hidden="true">iPod</div>
+      <div class="screen-body">
+        <h1>iPod.js (local files)</h1>
+        <p class="tagline">The iPod Classic, playing the music on your own computer. Point it at a folder and browse it with the click wheel.</p>
+        <ul class="facts"><li>Players</li><li>Fork</li><li>MIT licence</li><li>Not published yet</li></ul>
+      </div>
+    </div>
+    <div class="wheel" aria-hidden="true"></div>
+  </header>
+  <figure><img src="../images/ipod.webp" width="1440" height="697" loading="lazy" alt="The iPod in its Massive display mode, playing First Light, with the songs up next below the cover"></figure>
+
+  <h2 id="ipod-run">Run it</h2>
+  <p>You need Node.js and pnpm. From a copy of the repository:</p>
+  <pre><code>pnpm install
+pnpm dev        # then open http://localhost:3000/ipod</code></pre>
+  <p><code>pnpm build</code> writes a static site to <code>out/</code>, meant to be served from the <code>/ipod</code> path. It has to be served from <code>https://</code> or <code>localhost</code>; it doesn’t work opened as a file.</p>
+
+  <h2 id="ipod-use">Use it</h2>
+  <ul>
+    <li>Choose a folder from the iPod’s menu, the button at the top of the page, or by dragging it onto the window. Every audio file in it and its subfolders is added: mp3, m4a, aac, flac, wav, ogg, opus, aiff.</li>
+    <li>Artist, album and track come from the tags. Untagged files fall back to <code>Artist/Album/01 Title.mp3</code> folder names. Artwork comes from the files, or from a <code>cover</code>, <code>folder</code>, <code>front</code> or <code>album</code> image beside them.</li>
+    <li><code>.m3u</code> and <code>.m3u8</code> playlists in the folder appear under Playlists. Hold the centre button on a song for Play Next and Play Later.</li>
+    <li>Media keys and the system’s now-playing panel control playback, and a reload puts back the song you were on.</li>
+    <li>Albums have their own pages, and you can search the library or browse it by genre.</li>
+    <li>Three display modes: Compact, which can pop out into a small window that stays on top, Full and Massive. The MilkDrop and Bars visualisers play along on the screen.</li>
+  </ul>
+  <div class="table-wrap"><table>
+    <tr><th>Browser</th><th>Folder access</th></tr>
+    <tr><td>Chrome, Edge</td><td>The folder is remembered. Later visits need one click to allow it again.</td></tr>
+    <tr><td>Safari, Firefox, Brave</td><td>Choose or drag the folder in on each visit. The browser calls it an “upload”, but nothing leaves the computer.</td></tr>
+  </table></div>
+
+  <h2 id="ipod-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Your folder</strong>Read in the browser with the File System Access API</li>
+    <li><strong>Tags and art</strong>music-metadata reads them; results are cached so only new files are read again</li>
+    <li><strong>The iPod</strong>The original interface, now browsing your library</li>
+  </ol>
+
+  <h2 id="ipod-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/tvillarete/ipod-classic-js">tvillarete/ipod-classic-js</a> by Tanner Villarete (MIT), with the Apple Music and Spotify integrations replaced by a local library. iPod is a trademark of Apple; this fan-made tribute is not affiliated with Apple.</p>
+</article>
+
+<article class="doc" id="audiocheck" data-look="spectrum" style="--accent:#f97316">
+  <header class="banner">
+    <div class="banner-art" aria-hidden="true"></div>
+    <h1>audiocheck</h1>
+    <p class="tagline">Checks whether a music file is as good as it claims: an MP3 dressed up as FLAC, or a hi-res file that is upsampled CD audio. No file leaves your device.</p>
+    <ul class="facts"><li>Players</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+  <figure><img src="../images/audiocheck.webp" width="1280" height="1422" loading="lazy" alt="A spectrogram with a dashed line where the sound stops at 16.6 kHz, with the findings for that file beside it"></figure>
+
+  <h2 id="audiocheck-run">Run it</h2>
+  <p>Needs Node 24 or newer. From a copy of the repository:</p>
+  <pre><code>npm ci
+npm run dev        # http://localhost:5173</code></pre>
+  <p><code>npm run build</code> makes a static bundle in <code>dist/</code> that works from any path.</p>
+
+  <h2 id="audiocheck-use">Use it</h2>
+  <p>Drop files or a whole folder on the page, or use <strong>Choose files</strong> or <strong>Choose folder</strong>. Click a file name to see its spectrogram and findings. It analyses what your browser can decode: FLAC, WAV and MP3 are covered by the tests, other formats depend on the browser. For files it can’t decode, such as ALAC in Chromium, APE, WavPack or DSD, it still shows what the header says.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Verdict</th><th>Meaning</th></tr>
+    <tr><td>No problems found</td><td>Nothing tripped. This isn’t proof of a lossless source.</td></tr>
+    <tr><td>Suspicious source</td><td>A lossless file with an encoder-style cutoff below 19.5 kHz</td></tr>
+    <tr><td>Possibly lossy</td><td>A sharp cutoff between 19.5 and 21 kHz</td></tr>
+    <tr><td>Fake hi-res</td><td>Upsampled, or 16-bit audio padded to 24 bits</td></tr>
+    <tr><td>Clipping</td><td>Five or more flat tops</td></tr>
+    <tr><td>Peaks over full scale</td><td>The true peak goes above 0 dBTP</td></tr>
+    <tr><td>Damaged</td><td>Cut short, samples missing, checksum mismatch, or it won’t decode</td></tr>
+  </table></div>
+
+  <h2 id="audiocheck-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Decode</strong>The browser decodes at the file’s own sample rate, so nothing is resampled</li>
+    <li><strong>Spectrum</strong>8192-sample FFT frames, averaged into 50 Hz bands</li>
+    <li><strong>Find the edge</strong>A drop of 20 dB with nothing above it marks a lossy encoder</li>
+    <li><strong>Verdict</strong>Worded as evidence, beside the numbers and the spectrogram</li>
+  </ol>
+  <ul>
+    <li>The cutoff is matched against LAME’s low-pass per bitrate (128 kbps cuts at 17 kHz, 320 at 20.5 kHz), so the bitrate it names is an indication.</li>
+    <li>Bit depth: every sample is turned back into an integer and all of them are OR-ed together. Low bits that stay zero were never used.</li>
+    <li>For FLAC, the MD5 of the decoded samples is compared with the one stored in the file. A self-test at startup checks that the browser returns exact samples first.</li>
+    <li>Loudness, loudness range and true peak follow ITU-R BS.1770, through loudness-worklet.</li>
+  </ul>
+
+  <h2 id="audiocheck-limits">Limits</h2>
+  <ul>
+    <li>A clean result is not proof: MP3 at LAME’s V0 preset has no low-pass, so there is no edge to find.</li>
+    <li>Thresholds were set on generated noise. Quiet or treble-poor music can be misjudged, which is why the spectrogram is always shown.</li>
+    <li>Brave scales decoded audio by a tiny random factor, so the bit-depth and checksum checks are skipped there.</li>
+    <li>A file is decoded fully into memory: about 20 MB per minute of CD-quality stereo.</li>
+    <li>Tested in Chromium and Brave. Firefox and Safari haven’t been tried yet.</li>
+  </ul>
+
+  <h2 id="audiocheck-credits">Credits</h2>
+  <p>Built on music-metadata, fft.js, loudness-worklet and @noble/hashes (all MIT). The cutoff search follows the method of fakeflac by Maurits van der Schee.</p>
+</article>
+
+<article class="doc" id="videoina" data-look="glass" style="--accent:#7c3aed;--glow-1:#60a5fa;--glow-2:#fdba74">
+  <header class="banner">
+    <div class="pane">
+      <h1>Videoina</h1>
+      <p class="tagline">An IINA-style video player for Windows and Linux. It plays what mpv plays, with IINA’s shortcuts, under controls of liquid glass that bend the video behind them.</p>
+      <ul class="facts"><li>Players</li><li>GPL-3.0 licence</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/videoina.webp" width="1440" height="810" loading="lazy" alt="Videoina playing a colour-bar test video under a frosted glass control bar"></figure>
+
+  <h2 id="videoina-run">Run it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>System</th><th>File</th><th>How to run</th></tr>
+    <tr><td>Windows 10/11 (x64)</td><td><code>Videoina-win64.zip</code></td><td>Unzip and run <code>videoina.exe</code>. It is unsigned, so SmartScreen may ask you to confirm.</td></tr>
+    <tr><td>Linux (x86_64)</td><td><code>Videoina-x86_64.AppImage</code></td><td><code>chmod +x</code> it and run it</td></tr>
+  </table></div>
+  <p>The builds will be on the GitHub releases page once the repository is public. To build it yourself you need CMake 3.21+, Qt 6.5 or newer and libmpv:</p>
+  <pre><code>cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+./build/videoina video.mkv</code></pre>
+  <p>On macOS it builds for development only; Mac users should use IINA itself.</p>
+
+  <h2 id="videoina-use">Use it</h2>
+  <p>Drop files on the window or press Ctrl+O. Several files make a playlist. Controls and the cursor hide after 2.5 seconds without mouse movement. Double-click toggles full screen and the scroll wheel sets the volume. The playlist sidebar jumps to any file, and the subtitle and audio menus list every track with its language and codec.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>Action</th></tr>
+    <tr><td>Space</td><td>Play or pause</td></tr>
+    <tr><td>← / →</td><td>Seek 5 s</td></tr>
+    <tr><td>↑ / ↓</td><td>Volume ±5</td></tr>
+    <tr><td>f, Enter / Esc</td><td>Full screen toggle, on, off</td></tr>
+    <tr><td>Ctrl+← / Ctrl+→</td><td>Previous or next in the playlist</td></tr>
+    <tr><td>. / ,</td><td>One frame forward or back</td></tr>
+    <tr><td>Ctrl+[ / Ctrl+]</td><td>Half or double speed</td></tr>
+    <tr><td>v</td><td>Show or hide subtitles</td></tr>
+    <tr><td>Shift+Z / Shift+X</td><td>Subtitle delay −/+ 0.5 s</td></tr>
+    <tr><td>Ctrl+Shift+S / Ctrl+Shift+A</td><td>Next subtitle or audio track</td></tr>
+    <tr><td>Ctrl+s</td><td>Screenshot</td></tr>
+  </table></div>
+  <p>These are IINA’s default bindings with ⌘ mapped to Ctrl. The full list is in <code>config/input.conf</code>.</p>
+
+  <h2 id="videoina-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>libmpv</strong>Decodes and renders each frame through its OpenGL render API</li>
+    <li><strong>Qt Quick scene</strong>The frame lands in Qt’s scene graph, not a separate window</li>
+    <li><strong>Glass shader</strong>Each panel captures what is behind it, blurs and bends it at the edge</li>
+  </ol>
+  <p>Because the video is part of the scene, the glass reacts to it frame by frame. Key presses go to mpv as <code>keypress</code> commands, so <code>input.conf</code> decides what they do. CI builds on Windows and Linux, plays a generated test video in each build and keeps a screenshot.</p>
+
+  <h2 id="videoina-limits">Limits</h2>
+  <ul>
+    <li>No plugins, picture-in-picture, online video or seek-bar thumbnails yet.</li>
+    <li>Hardware decoding and HDR haven’t been tested on real Windows or Linux hardware. CI tests every build headlessly with software OpenGL.</li>
+    <li>x86_64 only, and the builds are not code-signed.</li>
+  </ul>
+
+  <h2 id="videoina-credits">Credits</h2>
+  <p>A separate project inspired by <a href="https://github.com/iina/iina">IINA</a>, sharing only its key-binding file, and not affiliated with IINA or Apple. Playback is <a href="https://mpv.io">mpv</a>, the interface is Qt.</p>
+</article>
+
+<!-- ================================================================ Spot -->
+<article class="doc" id="spot-fetch" data-look="spot" style="--accent:#d7263d">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot apporteert</h1>
+      <p class="tagline">A fetch game. Throw a ball across a park for Spot, a black labrador, and look after him: he gets tired, hungry and thirsty.</p>
+      <ul class="facts"><li>Spot</li><li>In Dutch</li><li>MIT licence</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-fetch.webp" width="1440" height="810" loading="lazy" alt="Spot, a black labrador, running back across the grass with a tennis ball in his mouth"></figure>
+
+  <h2 id="spot-fetch-run">Run it</h2>
+  <p>Needs Node 20.19 or newer. From a copy of the repository:</p>
+  <pre><code>npm ci
+npm run dev</code></pre>
+  <p><code>npm run build</code> makes a static bundle in <code>dist/</code> for any static host.</p>
+
+  <h2 id="spot-fetch-use">Play</h2>
+  <p>Drag the ball upwards and let go to throw. Aim for the flag: a throw scores up to 100 points, more the closer its first bounce lands, and nothing beyond 6 m. Tap Spot to pet him.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Button</th><th>What it does</th></tr>
+    <tr><td>Zit, Blijf, Bring, Aus</td><td>Sit, stay, fetch, drop. The bar under each shows how well Spot has learnt it.</td></tr>
+    <tr><td>Beloon</td><td>Reward him</td></tr>
+    <tr><td>Voer, Water</td><td>Fill his bowls</td></tr>
+    <tr><td>Foto</td><td>Photo mode: move around Spot, set a lens from 14 to 200 mm and the exposure from −2 to +2 EV, pick one of five filters, save a PNG</td></tr>
+    <tr><td>Geluid, Volledig scherm</td><td>Sound on or off, full screen on or off. The full-screen button hides where the browser can’t do it, as on an iPhone.</td></tr>
+  </table></div>
+  <p>The four bars in the corner are his energy, hunger, thirst and trust. He listens better the more he trusts you. The park has a day and night cycle and weather; <code>?tijd=18</code> fixes the hour, <code>?weer=helder</code>, <code>regen</code> or <code>sneeuw</code> the weather, and <code>?reset</code> starts without the saved game.</p>
+
+  <h2 id="spot-fetch-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>three.js</strong>Draws the park, Spot and his fur, all generated in code</li>
+    <li><strong>Physics</strong>The throw, the bounces and Spot’s run are unit tested</li>
+    <li><strong>localStorage</strong>Keeps Spot’s state and your best throw; no network requests</li>
+  </ol>
+</article>
+
+<article class="doc" id="spot-snake" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-conic-gradient(#7cc057 0 25%, #6aac48 0 50%) 0 0 / 44px 44px">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot’s Biscuit Snake</h1>
+      <p class="tagline">A snake game in one HTML file. Spot licks up biscuits to grow, and has to mind the fence, the flowers and his own tail.</p>
+      <ul class="facts"><li>Spot</li><li>MIT licence</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-snake.webp" width="1272" height="1298" loading="lazy" alt="Spot, a black labrador with a red collar, winding across a lawn towards a biscuit"></figure>
+
+  <h2 id="spot-snake-run">Run it</h2>
+  <p>Open <code>index.html</code> in a browser. There is nothing to install or build.</p>
+
+  <h2 id="spot-snake-use">Controls</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Input</th><th>What it does</th></tr>
+    <tr><td><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td><td>Steer</td></tr>
+    <tr><td><kbd>Space</kbd></td><td>Pause and resume</td></tr>
+    <tr><td><kbd>M</kbd></td><td>Sound: all, effects only, off</td></tr>
+    <tr><td>Gamepad</td><td>D-pad or left stick; A or Start pauses. It rumbles on a crash and on a golden biscuit.</td></tr>
+    <tr><td>Phone</td><td>Swipe on the lawn, or use the on-screen pad</td></tr>
+    <tr><td>AI plays</td><td>Spot steers himself. Any steering key, a swipe or a second press takes over again.</td></tr>
+  </table></div>
+  <p>Pick a speed first: Puppy, Normal or Zoomies. Spot speeds up as the biscuits add up, and gold ones score 5.</p>
+
+  <h2 id="spot-snake-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Input queue</strong>Turns wait their turn; reversing into yourself is refused</li>
+    <li><strong>Tile grid</strong>The tail leaves a cell before the head arrives</li>
+    <li><strong>Biscuits</strong>Dropped only on empty cells, with crumbs flying off</li>
+  </ol>
+  <p>The best score per speed and your settings stay in <code>localStorage</code>. Until you press AI plays, the only request is for two Google Fonts, with fonts on your device as the fallback.</p>
+
+  <h2 id="spot-snake-ai">AI plays</h2>
+  <p>The moves come from <a href="https://huggingface.co/convaiinnovations/laya">Laya</a>, a small decision model by Convai Innovations that scores a list of options instead of writing text. Each step the game keeps the moves that don’t crash Spot and leave him room, describes each one (“goes toward the biscuit, leaves 212 open squares”) and lets Laya pick. On its own Laya tends to walk in circles, which is why the game narrows the options first.</p>
+  <ul>
+    <li>It needs WebGPU. Without it the button is greyed out.</li>
+    <li>The first press downloads the model, about 851 MB, from Hugging Face and loads ONNX Runtime Web and tokenizers.js from jsDelivr. The model stays in Cache Storage, so later presses start in a few seconds.</li>
+    <li>Spot waits on each square while Laya thinks, so the speed buttons don’t apply.</li>
+  </ul>
+
+  <h2 id="spot-snake-credits">Credits</h2>
+  <p>Ideas from epidemian/snake (Unlicense), janbodnar/Java-Snake-Game (BSD-2-Clause) and Phaser (MIT), written from scratch. Fonts: Press Start 2P and VT323 (SIL Open Font License). AI plays runs Laya by Convai Innovations (Apache-2.0) on ONNX Runtime Web (MIT), with tokenizers.js (Apache-2.0).</p>
+</article>
+
+<article class="doc" id="spot-light" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-linear-gradient(#c8925a 0 34px, #a87645 34px 36px)">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot-light</h1>
+      <p class="tagline">Spot chases a laser dot around the living room, and you keep it out of his paws. Three games, in 2D or 3D, and in 8-bit if you like.</p>
+      <ul class="facts"><li>Spot</li><li>MIT licence</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-light.webp" width="1440" height="900" loading="lazy" alt="Spot, a black labrador with a red collar, chasing a red laser dot across a rug on a wooden floor"></figure>
+
+  <h2 id="spot-light-run">Run it</h2>
+  <p>Double-click <code>index.html</code>. It is one file with three.js beside it in <code>vendor/</code>, so it runs from disk with nothing to install.</p>
+
+  <h2 id="spot-light-use">Play</h2>
+  <p>The pointer is the laser. Move it and Spot runs after the dot.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Game</th><th>Goal</th></tr>
+    <tr><td>Dodge</td><td>60 seconds and 3 lives. Keep the dot out of his paws. He gets faster as the clock runs down.</td></tr>
+    <tr><td>Endless</td><td>No clock. Count how often he gets it, and beat your longest dodge streak.</td></tr>
+    <tr><td>Lure</td><td>90 seconds to steer him into the cup, the sock and the ball.</td></tr>
+  </table></div>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>What it does</th></tr>
+    <tr><td><kbd>V</kbd></td><td>Switch between 2D and 3D</td></tr>
+    <tr><td><kbd>B</kbd></td><td>Switch between Normal and 8-bit</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Pause</td></tr>
+  </table></div>
+
+  <h2 id="spot-light-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The dot</strong>Follows your pointer across the room</li>
+    <li><strong>Spot</strong>Chases it, faster with time in Dodge</li>
+    <li><strong>Two renderers</strong>A 2D canvas and a three.js 3D room show the same game</li>
+  </ol>
+  <p>8-bit draws at a fifth of the resolution and scales up without smoothing; in 2D it also snaps every colour to a 16-colour palette.</p>
+
+  <h2 id="spot-light-limits">Limits</h2>
+  <p>No sound, touch controls or saved high scores yet. The fonts come from Google Fonts, with fonts on your device as the fallback when offline.</p>
+</article>
+
+<article class="doc" id="blacklabspotsshop" data-look="spot" style="--accent:#d7263d;--banner-bg:linear-gradient(135deg, #1c1b20, #3b3a48)">
+  <header class="banner">
+    <div class="card">
+      <h1>BlackLabSpotsShop</h1>
+      <p class="tagline">A shop site for T-shirts and hoodies with Spot on them.</p>
+      <ul class="facts"><li>Spot</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/blacklabspotsshop.webp" width="1440" height="900" loading="lazy" alt="The shop's front page, headed Spot-powered style"></figure>
+
+  <h2 id="blacklabspotsshop-run">Open it</h2>
+  <p>Try it at <a href="https://blacklabspotsshop.lovable.app/">blacklabspotsshop.lovable.app</a>. The source is at <a href="https://github.com/Gitguy268/BlackLabSpotsShop">Gitguy268/BlackLabSpotsShop</a>.</p>
+  <pre><code>git clone https://github.com/Gitguy268/BlackLabSpotsShop.git
+cd BlackLabSpotsShop
+npm install
+npm run dev</code></pre>
+
+  <h2 id="blacklabspotsshop-use">Use it</h2>
+  <ul>
+    <li>Browse product cards, then open Quick View for sizes and details.</li>
+    <li>Save favourites to the wishlist; the count shows how many you have.</li>
+    <li>Minecraft mode switches the whole look.</li>
+  </ul>
+
+  <h2 id="blacklabspotsshop-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>React and Vite</strong>TypeScript, Tailwind CSS and shadcn-ui</li>
+    <li><strong>Contexts</strong>Wishlist and Minecraft mode, memoised</li>
+    <li><strong>Scroll hooks</strong>Progress bar, back to top and the floating Shop button, throttled</li>
+  </ol>
+  <p>A particle background sits behind the products. The wishlist is kept in <code>localStorage</code>.</p>
+</article>
+
+<!-- ================================================================ Editors -->
+<article class="doc" id="paint97" data-look="win98" style="--accent:#1084d0">
+  <header class="banner">
+    <div class="window">
+      <div class="titlebar"><span>Paint97</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="window-body">
+        <h1>Paint97</h1>
+        <p class="tagline">A Windows 9x desktop in the browser, built around an Excalidraw whiteboard, with a Start menu, Notepad, Minesweeper, Calculator and Clippy.</p>
+        <ul class="facts"><li>Editors</li><li>MIT licence</li><li>Not published yet</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/paint97.webp" width="1440" height="900" loading="lazy" alt="A teal Windows 9x desktop with a drawing program open on a flowchart, Minesweeper and Calculator in front of it, and Clippy in the corner"></figure>
+
+  <h2 id="paint97-run">Run it</h2>
+  <p>Needs Node 20.19 or newer, and git the first time. From a copy of the repository:</p>
+  <pre><code>npm ci
+npm run dev        # http://localhost:7891</code></pre>
+  <p>The first run fetches JS Paint at a pinned commit into <code>public/jspaint/</code> (about 13 MB). <code>npm run build</code> makes a static, installable site that reloads offline.</p>
+
+  <h2 id="paint97-use">What’s on the desktop</h2>
+  <div class="table-wrap"><table>
+    <tr><th>App</th><th>What it does</th></tr>
+    <tr><td>Paint97</td><td>Excalidraw behind a Win98 tool strip and 28-colour palette. Save <code>.excalidraw</code>, export PNG or SVG, copy a share link that carries the whole drawing, or send it to another device on the same Wi-Fi.</td></tr>
+    <tr><td>JS Paint</td><td>Isaiah Odhner’s remake of MS Paint, for pixels, served from this site and working offline</td></tr>
+    <tr><td>My Drawings</td><td>Folders, rename, move, a Recycle Bin, undo, and previous versions of each drawing</td></tr>
+    <tr><td>Notepad, Calculator, Minesweeper, Clock</td><td>Small apps, each in its own window</td></tr>
+    <tr><td>PC Emulator</td><td>An x86 PC on v86 that boots FreeDOS, or a disk image of your own</td></tr>
+    <tr><td>Control Panel</td><td>Wallpaper, volume, Liquid Glass, English or Dutch, Clippy’s personality and size, reduced motion, and one JSON backup of all local data</td></tr>
+    <tr><td>Ask Clippy</td><td>Chat with MiniCPM-V 4.7 1B, on your graphics card or else the processor. Tick <strong>Look at my drawing</strong> and Clippy sees the canvas. <strong>Diagram</strong> turns a description such as “login flow” into a Mermaid diagram that lands on the canvas as shapes. Nothing is drawn until you press Apply.</td></tr>
+  </table></div>
+  <p>Windows drag, resize, snap, minimise and maximise. Alt+Tab (or Alt+`) switches windows and the Win key opens Start.</p>
+
+  <h2 id="paint97-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>App registry</strong>One table drives icons, the Start menu, taskbar and windows</li>
+    <li><strong>Window manager</strong>One store for every window, its layout restored on reload</li>
+    <li><strong>Local storage</strong>BrowserFS and IndexedDB hold drawings and notes</li>
+  </ol>
+  <p>Clippy is meant to look like 1998, so his engine holds “choppy rules” as constants: 8 to 12 frames per second, no tweens or CSS transitions, integer pixel scale, five teleport jumps to move. Clippy’s model runs through a bundled build of wllama. It downloads from Hugging Face at a pinned revision in 64 MiB pieces, each checked against its SHA-256 before it is cached, so a download can be paused and resumed. Send to a device connects two tabs directly over WebRTC with no server between them, paired by scanning QR codes, and the receiver accepts before anything is sent.</p>
+
+  <h2 id="paint97-limits">Limits</h2>
+  <ul>
+    <li>Ask Clippy downloads a 1573 MB model from Hugging Face once. Without WebGPU it runs on the processor, which is much slower.</li>
+    <li>Send to a device works only between devices on the same network, and hasn’t been tried on a real phone yet.</li>
+  </ul>
+
+  <h2 id="paint97-credits">Credits</h2>
+  <p>Excalidraw (MIT), JS Paint by Isaiah Odhner (MIT), v86 (BSD-2-Clause), wllama (MIT), MiniCPM-V 4.7 by OpenBMB (Apache-2.0). Clippy’s artwork, animations and sounds belong to Microsoft and aren’t covered by the MIT licence; this project isn’t affiliated with Microsoft.</p>
+</article>
+
+<article class="doc" id="glasspaint" data-look="glass" style="--accent:#0284c7;--glow-1:#a5f3fc;--glow-2:#c4b5fd">
+  <header class="banner">
+    <div class="pane">
+      <h1>GlassPaint</h1>
+      <p class="tagline">miniPaint with a glass interface, and tools that run a model on your own device: background removal, object selection and upscaling.</p>
+      <ul class="facts"><li>Editors</li><li>Fork</li><li>MIT licence</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/glasspaint.webp" width="1440" height="900" loading="lazy" alt="An image editor with translucent glass toolbars and panels around an empty canvas"></figure>
+
+  <h2 id="glasspaint-run">Run it</h2>
+  <pre><code>npm install
+npm run server     # development server, opens the browser
+npm run build      # production build in dist/</code></pre>
+
+  <h2 id="glasspaint-use">What my edition adds</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Where</th><th>What</th></tr>
+    <tr><td>AI › Remove Background</td><td>U-2-Netp (5 MB) or IS-Net (179 MB), with feather and decontaminate sliders. Gives a cut-out and a mask layer as one undo step.</td></tr>
+    <tr><td>AI › Select Object</td><td>Click an object to get its mask with SlimSAM. Shift+click adds a point, Alt+click excludes one.</td></tr>
+    <tr><td>AI › Upscale 2x</td><td>Swin2SR, in tiles. Up to 1280 px with WebGPU, 768 px with WebAssembly.</td></tr>
+    <tr><td>Open a PSD</td><td>Each layer with pixels becomes a layer with its name, position, opacity and blend mode</td></tr>
+    <tr><td>Image › White Balance</td><td>Automatic, from a picked neutral colour, or by hand</td></tr>
+    <tr><td>History panel</td><td>Every undoable step; click one to jump to it</td></tr>
+  </table></div>
+  <p>Tool settings are remembered between visits. The <code>auto</code> theme follows your system’s light or dark setting.</p>
+
+  <h2 id="glasspaint-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>First use</strong>Transformers.js loads, then the model downloads once from Hugging Face</li>
+    <li><strong>Cache Storage</strong>The model is kept, so later runs need no network</li>
+    <li><strong>WebGPU</strong>Runs on the graphics card, or WebAssembly on the processor</li>
+  </ol>
+  <p>The glass is all in <code>src/css/glass.css</code>, driven by CSS variables, with SVG displacement-map refraction on the toolbar and dialog rims in Chromium. Firefox and Safari get plain blur. Reduced transparency gives opaque panels.</p>
+
+  <h2 id="glasspaint-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/viliusle/miniPaint">viliusle/miniPaint</a> (MIT). Every model’s source, licence and size is listed in <code>MODELS.md</code>; all are Apache-2.0.</p>
+</article>
+
+<article class="doc" id="photocraft" data-look="glass" style="--accent:#2563eb;--glow-1:#1e3a8a;--glow-2:#93c5fd">
+  <header class="banner">
+    <div class="pane">
+      <h1>PhotoCraft, my edition</h1>
+      <p class="tagline">PhotoCraft is an open-source image editor written in Rust, with layers, masks and real PSD files. This is its web version with my additions; the PhotoCraft team doesn’t publish or endorse it.</p>
+      <ul class="facts"><li>Editors</li><li>Fork</li><li>MIT licence</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/photocraft.webp" width="1440" height="900" loading="lazy" alt="An image editor with Hokusai's Great Wave open, a caption card over it, and a curves editor drawn over the histogram"></figure>
+
+  <h2 id="photocraft-run">Run it</h2>
+  <p>Double-click <code>start.command</code>: it builds the web version if needed, serves it on port 8780 and opens the browser. By hand, with Rust’s wasm32 target and trunk installed:</p>
+  <pre><code>cd apps/photocraft-web
+trunk build --release
+python3 -m http.server 8780 -d ../../dist/web</code></pre>
+
+  <h2 id="photocraft-use">What my edition adds</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Feature</th><th>How to use it</th></tr>
+    <tr><td>Liquid Glass theme</td><td>The default, dark and light. Panels show a blurred view of your image. Reduce transparency in Preferences › Interface.</td></tr>
+    <tr><td>Remove Background</td><td>Layer menu, Properties, the task bar or the command palette. The app asks before downloading the 4.4 MB model.</td></tr>
+    <tr><td>AI Upscale 2x / 4x</td><td>Filter › AI › AI Upscale, with Real-ESRGAN</td></tr>
+    <tr><td>AI Denoise</td><td>Filter › AI › AI Denoise, with SCUNet</td></tr>
+    <tr><td>Object Selection by clicking</td><td>With MobileSAM installed; ⇧ adds, ⌥ subtracts</td></tr>
+    <tr><td>Remove tool</td><td>With LaMa installed, fills what you paint over</td></tr>
+    <tr><td>Plain-language commands</td><td>Edit › Search (⌘F): “blur 5” or “make it brighter”, in English or Dutch</td></tr>
+    <tr><td>Autosave</td><td>Unsaved documents survive a crash or reload</td></tr>
+    <tr><td>Save back to the file</td><td>Where the browser has the File System Access API</td></tr>
+    <tr><td>Contextual Task Bar</td><td>Under the canvas: Remove Background, Select Subject, AI Upscale and AI Denoise. Window › Contextual Task Bar hides it.</td></tr>
+    <tr><td>AI model manager</td><td>Filter › AI › AI Models installs and removes the models</td></tr>
+  </table></div>
+  <p>On 17 October 2026 the fork merged upstream 0.9.0. That brought in, among much else, playing Photoshop action sets (<code>.atn</code>), Krita (<code>.kra</code>) import, CMYK TIFF and JPEG export, and the Pro Light and Soft Dark and Light themes beside Liquid Glass.</p>
+
+  <h2 id="photocraft-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Rust engine</strong>The same editor as the desktop app</li>
+    <li><strong>WebAssembly</strong>Compiled with trunk to run in the browser</li>
+    <li><strong>Local models</strong>Downloaded only after you agree, then run on your device</li>
+    <li><strong>IndexedDB</strong>Keeps autosaves; a service worker makes it work offline</li>
+  </ol>
+
+  <h2 id="photocraft-limits">Limits</h2>
+  <p>The AI tools are slow on large images in the browser: LaMa takes 10 to 25 seconds per stroke and about 2 GB of memory. Without a model, each tool falls back to the built-in method.</p>
+
+  <h2 id="photocraft-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/storytold/photocraft">storytold/photocraft</a>, which is MIT OR Apache-2.0; this edition takes the MIT option. I keep it up to date with upstream by merging.</p>
+</article>
+
+<article class="doc" id="pikado" data-look="glass" style="--accent:#db2777;--glow-1:#fbcfe8;--glow-2:#a78bfa">
+  <header class="banner">
+    <div class="pane">
+      <h1>Pikado</h1>
+      <p class="tagline">A raster and vector image editor in the spirit of Photopea. My fork gives the menus and dialogs a glass look.</p>
+      <ul class="facts"><li>Editors</li><li>Fork</li><li>MIT licence</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/pikado.webp" width="1440" height="900" loading="lazy" alt="An image editor with a photo open: tools down the left, the canvas in the middle, and layer and colour panels on the right"></figure>
+
+  <h2 id="pikado-run">Run it</h2>
+  <pre><code>npm install
+npm run dev      # http://localhost:5173
+npm run build    # production bundle in dist/</code></pre>
+  <p>Or with Docker, which serves the bundle from nginx:</p>
+  <pre><code>docker build -t pikado .
+docker run --rm -p 8080:80 pikado</code></pre>
+
+  <h2 id="pikado-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Plain ES modules</strong>No framework and no TypeScript; Vite bundles them</li>
+    <li><strong>One dependency</strong>The HEIC decoder, downloaded only when you open a HEIC</li>
+    <li><strong>Glass</strong>The design tokens of LiquidGlass-UI, as one CSS file</li>
+  </ol>
+  <p>Three things reach the network, and only these: Generative Fill (off until you supply your own API key, and it asks first), Google web fonts when you use one, and an image you drag in from another tab.</p>
+
+  <h2 id="pikado-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/koneb71/pikado">koneb71/pikado</a> by Neiell Care L. Paradiang (MIT). Its CHANGELOG lists everything the fork changes.</p>
+</article>
+
+<article class="doc" id="textarea" data-look="note" style="--accent:#7c3aed">
+  <header class="banner">
+    <h1>Textarea</h1>
+    <p class="tagline">A minimalist text editor. Notes live in the URL, in your own document library, or in a file you export.</p>
+    <ul class="facts"><li>Editors</li><li>Fork</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+  <figure><img src="../images/textarea.webp" width="1440" height="1032" loading="lazy" alt="A note with headings, nested bullets and a link, highlighted as Markdown, with a menu open beside it"></figure>
+
+  <h2 id="textarea-run">Run it</h2>
+  <p>There is no build step. Double-click <code>start.command</code>, which serves it and opens the browser, or serve the folder with any static server. It installs as an app and works offline.</p>
+
+  <h2 id="textarea-use">Use it</h2>
+  <h3>Where a note lives</h3>
+  <ul>
+    <li>In the URL: the text is compressed with deflate into the address, so copying the URL shares the note.</li>
+    <li>In My documents, a searchable library in this browser, with pins, tags, a trash that keeps notes for 30 days, and an activity calendar.</li>
+    <li>In a folder you pick, mirrored both ways as Markdown files.</li>
+    <li>Behind a password, as an encrypted link (AES-256-GCM).</li>
+  </ul>
+  <h3>Writing</h3>
+  <ul>
+    <li>Find and replace with Ctrl/⌘+F; a quick switcher on Ctrl/⌘+K.</li>
+    <li><code>[[Link]]</code> to another note by title, with backlinks; <code>- [ ]</code> becomes a checkbox; <code>#tag</code> is counted and filterable.</li>
+    <li>Writing tools (improve, shorten, summarise, fix, make casual) and speech to text with Whisper, both on models that run on your machine.</li>
+    <li>Every action in one filterable list on Ctrl/⌘+Shift+P, once the command palette is switched on in Settings.</li>
+  </ul>
+  <h3>Models</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Model</th><th>Size</th><th>For</th></tr>
+    <tr><td>Gemma 3 270M</td><td>253 MB</td><td>Quick rewrites; the default</td></tr>
+    <tr><td>MiniCPM5 2B</td><td>1.56 GB</td><td>The best writing of the three</td></tr>
+    <tr><td>MiniCPM-V 4.7 1B</td><td>1.57 GB</td><td>Reads pictures: adds <strong>Describe image</strong> and <strong>Read text from image</strong></td></tr>
+    <tr><td>Whisper small</td><td>249 MB</td><td>Speech to text, runs everywhere</td></tr>
+    <tr><td>Whisper large v3 turbo</td><td>1.65 GB</td><td>More accurate speech to text, on the graphics card</td></tr>
+  </table></div>
+  <h3>In and out</h3>
+  <p>Open text, ZIP and PDF files. Save as text, Markdown, HTML, JSON, CSV, XML, RTF, LaTeX or YAML. Export to a QR code, a ZIP, or straight to another device on the same Wi-Fi: Send to a device pairs the two by QR code and connects them over WebRTC with no server between them.</p>
+
+  <h2 id="textarea-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>You type</strong>In one textarea, highlighted as Markdown</li>
+    <li><strong>Deflate</strong>The text is compressed into the URL hash</li>
+    <li><strong>Library</strong>Each note is also kept in browser storage, and in your folder if you chose one</li>
+  </ol>
+  <p>Nothing is uploaded and there is no account or server. The models ship with the app in checksum-verified pieces and are cached after the first use, so they work offline.</p>
+
+  <h2 id="textarea-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/antonmedv/textarea">antonmedv/textarea</a> by Anton Medvedev (MIT).</p>
+</article>
+
+<article class="doc" id="liquidframe" data-look="finder" style="--accent:#0a84ff;--glow-1:#bfdbfe;--glow-2:#fde68a">
+  <header class="banner">
+    <div class="mac-window">
+      <div class="mac-side" aria-hidden="true">Library<br>Favorites<br>People &amp; Pets<br>Places<br>Memories</div>
+      <div class="mac-main">
+        <h1>LiquidFrame</h1>
+        <p class="tagline">A photo and video library in the style of Photos. Your pictures, reversible edits, AI tools and catalogue all stay on your computer.</p>
+        <ul class="facts"><li>Editors</li><li>MIT licence</li><li>Development preview 0.2</li><li>Not published yet</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/liquidframe.webp" width="1440" height="900" loading="lazy" alt="A photo library with a sidebar of library sections and a grid of twelve pictures"></figure>
+
+  <h2 id="liquidframe-run">Run it</h2>
+  <p>You need 64-bit Python 3.11 or newer and Node.js 22 for the first build. Set it up once, then start it with the launcher for your system:</p>
+  <pre><code>python3 scripts/setup.py
+./start.command    # macOS; start.cmd on Windows, ./start.sh on Linux</code></pre>
+  <p>It opens at <code>http://127.0.0.1:4320</code>. Optional tools add more formats: FFmpeg, Tesseract, ExifTool, ImageMagick 7, and darktable for RAW files.</p>
+
+  <h2 id="liquidframe-use">Use it</h2>
+  <ul>
+    <li>Connect a folder or paste its path. Subfolders are indexed and originals stay where they are.</li>
+    <li>Click selects, double-click or Enter opens the viewer, and <strong>Edit</strong> opens the editor.</li>
+    <li>Browse by Years, Months or All Photos; rate, flag, favourite, add keywords, make albums and smart albums.</li>
+    <li>Edits are reversible recipes: light and colour, curves, black and white, crop and perspective, retouching, and presets.</li>
+    <li>Local AI: background removal, cleanup, upscaling, and optional search by description, people, pets and text in photos.</li>
+    <li>RAW files are developed with LibRaw. Live Photos and RAW+JPEG pairs become stacks, with Loop, Bounce and Long Exposure effects.</li>
+    <li>Video trimming and speed, slideshows, an offline map and contact sheets.</li>
+    <li>Photobooks: send up to 100 selected photos to the Ente Photobook companion, which opens in a new tab and exports a PDF or a ZIP of PNGs.</li>
+  </ul>
+
+  <h2 id="liquidframe-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Browser</strong>The Photos-style interface with Liquid Glass controls</li>
+    <li><strong>Helper on 127.0.0.1</strong>A Python server that only works inside your connected folders</li>
+    <li><strong>Catalogue</strong>SQLite, recipes, previews and models in a data folder</li>
+  </ol>
+  <p>Exports make new copies by default. Replacing an original needs your confirmation and a verified backup first. Removed items wait 30 days in the catalogue trash, and source files are never deleted automatically. Private views lock with a local passcode.</p>
+
+  <h2 id="liquidframe-limits">Limits</h2>
+  <p>A development preview: some advanced workflows aren’t finished, and it doesn’t claim to match everything Photos does. The setup and the first model downloads need internet; after that it works offline. Photos are limited to 160 megapixels.</p>
+
+  <h2 id="liquidframe-credits">Credits</h2>
+  <p>LiquidFrame’s own code is MIT. The photobook companion is <a href="https://github.com/ente-toys/photobook">Ente Photobook</a>, a separate program under AGPL-3.0; its source and my changes to it are kept apart in <code>companions/photobook/</code>.</p>
+</article>
+
+<!-- ================================================================ Tools -->
+<article class="doc" id="convert" data-look="glass" style="--accent:#0d9488;--glow-1:#99f6e4;--glow-2:#fde68a">
+  <header class="banner">
+    <div class="pane">
+      <h1>Convert to it!</h1>
+      <p class="tagline">A file converter that works between almost any two formats without uploading anything. My fork adds output settings for each conversion, and much more.</p>
+      <ul class="facts"><li>Tools</li><li>Fork</li><li>GPL-2.0 licence</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/convert.webp" width="1440" height="900" loading="lazy" alt="A file converter with an MP4 file loaded and GIF chosen as the output format"></figure>
+
+  <h2 id="convert-run">Run it</h2>
+  <p>On a Mac with <a href="https://bun.sh/">Bun</a>, double-click <code>start.command</code>: it builds when needed, serves on <code>http://localhost:4319</code> and opens the browser. <code>bun run start</code> does the same anywhere. Opened straight from disk, the page explains why that can’t work.</p>
+
+  <h2 id="convert-use">Use it</h2>
+  <ol>
+    <li>Add files. Files of different types can go together, and you can add more to a selection that is already open.</li>
+    <li>Pick an output for each type, or click one file to choose its own.</li>
+    <li>Press <strong>Settings</strong> for options that fit the format: quality, frame rate, bitrate, size, start and end time, metadata removal, a zip password.</li>
+    <li>Convert. Several outputs arrive as one zip.</li>
+  </ol>
+  <h3>What my edition adds</h3>
+  <ul>
+    <li>A Tools row: read text (OCR), remove background, upscale 2×, contact sheet, check audio, make a video, merge or split PDFs.</li>
+    <li>Compress: converts a file to its own format and keeps whichever is smaller.</li>
+    <li>Cutting video and audio without re-encoding, the way LosslessCut does.</li>
+    <li>PDF tools: pages to keep, rotation, passwords, page numbers, watermarks.</li>
+    <li>More formats: 3D models, subtitles, spreadsheets, Outlook messages, vCards and about 65 more image formats, including camera RAW.</li>
+    <li>Audio edits: even out loudness to −14 LUFS, fade in and out, mix down to mono, play backwards, trim silence, and change the speed without changing the pitch.</li>
+    <li>A liquid glass action bar and dialogs, made with LiquidGlass UI and Liquid Glass Studio.</li>
+  </ul>
+
+  <h2 id="convert-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Your file</strong>Read in the page, never uploaded</li>
+    <li><strong>Route</strong>A chain of tools is found from input to output</li>
+    <li><strong>Tools</strong>FFmpeg, ImageMagick, mediabunny, mupdf and others, in WebAssembly</li>
+    <li><strong>Download</strong>One file, or one zip, optionally AES-256 encrypted</li>
+  </ol>
+  <p>When the page is cross-origin isolated, encoding uses several cores: an 8-second 720p clip encodes in 3.1 s instead of 11.5 s. A Content Security Policy keeps converted HTML, SVG or EPUB files from loading anything or running script.</p>
+
+  <h2 id="convert-limits">Limits</h2>
+  <ul>
+    <li>Output settings are read by six of the conversion tools. When a conversion ends in another one, the result says the settings weren’t applied.</li>
+    <li>Upscaling needs WebGPU. OCR downloads about 10 MB and background removal about 58 MB on first use.</li>
+    <li>Windows Explorer and macOS Archive Utility can’t open AES-encrypted zips; 7-Zip and Keka can.</li>
+  </ul>
+
+  <h2 id="convert-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/p2r3/convert">p2r3/convert</a> (GPL-2.0). Ideas from VERT, Stirling-PDF, LosslessCut, ConvertX and others are named in its README.</p>
+</article>
+
+<article class="doc" id="qrcodeforeveryone" data-look="note" style="--accent:#0f766e">
+  <header class="banner">
+    <h1>QRcodeforeveryone</h1>
+    <p class="tagline">Free QR codes that don’t expire. Pick the colours and put a logo in the middle.</p>
+    <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/qrcodeforeveryone.webp" width="1440" height="900" loading="lazy" alt="A QR code generator with fields for the content, two colours and a logo"></figure>
+
+  <h2 id="qrcodeforeveryone-run">Open it</h2>
+  <p>Use it at <a href="https://qrcodeforeveryone.vercel.app">qrcodeforeveryone.vercel.app</a>. It is one static page. A copy runs from any static server, but it needs an internet connection, because qrcodejs loads from cdnjs:</p>
+  <pre><code>git clone https://github.com/Gitguy268/QRcodeforeveryone.git
+cd QRcodeforeveryone
+python3 -m http.server 8000</code></pre>
+
+  <h2 id="qrcodeforeveryone-use">Use it</h2>
+  <ol>
+    <li>Type or paste a link or short text. It is encoded as plain text, so a Wi-Fi password won’t make phones offer to join the network.</li>
+    <li>Choose the dark and light colours, and add a logo for the centre if you like.</li>
+    <li>The code redraws as you type. Right-click it to save the image.</li>
+  </ol>
+
+  <h2 id="qrcodeforeveryone-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Your text</strong>Stays in the page</li>
+    <li><strong>qrcodejs</strong>Draws the code in your browser</li>
+    <li><strong>The image</strong>Encodes the content itself, so there is nothing to expire</li>
+  </ol>
+  <p>There is no redirect service in between: a link in the code keeps working for as long as the website it points to exists.</p>
+</article>
+
+<article class="doc" id="htmltopng" data-look="terminal" style="--accent:#f59e0b">
+  <header class="banner">
+    <p class="prompt" aria-hidden="true">~ $ open page.html --as png</p>
+    <h1>htmltopng</h1>
+    <p class="tagline">Turns an HTML file into a PNG image.</p>
+    <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/htmltopng.webp" width="1440" height="900" loading="lazy" alt="A code editor beside a preview pane, with a button to capture the preview as a PNG"></figure>
+
+  <h2 id="htmltopng-run">Open it</h2>
+  <p>Use it at <a href="https://htmltopngconverter.vercel.app/">htmltopngconverter.vercel.app</a>. The source is at <a href="https://github.com/Gitguy268/htmltopng">Gitguy268/htmltopng</a>.</p>
+
+  <h2 id="htmltopng-use">Use it</h2>
+  <ol>
+    <li>Paste or write HTML in the editor, or upload local <code>.html</code>, <code>.css</code> and <code>.js</code> files, which are combined into one preview.</li>
+    <li>Press <strong>Update Preview</strong> to render it in the pane beside it.</li>
+    <li>Press <strong>Capture as PNG</strong> to download the preview as an image.</li>
+  </ol>
+
+  <h2 id="htmltopng-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Editor</strong>Your HTML</li>
+    <li><strong>Sandboxed iframe</strong>Renders it beside the editor. Its scripts run, but they can’t reach the tool’s page</li>
+    <li><strong>html-to-image</strong>Runs inside the preview and sends the PNG back to the tool, which saves it</li>
+  </ol>
+  <p>The picture is drawn by the browser itself, through an SVG copy of the page, so it matches the preview closely. Text previews are drawn with html2canvas.</p>
+</article>
+
+<article class="doc" id="tabshell" data-look="terminal" style="--accent:#4ade80">
+  <header class="banner">
+    <p class="prompt" aria-hidden="true">~ $ apk add python3</p>
+    <h1>TabShell</h1>
+    <p class="tagline">A real Linux terminal in a browser tab. Install packages, play terminal games, then press Reset and it’s as if nothing happened.</p>
+    <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+  <figure><img src="../images/tabshell.webp" width="1440" height="864" loading="lazy" alt="A Linux terminal in a browser tab showing uname and the Alpine release, with Browser VM, Docker and Reset buttons above it"></figure>
+
+  <h2 id="tabshell-run">Run it</h2>
+  <p>On a Mac, double-click <code>start.command</code>. It starts Docker Desktop, builds what’s missing (a few minutes the first time), serves TabShell on <code>http://localhost:8686</code> and opens it. Elsewhere, with Node.js 20+ and Docker:</p>
+  <pre><code>npm ci
+npm run image                           # Alpine VM image
+docker build -t tabshell-ubuntu docker  # Ubuntu image for Docker mode
+npm run build
+npm start                               # http://localhost:8686</code></pre>
+
+  <h2 id="tabshell-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th></th><th>Browser VM</th><th>Docker</th></tr>
+    <tr><td>Linux</td><td>Alpine 3.21, 32-bit</td><td>Ubuntu 24.04, 64-bit</td></tr>
+    <tr><td>Runs in</td><td>Your browser, on v86</td><td>A container on your computer</td></tr>
+    <tr><td>Install packages</td><td><code>apk add python3</code></td><td><code>sudo apt install python3</code>, Homebrew</td></tr>
+    <tr><td>Kept until Reset</td><td>Saved in IndexedDB</td><td>The container stays</td></tr>
+  </table></div>
+  <pre><code>apk add python3        # about 30 s through the default relay
+snek                   # arrow keys to steer, q to quit</code></pre>
+  <p><strong>Reset</strong> throws the machine away and starts a fresh one. <strong>Clear</strong> only clears the screen. <strong>Network</strong> sets the relay the Browser VM uses.</p>
+
+  <h2 id="tabshell-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>xterm.js</strong>One terminal for both modes, drawn with WebGL</li>
+    <li><strong>Browser VM</strong>v86 runs Alpine from a 9p filesystem, fetched file by file</li>
+    <li><strong>Docker</strong>server.mjs proxies to ttyd and bash in Ubuntu</li>
+  </ol>
+  <ul>
+    <li>The VM saves its whole state (memory, devices, changed files) 5 seconds after the screen goes quiet, and when the tab is hidden.</li>
+    <li>The VM reaches the internet through a Wisp relay over a WebSocket.</li>
+    <li>The Docker server listens on 127.0.0.1 only, refuses other Host headers and origins, and adds a random per-container password for ttyd. The container has no access to your files.</li>
+  </ul>
+
+  <h2 id="tabshell-limits">Limits</h2>
+  <ul>
+    <li>No Homebrew in the Browser VM: v86 emulates a 32-bit PC.</li>
+    <li>It’s an emulator, so compiling or installing large packages is slow.</li>
+    <li>A saved VM with Python is about 150 MB of browser storage.</li>
+  </ul>
+
+  <h2 id="tabshell-credits">Credits</h2>
+  <p>Built on xterm.js, v86 and ttyd. The VM’s default relay is Mercury Workshop’s public Wisp server.</p>
+</article>
+
+<article class="doc" id="qrer" data-look="win98" style="--accent:#1084d0;--banner-bg:radial-gradient(ellipse at 20% 30%, #fff 0 10%, transparent 28%), radial-gradient(ellipse at 78% 72%, #fff 0 9%, transparent 26%), radial-gradient(ellipse at 60% 10%, #fff 0 6%, transparent 20%), linear-gradient(#2f6fd0, #79b0ee)">
+  <header class="banner">
+    <div class="window">
+      <div class="titlebar"><span>Qrer: QR Editor</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="window-body">
+        <h1>Qrer</h1>
+        <p class="tagline">A QR code editor that looks like Windows 98, with liquid glass on its title bar and taskbar over a cloud desktop. It reads codes as well as making them.</p>
+        <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Not published yet</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/qrer.webp" width="1440" height="900" loading="lazy" alt="A Windows 98 window titled Qrer, QR Editor, over a cloud wallpaper, showing a QR code and export buttons"></figure>
+
+  <h2 id="qrer-run">Run it</h2>
+  <p>Double-click <code>start.command</code>, or serve the folder:</p>
+  <pre><code>python3 serve.py --port 4317    # http://127.0.0.1:4317/</code></pre>
+  <p>There is no build step and no runtime dependency. Clipboard and offline use need HTTPS or localhost.</p>
+
+  <h2 id="qrer-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Tab</th><th>What you set</th></tr>
+    <tr><td>Content</td><td>A link, Unicode text, Wi-Fi credentials or an email draft</td></tr>
+    <tr><td>Style</td><td>Six presets, module, corner and eye shapes, colours, and a caption, outline or card frame. Photo look puts the code over a picture and checks it still scans.</td></tr>
+    <tr><td>Logo</td><td>A local image in the middle; error correction goes up automatically</td></tr>
+  </table></div>
+  <p>Export PNG or SVG at exactly 512, 1024 or 2048 pixels, copy to the clipboard, or make a 1080 × 1440 share card. Ctrl/⌘+Z undoes up to 30 style changes. <strong>Read QR…</strong> reads a code from an image or the camera and never opens links by itself. <strong>Check this code</strong> scans your export.</p>
+  <p>The desktop works like Windows 98: drag the window by its title, minimise to the taskbar, use the Start menu. View › Float export toolbar detaches the export controls.</p>
+
+  <h2 id="qrer-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Encode</strong>Your content becomes a QR matrix in the page</li>
+    <li><strong>Style</strong>Shapes, colours and frames are drawn on top</li>
+    <li><strong>Verify</strong>Photo look decodes the result before it can be exported; any other export is scanned when you press Check this code</li>
+  </ol>
+  <p>Glass goes only on chrome that sits over the wallpaper, because glass bends what is behind it and a flat grey panel gives it nothing to bend. Chromium refracts the live backdrop; WebKit and Gecko refract a copy of the painted cloud wallpaper. The code itself is never under glass. After the first visit everything works offline.</p>
+
+  <h2 id="qrer-limits">Limits</h2>
+  <p>Custom colours, shapes and logos can make a code harder to scan: always test it on the device and at the size you’ll print. Anyone who receives a Wi-Fi code can read the password in it.</p>
+
+  <h2 id="qrer-credits">Credits</h2>
+  <p>Clean codes are encoded with Nayuki’s QR Code generator and read with Nimiq QR Scanner (both MIT). Liquid glass from kwlck/liquid-glass-web, gentpan/liquidglass and Liquid Glass Studio (all MIT). The taskbar and controls adapt Windows 98 Web Edition (MIT), and the Start menu follows WIN98-template (Unlicense). The icons and wallpapers are original; no Windows media is bundled.</p>
+</article>
+
+<article class="doc" id="openfinder" data-look="finder" style="--accent:#0a84ff;--glow-1:#a5b4fc;--glow-2:#f9a8d4">
+  <header class="banner">
+    <div class="mac-window">
+      <div class="mac-side" aria-hidden="true">Favorites<br>Desktop<br>Documents<br>Sandbox<br>Tags</div>
+      <div class="mac-main">
+        <h1>OpenFinder</h1>
+        <p class="tagline">A file manager that runs in your browser, styled after the Finder with liquid glass. It works on real folders on your computer.</p>
+        <ul class="facts"><li>Tools</li><li>GPL-3.0-or-later licence</li><li>Not published yet</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/openfinder.webp" width="1280" height="800" loading="lazy" alt="A Finder-style window with a glass sidebar of favourites, and folders shown as icons"></figure>
+
+  <h2 id="openfinder-run">Run it</h2>
+  <pre><code>npm install
+npm run build
+npm start        # then open http://localhost:4627</code></pre>
+  <p>On a Mac, <code>start.command</code> does all three and opens the browser. Use Chrome, Edge, Brave, Opera or Arc.</p>
+
+  <h2 id="openfinder-use">Use it</h2>
+  <p>Click <strong>Allow File Access…</strong>, pick a folder and start working. There is no account, database or config file, and your files never leave your computer. The <strong>Sandbox</strong> is private storage inside the browser, for trying it without your own files.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Milestone</th><th>Contents</th><th>State</th></tr>
+    <tr><td>1</td><td>Window, glass sidebar and toolbar, folder access, Sandbox, light and dark</td><td>Done</td></tr>
+    <tr><td>2</td><td>Icon, List, Column and Gallery views, Quick Look, Get Info, tags, file operations</td><td>Next</td></tr>
+    <tr><td>3–7</td><td>Search, archives, conversion, sharing, offline app</td><td>Planned</td></tr>
+  </table></div>
+
+  <h2 id="openfinder-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Folder picker</strong>You grant one folder through the File System Access API</li>
+    <li><strong>The page</strong>Reads and lists it directly; nothing is uploaded</li>
+    <li><strong>Glass</strong>Edge refraction adapted from Liquid Glass Studio</li>
+  </ol>
+
+  <h2 id="openfinder-limits">Limits</h2>
+  <ul>
+    <li>Chromium browsers only: Firefox and Safari don’t offer folder access.</li>
+    <li>Brave ships with folder access off; enable <code>brave://flags/#file-system-access-api</code>.</li>
+    <li>Browsers refuse Home, Desktop, Documents and Downloads themselves. Pick a folder inside one.</li>
+    <li>Permission is asked again after a browser restart.</li>
+  </ul>
+
+  <h2 id="openfinder-credits">Credits</h2>
+  <p>Not affiliated with Apple. Feature ideas from FileBrowser Quantum (no code used). Icons from Lucide (ISC).</p>
+</article>
+
+<article class="doc" id="archium" data-look="glass" style="--accent:#6b3fa0;--glow-1:#c4b5fd;--glow-2:#5eead4">
+  <header class="banner">
+    <div class="pane">
+      <h1>Archium</h1>
+      <p class="tagline">A privacy layer for the Helium browser: an offline new tab, search that runs on your own Mac, a Tor switch with a kill switch, and a URL cleaner.</p>
+      <ul class="facts"><li>Tools</li><li>GPL-3.0 licence</li><li>macOS</li><li>Not published yet</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/archium.webp" width="1440" height="855" loading="lazy" alt="A browser new tab page with a clock, a search box and quick links"></figure>
+  <p class="note">Archium is a companion kit for now: an extension and scripts on top of a stock <a href="https://helium.computer">Helium</a> release, not a browser you download. Its own builds are planned.</p>
+
+  <h2 id="archium-run">Install</h2>
+  <p>You need macOS, Helium and Homebrew.</p>
+  <ol>
+    <li>Start local search: double-click <code>searxng/install.command</code>. SearXNG starts now and at every login, on <code>127.0.0.1:8888</code>, without Docker.</li>
+    <li>In Helium open <code>chrome://extensions</code>, turn on Developer mode, click Load unpacked and choose the <code>extension</code> folder.</li>
+    <li>Add a search engine with the URL <code>http://127.0.0.1:8888/search?q=%s</code> and make it the default.</li>
+    <li>For Tor, run <code>brew install tor &amp;&amp; brew services start tor</code>, then pick Tor in the Archium popup.</li>
+  </ol>
+
+  <h2 id="archium-use">Features</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Feature</th><th>What it does</th></tr>
+    <tr><td>Offline new tab</td><td>Clock, search box and quick links, with no network requests</td></tr>
+    <tr><td>Private search</td><td>SearXNG on your Mac, with a public instance as the fallback</td></tr>
+    <tr><td>URL cleaner</td><td>27 rules strip <code>utm_*</code>, <code>fbclid</code>, <code>gclid</code> and other tracking parameters</td></tr>
+    <tr><td>Tor or proxy switch</td><td>One click routes all traffic through your own Tor or a proxy</td></tr>
+    <tr><td>Kill switch</td><td>When Tor stops, pages fail to load; they never fall back to a direct connection</td></tr>
+    <tr><td>WebRTC block</td><td>Stops WebRTC leaking your address, forced on while proxied</td></tr>
+    <tr><td>Own Helium services</td><td>Optional: <code>services/run-local.sh</code> runs Helium’s services server on your Mac, so filter lists, !bangs and extensions never come through imputnet’s servers. Needs Docker and mkcert.</td></tr>
+  </table></div>
+
+  <h2 id="archium-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Popup</strong>Your choices go into extension storage</li>
+    <li><strong>Background worker</strong>Applies the proxy, WebRTC policy and redirect rules</li>
+    <li><strong>Chromium</strong>Never falls back to a direct connection from a fixed proxy</li>
+  </ol>
+  <p>Chromium never sends loopback traffic through a proxy, so in Tor mode a redirect rule sends local searches to the public instance, through Tor. The extension asks for access to all sites only because redirect rules need it; it has no content scripts and never reads pages.</p>
+
+  <h2 id="archium-limits">Limits</h2>
+  <ul>
+    <li>Tor through a Chromium browser is not Tor Browser. It hides your IP from sites, but your browser fingerprint still identifies you.</li>
+    <li>Local SearXNG queries Google, Bing and others from your IP outside Tor mode.</li>
+    <li>Nothing is compiled into the browser yet, so the extension can be switched off.</li>
+  </ul>
+
+  <h2 id="archium-credits">Credits</h2>
+  <p>Builds on <a href="https://github.com/imputnet/helium">Helium</a> by imputnet, which builds on ungoogled-chromium. Search is SearXNG. Not affiliated with any of them, Google or the Tor Project.</p>
+</article>
+
+<article class="doc" id="web2app" data-look="paper" style="--accent:#1c5d33">
+  <header class="banner">
+    <h1>web2app</h1>
+    <p class="tagline">Turn any website into a small Mac app. A page on your own Mac for the Pake command-line tool, with a build queue and a history.</p>
+    <ul class="facts"><li>Tools</li><li>macOS</li><li>GPL-3.0-or-later licence</li><li>Not published yet</li></ul>
+  </header>
+  <figure><img src="../images/web2app.webp" width="1440" height="900" loading="lazy" alt="A page headed Turn any website into a Mac app, with buttons for popular apps and a build form"></figure>
+
+  <h2 id="web2app-run">Run it</h2>
+  <p>Double-click <code>start.command</code>. It installs Pake the first time, starts the server and opens <code>http://localhost:7417</code>. Building apps needs Rust; web2app tells you if it’s missing.</p>
+
+  <h2 id="web2app-use">Use it</h2>
+  <ol>
+    <li>Start from a popular app, enter a web address, or choose files on this device.</li>
+    <li>Set the name, window size, zoom, title bar, dark mode, tray icon and the other Pake options. The page shows the exact <code>pake</code> command it will run.</li>
+    <li>Press <strong>Build app</strong>. Builds wait in a queue and run one at a time.</li>
+    <li>Download the <code>.dmg</code> or <code>.app</code>, or install it straight away. Every build stays in History.</li>
+  </ol>
+  <p><strong>Use on phone</strong> lets a phone on the same Wi-Fi start builds: scan the QR code on the Mac, then type the 6-digit code it shows. It is off until you turn it on. In History you can cancel a build, build it again, open the app or show it in Finder.</p>
+
+  <h2 id="web2app-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The page</strong>Your options become Pake flags</li>
+    <li><strong>server.js</strong>A plain Node server on 127.0.0.1 queues the build</li>
+    <li><strong>Pake</strong>Wraps the site in a Tauri app with Rust</li>
+    <li><strong>History</strong>Each build keeps its folder and log</li>
+  </ol>
+  <p>One file lists every flag the form may set, and both the server and the page read it, so the command shown is always the command run. Builds work offline once Pake and its Rust cache are installed: about 45 seconds for an app.</p>
+
+  <h2 id="web2app-limits">Limits</h2>
+  <p>Mac only. Phone access needs the macOS firewall to allow Node.</p>
+
+  <h2 id="web2app-credits">Credits</h2>
+  <p>A front end for <a href="https://github.com/tw93/Pake">tw93/Pake</a>. It has its own name because Pake asks derived tools not to use its name or logo.</p>
+</article>
+
+<article class="doc" id="superfile" data-look="terminal" style="--accent:#c084fc">
+  <header class="banner">
+    <p class="prompt" aria-hidden="true">~ $ spf</p>
+    <h1>superfile, my edition</h1>
+    <p class="tagline">The superfile terminal file manager with eleven fixes and features: six from open upstream pull requests and five of my own.</p>
+    <ul class="facts"><li>Tools</li><li>Fork</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+
+  <h2 id="superfile-run">Run it</h2>
+  <p>Build it from source with Go 1.26 or newer:</p>
+  <pre><code>./build.sh
+./bin/spf</code></pre>
+  <p><code>make build</code> also runs golangci-lint, so it needs that installed.</p>
+
+  <h2 id="superfile-use">What my edition adds</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Change</th><th>From</th></tr>
+    <tr><td>Copy (<kbd>T</kbd>) or move (<kbd>M</kbd>) items straight into the next panel</td><td>New</td></tr>
+    <tr><td>A <code>terminal</code> theme that uses your terminal’s 16 colours</td><td>New</td></tr>
+    <tr><td>Search and sort show up at once in folders with 300+ files</td><td>New</td></tr>
+    <tr><td>Binaries named like man pages (<code>bin.3</code>) are no longer previewed as text</td><td>New</td></tr>
+    <tr><td>Docs for the <code>--chooser-file</code> file picker</td><td>New</td></tr>
+    <tr><td>Copy and paste files through the system clipboard (<kbd>C</kbd> / <kbd>V</kbd>)</td><td>Upstream PR</td></tr>
+    <tr><td><code>theme = "auto"</code> picks light or dark from the terminal background</td><td>Upstream PR</td></tr>
+    <tr><td><code>bat_flags</code> option for the bat previewer</td><td>Upstream PR</td></tr>
+    <tr><td><code>cd_on_quit</code> works with any install</td><td>Upstream PR</td></tr>
+    <tr><td>Cut and paste no longer overwrites a same-named file</td><td>Upstream PR</td></tr>
+    <tr><td>The Nix flake builds again</td><td>Upstream PR</td></tr>
+  </table></div>
+  <p>Merged pull requests keep their original authors on the commits.</p>
+
+  <h2 id="superfile-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Panels</strong>Several folders side by side, plus preview and process panels</li>
+    <li><strong>Bubble Tea</strong>Go’s terminal UI framework draws them</li>
+    <li><strong>Config</strong>TOML files for settings, hotkeys and themes</li>
+  </ol>
+
+  <h2 id="superfile-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/yorukot/superfile">yorukot/superfile</a> (MIT). It follows upstream; everything not listed here is upstream’s work.</p>
+</article>
+
+<article class="doc" id="opencode" data-look="terminal" style="--accent:#fab283">
+  <header class="banner">
+    <p class="prompt" aria-hidden="true">~ $ opencode</p>
+    <h1>opencode, my edition</h1>
+    <p class="tagline">The opencode coding agent with nine additions for the terminal and the desktop app, from session goals to a shell sandbox.</p>
+    <ul class="facts"><li>Tools</li><li>Fork</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+
+  <h2 id="opencode-run">Run it</h2>
+  <p>Build it like upstream opencode, with Bun. Local builds are versioned <code>0.0.0-&lt;branch&gt;-&lt;date&gt;</code>, which OpenCode Zen’s free tier refuses, so connect your own provider with <code>/connect</code>.</p>
+
+  <h2 id="opencode-use">What my edition adds</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Feature</th><th>How to use it</th></tr>
+    <tr><td>Session goals</td><td><code>/goal &lt;text&gt;</code> sets a goal and starts work. The agent keeps going until it calls <code>goal_complete</code>, you run <code>/goal clear</code>, or 20 unattended turns pass.</td></tr>
+    <tr><td>Context breakdown</td><td><code>/context</code> estimates the tokens used by the system prompt, each instruction source, each tool and the messages, with the session cost.</td></tr>
+    <tr><td>Transcript search</td><td><code>/find</code> searches the conversation and jumps to the message</td></tr>
+    <tr><td>Inline skills</td><td>Type <code>$skill-name</code> in a prompt to load that skill</td></tr>
+    <tr><td>Claude Code hooks</td><td>Runs PreToolUse, PostToolUse, UserPromptSubmit and Stop hooks from <code>~/.claude/settings.json</code>. A project’s own hooks run only with <code>"experimental": { "claude_hooks": "all" }</code>.</td></tr>
+    <tr><td>Auto mode</td><td><code>"experimental": { "auto_mode": true }</code> lets the model approve routine permission prompts; risky ones still ask</td></tr>
+    <tr><td>Subagent cap</td><td><code>"experimental": { "subagent_parallel": 2 }</code></td></tr>
+    <tr><td>Shell sandbox (macOS)</td><td><code>"experimental": { "sandbox": true }</code>: shell commands may write only to the project, temp folders and package caches</td></tr>
+    <tr><td>SearXNG search</td><td>Set <code>SEARXNG_URL</code> and choose <code>"websearch": { "provider": "searxng" }</code></td></tr>
+  </table></div>
+
+  <h2 id="opencode-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>TUI or app</strong>Both talk to the same local server</li>
+    <li><strong>Server</strong>Runs the session, the tools and the permission checks</li>
+    <li><strong>Your provider</strong>The model you connected answers</li>
+  </ol>
+
+  <h2 id="opencode-limits">Limits</h2>
+  <ul>
+    <li>Session goals and auto mode were tested with stubbed models only, never against a live model.</li>
+    <li>The sandbox covers the shell tool only, and only on macOS.</li>
+    <li>A UserPromptSubmit hook can’t block a prompt; its reason is added as context.</li>
+  </ul>
+
+  <h2 id="opencode-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a> (MIT). Not built by or affiliated with the OpenCode team.</p>
+</article>
+
+<article class="doc" id="retrofind" data-look="win98" style="--accent:#1084d0;--banner-bg:radial-gradient(ellipse at 20% 30%, #fff 0 10%, transparent 28%), radial-gradient(ellipse at 78% 72%, #fff 0 9%, transparent 26%), linear-gradient(#2f6fd0, #79b0ee)">
+  <header class="banner">
+    <div class="window">
+      <div class="titlebar"><span>Retrofind</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="window-body">
+        <h1>Retrofind</h1>
+        <p class="tagline">Private web search on your own Mac, in the style of 1998. SearXNG runs underneath without Docker, under a start page modelled on early Google in a Windows 98 window of liquid glass.</p>
+        <ul class="facts"><li>Tools</li><li>macOS</li><li>MIT licence</li><li>Not published yet</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/retrofind.webp" width="1440" height="912" loading="lazy" alt="A Windows 98 window over a cloudy sky showing a 1998-style search page with a multicoloured Retrofind wordmark and an I'm Feeling Lucky button"></figure>
+
+  <h2 id="retrofind-run">Install</h2>
+  <p>You need macOS and Homebrew. Run <code>brew install uv</code>, then double-click <code>start.command</code> in a copy of the repository. The first run installs SearXNG, which takes a few minutes; after that it opens <code>http://127.0.0.1:8898/</code>. Both services start again when you log in.</p>
+  <p>To make it your browser’s search engine, add a site search with this address:</p>
+  <pre><code>http://127.0.0.1:8898/search?q=%s</code></pre>
+  <p><code>sh searxng/uninstall.sh</code> stops both services and deletes everything the installer made.</p>
+
+  <h2 id="retrofind-use">Use it</h2>
+  <ul>
+    <li>The start page has a wordmark with a drop shadow, <strong>I’m Feeling Lucky</strong>, and a choice of Web or News.</li>
+    <li>Results come in a blue “Searched the web for…” bar, with green addresses and a “Retroooofind” strip of pages at the bottom.</li>
+    <li>The window frame, title bar, taskbar and Start button are liquid glass that bends the sky behind them. Results stay on solid white, so they are easy to read.</li>
+  </ul>
+
+  <h2 id="retrofind-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The page</strong>Plain HTML, CSS and JavaScript on <code>127.0.0.1:8898</code></li>
+    <li><strong>server.py</strong>Python’s standard library only. It passes on the query, the page and the category, nothing else</li>
+    <li><strong>SearXNG</strong>On <code>127.0.0.1:8893</code>, asking several search engines at once</li>
+  </ol>
+  <p>SearXNG lives in a Python environment made with uv and is kept running by two LaunchAgents, so there is no Docker. <code>server.py</code> strips every result down to its title, link, snippet and engine names. Only <code>http</code> and <code>https</code> links reach the page, and results are inserted as text, never as HTML.</p>
+
+  <h2 id="retrofind-limits">Limits</h2>
+  <ul>
+    <li>No image search, on purpose: 1998 had none, and the thumbnails would load from other servers.</li>
+    <li>No result totals, because SearXNG doesn’t report them.</li>
+    <li>Search engines sometimes block or slow down your address, so results can come from fewer engines.</li>
+    <li>The glass bends only in Chromium browsers; Safari and Firefox get glass that doesn’t bend.</li>
+    <li>macOS only, because the installer uses LaunchAgents.</li>
+  </ul>
+
+  <h2 id="retrofind-credits">Credits</h2>
+  <p>Search is <a href="https://github.com/searxng/searxng">SearXNG</a> (AGPL-3.0), downloaded at a pinned commit and run unchanged as a separate program. Liquid glass from kwlck/liquid-glass-web and the edge highlights of kevinbism/liquid-glass-effect (both MIT). The cloud wallpaper is Qrer’s. The wordmark, icon and Windows chrome are original drawings; Retrofind isn’t affiliated with Google or Microsoft.</p>
+</article>
+
+<article class="doc" id="container" data-look="terminal" style="--accent:#38bdf8">
+  <header class="banner">
+    <p class="prompt" aria-hidden="true">~ $ container here alpine uname -a</p>
+    <h1>container, my edition</h1>
+    <p class="tagline">Apple’s tool for running Linux containers on a Mac, with a VM that lives inside your terminal, a full-screen dashboard, and a set of fixes and new options.</p>
+    <ul class="facts"><li>Tools</li><li>Fork</li><li>macOS 26, Apple silicon</li><li>Apache-2.0 licence</li><li>Not published yet</li></ul>
+  </header>
+  <figure><img src="../images/container.webp" width="1100" height="688" loading="lazy" alt="A terminal dashboard listing four containers with their image, state, IP address, CPU and memory, and key hints along the bottom"></figure>
+
+  <h2 id="container-run">Run it</h2>
+  <p>You need a Mac with Apple silicon on macOS 26. The Command Line Tools are enough to build it. Keep the copy out of Documents and Desktop, because of a vmnet bug:</p>
+  <pre><code>cd ~/container
+make all                  # builds and signs into ./bin and ./libexec
+bin/container here alpine echo hello</code></pre>
+
+  <h2 id="container-use">What my edition adds</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Change</th><th>What it does</th></tr>
+    <tr><td><code>container here</code></td><td>Runs a container in a VM inside your terminal, with no <code>container system start</code> and no background services. Close the tab and the VM is gone. The tty is detected, pipes work, and the exit code comes back.</td></tr>
+    <tr><td><code>container dash</code></td><td>A full-screen dashboard of containers, images, machines, volumes and networks, with live CPU and memory. Start, stop, restart, open a shell, read logs or delete without leaving it.</td></tr>
+    <tr><td>Terminal fix</td><td><code>exec -it</code> and <code>run -it</code> no longer break tmux and other full-screen programs</td></tr>
+    <tr><td>Safer commands</td><td><code>export -o &lt;dir&gt;</code> no longer deletes the folder, <code>kernel set --force</code> keeps the old kernel until the copy succeeds, and relative mount targets are refused instead of mounted at <code>/</code></td></tr>
+    <tr><td>New options</td><td><code>container wait</code>, <code>system prune</code>, <code>ls --filter label=</code>, <code>--pids-limit</code>, <code>--sysctl</code>, a <code>ps</code> alias, and CPU % in <code>stats --format json</code></td></tr>
+    <tr><td>Backups</td><td>Image snapshots and root filesystems are left out of Time Machine</td></tr>
+  </table></div>
+  <p>In the dashboard: <kbd>↑</kbd> <kbd>↓</kbd> or <kbd>j</kbd> <kbd>k</kbd> select, <kbd>Tab</kbd> switches tabs, <kbd>s</kbd> starts or stops, <kbd>e</kbd> opens a shell, <kbd>l</kbd> shows logs, <kbd>d</kbd> deletes after asking, <kbd>/</kbd> filters and <kbd>q</kbd> quits.</p>
+
+  <h2 id="container-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Pull</strong>The CLI process fetches and unpacks the image itself</li>
+    <li><strong>Boot</strong>Containerization and Virtualization.framework start the VM in that process</li>
+    <li><strong>Clean up</strong>The VM and its files go when the command ends or the terminal closes</li>
+  </ol>
+  <p>For that the <code>container</code> binary is signed with Apple’s virtualization entitlement. <code>here</code> keeps its images in a store of its own, so it never writes at the same time as the API server.</p>
+
+  <h2 id="container-limits">Limits</h2>
+  <ul>
+    <li><code>container here</code> has no port publishing, named volumes or private registries, and its VMs don’t show up in <code>container ls</code> or the dashboard.</li>
+    <li>Images you pulled with <code>container image pull</code> are pulled again the first time <code>here</code> uses them.</li>
+  </ul>
+
+  <h2 id="container-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/apple/container">apple/container</a> (Apache-2.0), built on Apple’s <a href="https://github.com/apple/containerization">Containerization</a> package. Not affiliated with or endorsed by Apple.</p>
+</article>
+
+<!-- ================================================================ Experiments -->
+<article class="doc" id="rubber-hose-revue" data-look="reel" style="--accent:#b45309">
+  <header class="banner">
+    <h1>The Rubber Hose Revue</h1>
+    <p class="tagline">A programme in two parts: a rooftop cartoon with a musical saw, and Cannonball Capers, an asteroids game drawn the same way.</p>
+    <ul class="facts"><li>Experiments</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+
+  <h2 id="rubber-hose-revue-run">Run it</h2>
+  <p>Open <code>index.html</code> and pick the picture or the game. Everything, including the music and the crackle, is made in the page; there are no image or sound files.</p>
+
+  <h2 id="rubber-hose-revue-use">Controls</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>The picture</th><th>The game</th></tr>
+    <tr><td>Click</td><td>Start</td><td></td></tr>
+    <tr><td>Arrows</td><td></td><td>Steer and thrust</td></tr>
+    <tr><td>Space</td><td></td><td>Fire</td></tr>
+    <tr><td>P</td><td></td><td>Pause</td></tr>
+    <tr><td>M</td><td>Mute</td><td>Mute</td></tr>
+    <tr><td>S</td><td>Sepia on or off</td><td>Sepia on or off</td></tr>
+    <tr><td>F</td><td>Steady the picture</td><td>Steady the picture</td></tr>
+  </table></div>
+  <p>The game has buttons on touch screens, and a gamepad works too.</p>
+
+  <h2 id="rubber-hose-revue-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Drawing</strong>Rubber-hose characters drawn in code</li>
+    <li><strong>Film</strong>Sepia and a wobbling picture, which F steadies</li>
+    <li><strong>Sound</strong>A narrow band like a gramophone horn, over surface crackle</li>
+  </ol>
+</article>
+
+<article class="doc" id="cozy-christmas-lab" data-look="pixel" style="--accent:#c81d25;--banner-bg:#0f2a1d">
+  <header class="banner">
+    <div class="banner-art" aria-hidden="true"></div>
+    <h1>Cozy Christmas Lab</h1>
+    <p class="tagline">An 8-bit room with a labrador, a Christmas tree and snow falling outside, on a screen of 256 by 144 pixels.</p>
+    <ul class="facts"><li>Experiments</li><li>MIT licence</li><li>Not published yet</li></ul>
+  </header>
+
+  <h2 id="cozy-christmas-lab-about">About it</h2>
+  <p>A small pixel-art scene: a room at Christmas with a labrador, a tree, and snow falling outside the window, on a screen of 256 × 144 pixels.</p>
+  <h2 id="cozy-christmas-lab-run">Run it</h2>
+  <p>It is one <code>index.html</code>: double-click it. There is nothing to install or build.</p>
+</article>
+
+<article class="doc" id="vinyl-player" data-look="vinyl" style="--accent:#e8562a">
+  <header class="banner">
+    <div class="banner-art" aria-hidden="true"></div>
+    <h1>Vinyl Player</h1>
+    <p class="tagline">An earlier record player in one HTML file, for your own audio files: a draggable tonearm, scratching, three speeds and a three-band EQ.</p>
+    <ul class="facts"><li>Experiments</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+
+  <h2 id="vinyl-player-run">Open it</h2>
+  <p>Try it at <a href="https://vinyl-player-chi.vercel.app">vinyl-player-chi.vercel.app</a>. The source is at <a href="https://github.com/Gitguy268/Vinyl-Player">Gitguy268/Vinyl-Player</a>. It is one HTML file, but it needs an internet connection the first time, because its styling library loads from a CDN.</p>
+
+  <h2 id="vinyl-player-use">Use it</h2>
+  <ul>
+    <li>Add audio files with the button or by dragging them onto the page; a cover image can be dropped the same way. Title, artist, album and cover art come from the ID3 tags.</li>
+    <li>Drag the tonearm onto the record to play from that point, and lift it to pause. Spin the record with the mouse to scrub, or turn on Scratch mode.</li>
+    <li>33⅓, 45 or 78 rpm changes both pitch and spin speed. There is a three-band EQ, vinyl crackle, and a glow ring that pulses with the bass.</li>
+    <li>Themes are Minimal, Wood and Clear, in light or dark, or your own colours. Focus mode hides everything but the record and a floating control bar.</li>
+  </ul>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>Action</th></tr>
+    <tr><td><kbd>Space</kbd></td><td>Play or pause</td></tr>
+    <tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>Back or forward 5 s</td></tr>
+    <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>Volume</td></tr>
+    <tr><td><kbd>S</kbd> / <kbd>R</kbd></td><td>Shuffle, repeat off, one or all</td></tr>
+    <tr><td><kbd>F</kbd> / <kbd>Esc</kbd></td><td>Focus mode on or off</td></tr>
+  </table></div>
+
+  <h2 id="vinyl-player-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Your files</strong>Kept in the browser’s IndexedDB, never uploaded</li>
+    <li><strong>Web Audio</strong>Plays them through the EQ and the vinyl noise</li>
+    <li><strong>localStorage</strong>Keeps your settings and album notes</li>
+  </ol>
+  <p>The <a href="#realistic-vinyl-player">Realistic Vinyl Player</a> is its remake, with the same layout, controls and saved library, and new materials, physics and sound. Served from the same address, it picks up this player’s library.</p>
+</article>
+
+<article class="doc" id="vinyl-player-for-spotify" data-look="vinyl" style="--accent:#1db954">
+  <header class="banner">
+    <div class="banner-art" aria-hidden="true"></div>
+    <h1>Vinyl Player for Spotify</h1>
+    <p class="tagline">An earlier record player that plays your own files or connects to Spotify.</p>
+    <ul class="facts"><li>Experiments</li><li>Apache-2.0 licence</li><li>Available online</li></ul>
+  </header>
+
+  <h2 id="vinyl-player-for-spotify-run">Open it</h2>
+  <p>Try it at <a href="https://vinyl-player-for-spotify.vercel.app">vinyl-player-for-spotify.vercel.app</a>. The source is at <a href="https://github.com/Gitguy268/vinyl-player-for-spotify">Gitguy268/vinyl-player-for-spotify</a>. To host your own copy you need a Spotify developer app and its Client ID.</p>
+
+  <h2 id="vinyl-player-for-spotify-use">Use it</h2>
+  <ol>
+    <li>Sign in with Spotify. Playback through the Web Playback API needs Spotify Premium.</li>
+    <li>Start playing music and watch the record spin, or load your own files instead.</li>
+  </ol>
+
+  <h2 id="vinyl-player-for-spotify-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Spotify sign-in</strong>Gives the page permission to control playback</li>
+    <li><strong>Web Playback API</strong>The browser becomes a Spotify device</li>
+    <li><strong>The deck</strong>Shows the current track on a spinning record</li>
+  </ol>
+  <p>It shares its idea with my other early <a href="#vinyl-player">Vinyl Player</a>. The Realistic Vinyl Player is the remake of that one, for your own files only, with real physics.</p>
+</article>
+
+<nav class="pager" aria-label="Previous and next page" hidden></nav>
+</main>
+
+<aside class="toc" aria-label="On this page" hidden></aside>
+</div>
+
+<dialog class="search" aria-label="Search the docs">
+  <label for="docs-search">Search the docs</label>
+  <input id="docs-search" type="text" placeholder="Search pages and sections" autocomplete="off" spellcheck="false">
+  <ul></ul>
+  <p>↑ and ↓ choose, Enter opens, Esc closes.</p>
+</dialog>
+<script src="../scripts/docs.js?v=20261019-1" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+Third-party work in this site
+
+Code
+----
+Liquid Glass Studio (MIT), Copyright (c) 2024 Charles Yin
+    https://github.com/iyinchao/liquid-glass-studio, commit f7b28c3
+  The shaders in glass.js: vertex.glsl, fragment-main.glsl, the two blur passes,
+  the drop shadow of fragment-bg.glsl, and lib/sdf.glsl, lib/math.glsl and
+  lib/color.glsl. The header of glass.js lists what was changed. Licence in
+  vendor/liquid-glass-studio/LICENSE.
+GLSL-Color-Functions by Rachmanin0xFF
+    https://github.com/Rachmanin0xFF/GLSL-Color-Functions
+  The LCH colour conversions inside Liquid Glass Studio's lib/color.glsl.
+LiquidGlass UI (MIT), Copyright (c) 2026 Hollan Yuan
+    https://github.com/hwyuanzi/LiquidGlass-UI
+  The recipe for the dock's stylesheet glass (fill, bevel, glare), by way of my
+  Textarea fork.
+
+Fonts
+-----
+Anybody (SIL Open Font License 1.1), Copyright 2020 The Anybody Project Authors
+    https://github.com/Etcetera-Type-Co/Anybody
+    fonts/OFL-Anybody.txt
+Atkinson Hyperlegible Next (SIL Open Font License 1.1),
+  Copyright 2020-2024 The Atkinson Hyperlegible Next Project Authors
+    https://github.com/googlefonts/atkinson-hyperlegible-next
+    fonts/OFL-AtkinsonHyperlegibleNext.txt
+Both are the Latin subsets served by Google Fonts.
+
+Images
+------
+The screenshots in images/ show my own projects and my forks of other people's.
+The forks belong to their authors under their own licences:
+  iPod.js           tvillarete/ipod-classic-js (MIT)
+  GlassPaint        viliusle/miniPaint (MIT)
+  PhotoCraft        storytold/photocraft (MIT OR Apache-2.0; my edition takes MIT)
+  Pikado            koneb71/pikado (MIT)
+  Textarea          antonmedv/textarea (MIT)
+  Convert to it!    p2r3/convert (GPL-2.0)
+  superfile         yorukot/superfile (MIT)
+  opencode          anomalyco/opencode (MIT)
+  container         apple/container (Apache-2.0)
+The web2app page is a front end for tw93/Pake, and Videoina takes its key
+bindings from IINA (GPL-3.0); both are named on their docs pages.
+Retrofind runs SearXNG (AGPL-3.0) as a separate program, and LiquidFrame's
+photobooks come from the separate Ente Photobook companion (AGPL-3.0); neither
+is part of those projects' MIT code. The Retrofind screenshot shows its own
+wordmark and Windows-style chrome, drawn from scratch; it is not affiliated
+with Google.
+The Paint97 screenshot shows Clippy, which is Microsoft's artwork. The web2app
+screenshot shows the names and logos of the sites in Pake's presets (YouTube,
+X, ChatGPT and others), which belong to their owners. The PhotoCraft
+screenshot shows The Great Wave off Kanagawa by Katsushika Hokusai (public domain).
+This site is not affiliated with Microsoft, Apple or any of the projects above.
+
+Ideas, no code
+--------------
+The floating dock is from magicuidesign/portfolio. The one-page layout with
+project rows follows brittanychiang.com, the plain grouping follows antfu.me,
+and the contact block follows codewithsadee/vcard-personal-portfolio and
+academicpages. henryjeff/portfolio-website suggested an old computer as the
+setting, and once-ui-system/magic-portfolio the restraint with motion.
+
+Three-experience edition (2026)
+-------------------------------
+The chooser, command interpreter, desktop window manager, Notepad, Minesweeper,
+and small inline pixel icons are original code/artwork for this site. No code
+was copied from the following additional research references:
+  PythonToGo/terminal-portfolio-template — terminal navigation and commands
+  pritish384/error-page-html — compact terminal chrome and error-page direction
+  runtimefriend/animated-terminal — short typed introductions
+  henryjeff/portfolio-inner-site — portfolio content within a desktop
+  jdan/98.css and 1j01/98 — Windows 98 visual language and window conventions
+  DustinBrett/daedalOS — browser desktop interaction patterns
+  pacocoursey/paco and taniarascia/taniarascia.com — personal site clarity
+The existing Liquid Glass Studio shader attribution above continues to apply.
+
+Cursors and extras (2026)
+-------------------------
+The cursors in cursors/ (vinyl, liquid glass, Spot's fur) are original artwork
+for this site. Everything else in this section was an idea only; no code was
+copied from:
+  janpaepke/ScrollMagic (MIT), pptt3300/ui-fx-kit (MIT) — cards that rise into
+    view and the reading-progress bar, done here with CSS scroll timelines
+  tholman/cursor-effects (no licence), upgradeQ/cursor-skin-fx (MIT) — themed
+    cursors
+  facebook/docusaurus, vuejs/vitepress, withastro/starlight (MIT) — the / and
+    Ctrl+K jump-to-project search
+  tehckisnow/terminal, minie4/WebTerm (no licence) — ls, cd and cat over folders
+  dylanaraps/neofetch (MIT) — the layout of the neofetch command
+  vercel/hyper (MIT) — the colours of the hyper terminal theme
+  raphamorim/rio (MIT) — the scanlines and glow of the crt terminal theme
+  saadpasta/developerFolio (GPL-3.0) — the back-to-top button
+TabShell, shown in images/tabshell.webp, is my own project (MIT).

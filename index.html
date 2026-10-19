@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucas van de Weerd</title>
+<meta name="description" content="Lucas van de Weerd makes things that run in your browser: record players, an iPod, a Windows 9x desktop, image editors, and games starring Spot the black labrador.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#008080">
+<link rel="canonical" href="https://gitguy268.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Lucas van de Weerd">
+<meta property="og:description" content="Things that run in your browser: record players, an iPod, a Windows 9x desktop, image editors, and games starring Spot the black labrador.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gitguy268.github.io/">
+<link rel="stylesheet" href="styles/base.css?v=20261019-1">
+<link rel="stylesheet" href="styles/site.css?v=20261019-1">
+<link rel="stylesheet" href="styles/shell.css?v=20261019-1">
+</head>
+<body>
+<div id="chooser" class="experience chooser" hidden>
+  <main class="boot-shell" aria-labelledby="boot-title">
+    <div class="terminal-chrome"><span>lucas@home: ~</span><span aria-hidden="true">— □ ×</span></div>
+    <div class="boot-body">
+      <pre class="ascii-name" aria-label="Lucas"> _
+| | _   _  ___ __ _ ___
+| || | | |/ __/ _` / __|
+| || |_| | (_| (_| \__ \
+|_| \__,_|\___\__,_|___/</pre>
+      <h1 id="boot-title">Lucas van de Weerd</h1>
+      <p class="boot-intro">Record players, image editors, and games with my black labrador, Spot.<span id="boot-typed">Pick a way to browse my projects:</span></p>
+      <nav class="experience-options" aria-label="Choose your experience">
+        <a class="experience-option" href="?view=website"><span class="option-number">[1]</span><strong>Website</strong><small>Pictures and project notes</small></a>
+        <a class="experience-option" href="?view=terminal"><span class="option-number">[2]</span><strong>Terminal</strong><small>Browse with commands</small></a>
+        <a class="experience-option" href="?view=desktop"><span class="option-number">[3]</span><strong>Windows 98</strong><small>Folders, Notepad, Minesweeper</small></a>
+      </nav>
+      <form id="boot-form" class="command-line" autocomplete="off"><label for="boot-input">guest@lucas:~$</label><input id="boot-input" name="command" aria-label="Choose an experience by number or name" placeholder="1, 2, or 3" autocapitalize="off" spellcheck="false"><button type="submit" aria-label="Open selected experience">↵</button></form>
+      <p id="boot-feedback" class="boot-feedback" role="status">Click a choice, or type a number/name and press Enter.</p>
+      <footer class="chooser-footer"><a href="docs/index.html">Docs</a><a href="https://github.com/Gitguy268">github.com/Gitguy268</a><a href="mailto:l.a.vandeweerd@gmail.com">Email me</a></footer>
+    </div>
+  </main>
+</div>
+<div id="website" class="experience website">
+<a class="skip" href="#projects">Skip to projects</a>
+
+<header class="hero">
+  <div class="site-top"><a href="?view=website" class="wordmark">lvw.</a><span class="site-kicker">Personal projects</span><a class="switch-link" href="?view=choose">Switch experience <span aria-hidden="true">↗</span></a></div>
+  <canvas aria-hidden="true"></canvas>
+  <p class="hero-eyebrow">Hi, I’m</p>
+  <h1 data-glass><span>Lucas</span> <span>van de</span> <span>Weerd</span></h1>
+  <p data-glass>I make things that run in your browser: record players, an iPod, a Windows 9x desktop, image editors, and games starring Spot the black labrador.</p>
+  <div class="hero-bottom"><a class="hero-cta" href="#projects">Explore projects <span aria-hidden="true">↓</span></a><a class="hero-aside" href="https://github.com/Gitguy268">Gitguy268 on GitHub ↗</a></div>
+</header>
+
+<nav class="dock" aria-label="Sections">
+  <a href="#projects">Projects</a>
+  <a href="docs/index.html">Docs</a>
+  <a href="#about">About</a>
+  <a href="mailto:l.a.vandeweerd@gmail.com">Email</a>
+</nav>
+
+<main id="projects" tabindex="-1">
+  <section class="featured-section" id="featured" aria-labelledby="featured-heading" hidden><div class="section-heading"><h2 id="featured-heading">Try these online</h2><p>Three projects you can open now.</p></div><div id="featured-grid" class="featured-grid"></div></section>
+  <div class="collection-heading"><h2>All projects <span id="project-count">31</span></h2><p>Finished things, works in progress, and forks. Each project lists its status and credits.</p></div>
+  <div id="project-controls" class="project-controls" hidden><div class="filter-list" aria-label="Project category"><button type="button" data-filter="all" aria-pressed="true">All <span>31</span></button><button type="button" data-filter="players" aria-pressed="false">Players</button><button type="button" data-filter="spot" aria-pressed="false">Spot</button><button type="button" data-filter="editors" aria-pressed="false">Editors</button><button type="button" data-filter="tools" aria-pressed="false">Tools</button><button type="button" data-filter="experiments" aria-pressed="false">Experiments</button></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Find a project… (press / to jump)" aria-label="Search projects"></label></div>
+  <p class="results-summary" id="results-summary" role="status" hidden></p><div id="empty-results" class="empty-results" hidden><h3>No matching projects.</h3><p>Try another search or explore all projects.</p><button type="button" id="reset-filters">Clear filters</button></div>
+
+  <section class="group" aria-labelledby="players">
+    <h2 id="players">Players</h2>
+    <div class="project-grid">
+      <article class="project" id="project-realistic-vinyl-player" data-project="realistic-vinyl-player" data-category="players" data-status="unpublished">
+        <img decoding="async" loading="lazy" src="images/realistic-vinyl-player.webp" width="1440" height="900" alt="A dark turntable playing a record with an orange label, above a tracklist of three demo tracks and the transport buttons">
+        <div>
+          <div class="project-meta"><span>Players</span><span class="status ">Not published yet</span></div><h3>Realistic Vinyl Player</h3>
+          <p>A turntable in one HTML file, with a modelled motor, tonearm and record surface. Load your own music, drag the tonearm, scratch the record, flip it to side B.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#realistic-vinyl-player">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-8-bit-vinyl-player" data-project="8-bit-vinyl-player" data-category="players" data-status="unpublished">
+        <img decoding="async" src="images/8-bit-vinyl-player.webp" width="1440" height="1777" loading="lazy" alt="The same turntable as pixel art in the NES palette, with a tracklist under it">
+        <div>
+          <div class="project-meta"><span>Players</span><span class="status ">Not published yet</span></div><h3>8-Bit Vinyl Player</h3>
+          <p>The same deck redrawn as pixel art, in one HTML file. It plays your own audio files in the colours of an NES, a Game Boy or a C64.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#8-bit-vinyl-player">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-ipod" data-project="ipod" data-category="players" data-status="unpublished">
+        <img decoding="async" src="images/ipod.webp" width="1440" height="697" loading="lazy" alt="The iPod in its Massive display mode, playing First Light, with the songs up next below the cover">
+        <div>
+          <div class="project-meta"><span>Players</span><span class="status ">Not published yet</span></div><h3>iPod.js (local files)</h3>
+          <p>The iPod Classic, playing the music on your own computer. Point it at a folder and browse it with the click wheel.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/tvillarete/ipod-classic-js">tvillarete/ipod-classic-js</a>. MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#ipod">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-audiocheck" data-project="audiocheck" data-category="players" data-status="unpublished">
+        <img decoding="async" src="images/audiocheck.webp" width="1280" height="1422" loading="lazy" alt="A spectrogram with a dashed line where the sound stops at 16.6 kHz, with the findings for that file beside it">
+        <div>
+          <div class="project-meta"><span>Players</span><span class="status ">Not published yet</span></div><h3>audiocheck</h3>
+          <p>Checks whether a music file is as good as it claims: an MP3 dressed up as FLAC, or a hi-res file that is upsampled CD audio. No file leaves your device.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#audiocheck">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-videoina" data-project="videoina" data-category="players" data-status="unpublished">
+        <img decoding="async" src="images/videoina.webp" width="1440" height="810" loading="lazy" alt="Videoina playing a colour-bar test video under a frosted glass control bar">
+        <div>
+          <div class="project-meta"><span>Players</span><span class="status ">Not published yet</span></div><h3>Videoina</h3>
+          <p>An IINA-style video player for Windows and Linux. It plays what mpv plays, under controls of liquid glass that bend the video behind them.</p>
+          <p class="note project-credit">GPL-3.0 licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#videoina">Docs</a></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="group" aria-labelledby="spot">
+    <h2 id="spot">Spot</h2>
+    <div class="project-grid">
+      <article class="project" id="project-spot-fetch" data-project="spot-fetch" data-category="spot" data-status="unpublished">
+        <img decoding="async" src="images/spot-fetch.webp" width="1440" height="810" loading="lazy" alt="Spot, a black labrador, running back across the grass with a tennis ball in his mouth">
+        <div>
+          <div class="project-meta"><span>Spot</span><span class="status ">Not published yet</span></div><h3>Spot apporteert</h3>
+          <p>A fetch game. Throw a ball across a park for Spot and look after him: he gets tired, hungry and thirsty. The game is in Dutch.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-fetch">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-spot-snake" data-project="spot-snake" data-category="spot" data-status="unpublished">
+        <img decoding="async" src="images/spot-snake.webp" width="1272" height="1298" loading="lazy" alt="Spot, a black labrador with a red collar, winding across a lawn towards a biscuit">
+        <div>
+          <div class="project-meta"><span>Spot</span><span class="status ">Not published yet</span></div><h3>Spot’s Biscuit Snake</h3>
+          <p>A snake game in one HTML file. Spot licks up biscuits to grow, and has to mind the fence, the flowers and his own tail. Press AI plays and a small model steers him.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-snake">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-spot-light" data-project="spot-light" data-category="spot" data-status="unpublished">
+        <img decoding="async" src="images/spot-light.webp" width="1440" height="900" loading="lazy" alt="Spot, a black labrador with a red collar, chasing a red laser dot across a rug on a wooden floor">
+        <div>
+          <div class="project-meta"><span>Spot</span><span class="status ">Not published yet</span></div><h3>Spot-light</h3>
+          <p>Spot chases a laser dot around the living room and you keep it out of his paws. Three games, in 2D or 3D, and in 8-bit if you like.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-light">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-blacklabspotsshop" data-project="blacklabspotsshop" data-category="spot" data-status="public" data-demo="https://blacklabspotsshop.lovable.app/" data-source="https://github.com/Gitguy268/BlackLabSpotsShop">
+        <img decoding="async" src="images/blacklabspotsshop.webp" width="1440" height="900" loading="lazy" alt="The shop's front page, headed Spot-powered style">
+        <div>
+          <div class="project-meta"><span>Spot</span><span class="status live">Available online</span></div><h3>BlackLabSpotsShop</h3>
+          <p>A shop site for T-shirts and hoodies with Spot on them.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/BlackLabSpotsShop">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#blacklabspotsshop">Docs</a><a class="action demo-link" href="https://blacklabspotsshop.lovable.app/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/BlackLabSpotsShop" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="group" aria-labelledby="editors">
+    <h2 id="editors">Editors</h2>
+    <div class="project-grid">
+      <article class="project" id="project-paint97" data-project="paint97" data-category="editors" data-status="unpublished">
+        <img decoding="async" src="images/paint97.webp" width="1440" height="900" loading="lazy" alt="A teal Windows 9x desktop with a drawing program open on a flowchart, Minesweeper and Calculator in front of it, and Clippy in the corner">
+        <div>
+          <div class="project-meta"><span>Editors</span><span class="status ">Not published yet</span></div><h3>Paint97</h3>
+          <p>A Windows 9x desktop built around an Excalidraw whiteboard, with a Start menu, Notepad, Minesweeper, Calculator and Clippy.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#paint97">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-glasspaint" data-project="glasspaint" data-category="editors" data-status="unpublished">
+        <img decoding="async" src="images/glasspaint.webp" width="1440" height="900" loading="lazy" alt="An image editor with translucent glass toolbars and panels around an empty canvas">
+        <div>
+          <div class="project-meta"><span>Editors</span><span class="status ">Not published yet</span></div><h3>GlassPaint</h3>
+          <p>miniPaint with a glass interface and tools that run a model on your own device: background removal, object selection and upscaling.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/viliusle/miniPaint">viliusle/miniPaint</a>. MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#glasspaint">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-photocraft" data-project="photocraft" data-category="editors" data-status="unpublished">
+        <img decoding="async" src="images/photocraft.webp" width="1440" height="900" loading="lazy" alt="An image editor with Hokusai's Great Wave open, a caption card over it, and a curves editor drawn over the histogram">
+        <div>
+          <div class="project-meta"><span>Editors</span><span class="status ">Not published yet</span></div><h3>PhotoCraft, my edition</h3>
+          <p>PhotoCraft is an open-source image editor written in Rust, with layers, masks and real PSD files. This is its web version with my additions; the PhotoCraft team does not publish or endorse it.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/storytold/photocraft">storytold/photocraft</a>. MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#photocraft">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-pikado" data-project="pikado" data-category="editors" data-status="unpublished">
+        <img decoding="async" src="images/pikado.webp" width="1440" height="900" loading="lazy" alt="An image editor with a photo open: tools down the left, the canvas in the middle, and layer and colour panels on the right">
+        <div>
+          <div class="project-meta"><span>Editors</span><span class="status ">Not published yet</span></div><h3>Pikado</h3>
+          <p>A raster and vector image editor in the spirit of Photopea. My fork gives the menus and dialogs a glass look.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/koneb71/pikado">koneb71/pikado</a>. MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#pikado">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-textarea" data-project="textarea" data-category="editors" data-status="unpublished">
+        <img decoding="async" src="images/textarea.webp" width="1440" height="1032" loading="lazy" alt="A note with headings, nested bullets and a link, highlighted as Markdown, with a menu open beside it">
+        <div>
+          <div class="project-meta"><span>Editors</span><span class="status ">Not published yet</span></div><h3>Textarea</h3>
+          <p>A minimalist text editor. Notes live in the URL, in your own document library, or in a file you export.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/antonmedv/textarea">antonmedv/textarea</a>. MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#textarea">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-liquidframe" data-project="liquidframe" data-category="editors" data-status="unpublished">
+        <img decoding="async" src="images/liquidframe.webp" width="1440" height="900" loading="lazy" alt="A photo library with a sidebar of library sections and a grid of twelve pictures">
+        <div>
+          <div class="project-meta"><span>Editors</span><span class="status ">Not published yet</span></div><h3>LiquidFrame</h3>
+          <p>A photo and video library in the style of Photos. Your pictures, edits, AI tools and catalogue all stay on your computer.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#liquidframe">Docs</a></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="group" aria-labelledby="tools">
+    <h2 id="tools">Tools</h2>
+    <div class="project-grid">
+      <article class="project" id="project-convert" data-project="convert" data-category="tools" data-status="unpublished">
+        <img decoding="async" src="images/convert.webp" width="1440" height="900" loading="lazy" alt="A file converter with an MP4 file loaded and GIF chosen as the output format">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>Convert to it!</h3>
+          <p>A file converter that works between almost any two formats without uploading anything. My fork adds output settings for each conversion.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/p2r3/convert">p2r3/convert</a>. GPL-2.0 licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#convert">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-qrcodeforeveryone" data-project="qrcodeforeveryone" data-category="tools" data-status="public" data-demo="https://qrcodeforeveryone.vercel.app" data-source="https://github.com/Gitguy268/QRcodeforeveryone">
+        <img decoding="async" src="images/qrcodeforeveryone.webp" width="1440" height="900" loading="lazy" alt="A QR code generator with fields for the content, two colours and a logo">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>QRcodeforeveryone</h3>
+          <p>Free QR codes that do not expire. Pick the colours and put a logo in the middle.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/QRcodeforeveryone">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#qrcodeforeveryone">Docs</a><a class="action demo-link" href="https://qrcodeforeveryone.vercel.app" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/QRcodeforeveryone" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-htmltopng" data-project="htmltopng" data-category="tools" data-status="public" data-demo="https://htmltopngconverter.vercel.app/" data-source="https://github.com/Gitguy268/htmltopng">
+        <img decoding="async" src="images/htmltopng.webp" width="1440" height="900" loading="lazy" alt="A code editor beside a preview pane, with a button to capture the preview as a PNG">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>htmltopng</h3>
+          <p>Turns an HTML file into a PNG image.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/htmltopng">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#htmltopng">Docs</a><a class="action demo-link" href="https://htmltopngconverter.vercel.app/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/htmltopng" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-tabshell" data-project="tabshell" data-category="tools" data-status="unpublished">
+        <img decoding="async" src="images/tabshell.webp" width="1440" height="864" loading="lazy" alt="A Linux terminal in a browser tab showing uname and the Alpine release, with Browser VM, Docker and Reset buttons above it">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>TabShell</h3>
+          <p>A real Linux terminal in a browser tab. Install packages, play terminal games, then press Reset and it’s as if nothing happened.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#tabshell">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-qrer" data-project="qrer" data-category="tools" data-status="unpublished">
+        <img decoding="async" src="images/qrer.webp" width="1440" height="900" loading="lazy" alt="A Windows 98 window titled Qrer, QR Editor, over a cloud wallpaper, showing a QR code and export buttons">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>Qrer</h3>
+          <p>A QR code editor that looks like Windows 98, with liquid glass on its title bar and taskbar. It reads codes as well as making them.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#qrer">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-openfinder" data-project="openfinder" data-category="tools" data-status="unpublished">
+        <img decoding="async" src="images/openfinder.webp" width="1280" height="800" loading="lazy" alt="A Finder-style window with a glass sidebar of favourites, and folders shown as icons">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>OpenFinder</h3>
+          <p>A file manager that runs in the browser, styled after the Finder with liquid glass. It works on real folders on your computer.</p>
+          <p class="note project-credit">GPL-3.0-or-later licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#openfinder">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-archium" data-project="archium" data-category="tools" data-status="unpublished">
+        <img decoding="async" src="images/archium.webp" width="1440" height="855" loading="lazy" alt="A browser new tab page with a clock, a search box and quick links">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>Archium</h3>
+          <p>A privacy layer for the Helium browser: an offline new tab, search that runs on your own Mac, a Tor switch with a kill switch, and a URL cleaner.</p>
+          <p class="note project-credit">GPL-3.0 licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#archium">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-web2app" data-project="web2app" data-category="tools" data-status="unpublished">
+        <img decoding="async" src="images/web2app.webp" width="1440" height="900" loading="lazy" alt="A page headed Turn any website into a Mac app, with buttons for popular apps and a build form">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>web2app</h3>
+          <p>Turns any website into a small Mac app. A page on your own Mac for the Pake command-line tool, with a build queue and a history.</p>
+          <p class="note project-credit">Built on <a href="https://github.com/tw93/Pake">tw93/Pake</a>. GPL-3.0-or-later licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#web2app">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-superfile" data-project="superfile" data-category="tools" data-status="unpublished">
+        <div class="project-art" aria-hidden="true"><span>▤</span><small>tools</small></div>
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>superfile, my edition</h3>
+          <p>The superfile terminal file manager with eleven fixes and features: six from open upstream pull requests and five of my own.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/yorukot/superfile">yorukot/superfile</a>. MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#superfile">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-opencode" data-project="opencode" data-category="tools" data-status="unpublished">
+        <div class="project-art" aria-hidden="true"><span>›_</span><small>tools</small></div>
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>opencode, my edition</h3>
+          <p>The opencode coding agent with nine additions, among them session goals, a token breakdown, transcript search, Claude Code hooks and a shell sandbox.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a>. MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#opencode">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-retrofind" data-project="retrofind" data-category="tools" data-status="unpublished">
+        <img decoding="async" src="images/retrofind.webp" width="1440" height="912" loading="lazy" alt="A Windows 98 window over a cloudy sky showing a 1998-style search page with a multicoloured Retrofind wordmark and an I'm Feeling Lucky button">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>Retrofind</h3>
+          <p>Private web search on your own Mac, in the style of 1998. SearXNG runs underneath without Docker, under a start page modelled on early Google in a Windows 98 window of liquid glass.</p>
+          <p class="note project-credit">MIT licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#retrofind">Docs</a></div></div>
+      </article>
+      <article class="project" id="project-container" data-project="container" data-category="tools" data-status="unpublished">
+        <img decoding="async" src="images/container.webp" width="1100" height="688" loading="lazy" alt="A terminal dashboard listing four containers with their image, state, IP address, CPU and memory, and key hints along the bottom">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status ">Not published yet</span></div><h3>container, my edition</h3>
+          <p>Apple’s tool for running Linux containers on a Mac, with <code>container here</code>, which boots a VM inside your terminal with no background services, and <code>container dash</code>, a full-screen dashboard. Plus fixes and new options.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/apple/container">apple/container</a>. Apache-2.0 licence. Not published yet.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#container">Docs</a></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="group" aria-labelledby="experiments">
+    <h2 id="experiments">Experiments</h2>
+    <div class="plain">
+      <article class="project" id="project-rubber-hose-revue" data-project="rubber-hose-revue" data-category="experiments" data-status="unpublished"><div class="project-art" aria-hidden="true"><span>♪</span><small>experiments</small></div><div>
+        <div class="project-meta"><span>Experiments</span><span class="status ">Not published yet</span></div><h3>The Rubber Hose Revue</h3>
+        <p>A rooftop cartoon with a musical saw, and Cannonball Capers, an asteroids game drawn the same way.</p>
+        <p class="note project-credit">MIT licence. Not published yet.</p>
+      <div class="project-actions"><a class="action docs-link" href="docs/index.html#rubber-hose-revue">Docs</a></div></div></article>
+      <article class="project" id="project-cozy-christmas-lab" data-project="cozy-christmas-lab" data-category="experiments" data-status="unpublished"><div class="project-art" aria-hidden="true"><span>✳</span><small>experiments</small></div><div>
+        <div class="project-meta"><span>Experiments</span><span class="status ">Not published yet</span></div><h3>Cozy Christmas Lab</h3>
+        <p>An 8-bit room with a labrador, a Christmas tree and snow falling outside, on a screen of 256 by 144 pixels.</p>
+        <p class="note project-credit">MIT licence. Not published yet.</p>
+      <div class="project-actions"><a class="action docs-link" href="docs/index.html#cozy-christmas-lab">Docs</a></div></div></article>
+      <article class="project" id="project-vinyl-player" data-project="vinyl-player" data-category="experiments" data-status="public" data-demo="https://vinyl-player-chi.vercel.app" data-source="https://github.com/Gitguy268/Vinyl-Player"><div class="project-art" aria-hidden="true"><span>◉</span><small>experiments</small></div><div>
+        <div class="project-meta"><span>Experiments</span><span class="status live">Available online</span></div><h3>Vinyl Player</h3>
+        <p>An earlier record player in one HTML file, for your own audio files: a draggable tonearm, scratching, three speeds and a three-band EQ. The Realistic Vinyl Player is its remake.</p>
+        <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/Vinyl-Player">Source on GitHub</a>.</p>
+      <div class="project-actions"><a class="action docs-link" href="docs/index.html#vinyl-player">Docs</a><a class="action demo-link" href="https://vinyl-player-chi.vercel.app" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/Vinyl-Player" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div></article>
+      <article class="project" id="project-vinyl-player-for-spotify" data-project="vinyl-player-for-spotify" data-category="experiments" data-status="public" data-demo="https://vinyl-player-for-spotify.vercel.app" data-source="https://github.com/Gitguy268/vinyl-player-for-spotify"><div class="project-art" aria-hidden="true"><span>◎</span><small>experiments</small></div><div>
+        <div class="project-meta"><span>Experiments</span><span class="status live">Available online</span></div><h3>Vinyl Player for Spotify</h3>
+        <p>An earlier record player that plays your own files or connects to Spotify.</p>
+        <p class="note project-credit">Apache-2.0 licence. <a href="https://github.com/Gitguy268/vinyl-player-for-spotify">Source on GitHub</a>.</p>
+      <div class="project-actions"><a class="action docs-link" href="docs/index.html#vinyl-player-for-spotify">Docs</a><a class="action demo-link" href="https://vinyl-player-for-spotify.vercel.app" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/vinyl-player-for-spotify" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div></article>
+    </div>
+  </section>
+
+  <section class="group about" id="about" aria-labelledby="about-heading">
+    <h2 id="about-heading">About</h2>
+    <div>
+      <p>Most of what I make rebuilds something old, like a record deck or a Windows 9x desktop, with what a browser can do now. Nearly all of it runs on your own device: no account, no server, and your files stay where they are.</p>
+      <p>Several projects are forks. I took an open-source project I liked and kept adding to it, and each one names whose work it started from.</p>
+      <address>
+        <a href="mailto:l.a.vandeweerd@gmail.com">l.a.vandeweerd@gmail.com</a><br>
+        <a href="https://github.com/Gitguy268">github.com/Gitguy268</a>
+      </address>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>The glass at the top runs the shaders of <a href="https://github.com/iyinchao/liquid-glass-studio">Liquid Glass Studio</a> by Charles Yin. The type is Anybody and Atkinson Hyperlegible Next. This page makes no network requests beyond its own files.</p>
+  <p>The <a href="docs/index.html">docs</a> explain how every project works. <a href="https://github.com/Gitguy268/Gitguy268.github.io">Source of this page</a>, MIT licence.</p>
+  <p class="cursor-picker" id="cursor-picker" role="group" aria-label="Cursor style" hidden>Cursor: <button type="button" data-cursor-pick="system" aria-pressed="true">System</button> <button type="button" data-cursor-pick="vinyl" aria-pressed="false">Vinyl</button> <button type="button" data-cursor-pick="glass" aria-pressed="false">Liquid glass</button> <button type="button" data-cursor-pick="spot" aria-pressed="false">Spot’s fur</button></p>
+</footer>
+<a class="to-top" href="?view=website"><span aria-hidden="true">↑</span> Back to top</a>
+
+</div>
+<section id="terminal" class="experience terminal-experience" aria-label="Terminal portfolio" hidden></section>
+<section id="desktop" class="experience desktop-experience" aria-label="Windows 98 desktop" hidden></section>
+<noscript><p class="noscript-note">You’re viewing the complete website. The terminal and desktop experiences use JavaScript.</p></noscript>
+<script src="scripts/app.js?v=20261019-1" defer></script>
+</body>
+</html>

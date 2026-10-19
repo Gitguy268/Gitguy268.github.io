@@ -1,0 +1,56 @@
+/* Original pixel artwork and Windows 98-inspired browser desktop. */
+body[data-view="desktop"] { overflow: hidden; background: #008080; }
+.desktop-experience { height: 100svh; min-height: 320px; color: #171717; font: 12px/1.4 Tahoma,Verdana,Arial,sans-serif; background: #008080; position: relative; overflow: hidden; color-scheme: light; }
+.desktop-workspace { position: absolute; inset: 0 0 44px; overflow: hidden; }
+.desktop-icons { display: grid; grid-auto-flow: column; grid-template-rows: repeat(6,92px); grid-auto-columns: 94px; position: absolute; left: 12px; top: 16px; gap: 4px 10px; }
+.desktop-icon { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 94px; min-height: 84px; padding: 7px 4px; border: 1px solid transparent; background: none; color: white; font-size: 12px; text-shadow: 1px 1px #004848; }
+.desktop-icon:hover { background: #ffffff15; }.desktop-icon:focus-visible { outline: 1px dotted white; outline-offset: -2px; background: #00008055; }
+.pixel-icon { width: 34px; height: 34px; image-rendering: pixelated; flex-shrink: 0; }
+.desktop-icon .pixel-icon { filter: drop-shadow(2px 2px #005959); }
+.desktop-help {position:absolute;right:18px;top:18px;text-align:right;z-index:1;color:#fff;font-size:11px;}
+.desktop-help p {margin:12px 0;line-height:1.6;}
+.desktop-switch {display:inline-block;text-decoration:none;}
+.desktop-icon.selected>span {background:#000080;outline:1px dotted #fff;}
+.win-button { background: #c0c0c0; color: #111; border: 0; box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px #808080,inset 2px 2px #dfdfdf; padding: 6px 14px; font: inherit; min-height: 30px; }
+.win-button:active,.win-button[aria-pressed="true"] { box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080; background: #d8d8d8; }
+.win-button:focus-visible { outline: 1px dotted #111; outline-offset: -5px; }
+.win { position: absolute; padding: 3px; background: #c0c0c0; box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px #808080,inset 2px 2px #fff,1px 1px 0 #004848; display: flex; flex-direction: column; min-width: 260px; min-height: 200px; }
+.win-titlebar { display: flex; align-items: center; gap: 6px; min-height: 26px; background: #737373; color: white; padding: 3px 3px 3px 5px; user-select: none; cursor: move; touch-action: none; }
+.win.active .win-titlebar { background: linear-gradient(90deg,#000080,#0d6eaa); }
+.win-titlebar>.pixel-icon { width: 18px; height: 18px; }.win-titlebar h2 { font: 700 12px/1.2 Tahoma,Verdana,Arial,sans-serif; margin: 0; position: static; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: 0; }
+.win-controls { display: flex; gap: 2px; }.win-controls .win-button { width: 24px; height: 23px; min-height: 23px; padding: 0; font: bold 15px/1 Tahoma,sans-serif; }
+.win-controls .close-window { margin-left: 2px; }
+.win-content { flex: 1; min-height: 0; overflow: auto; margin: 3px 0 0; color: #111; }
+.win-status { flex-shrink: 0; margin: 3px 2px 0; padding: 3px 7px; box-shadow: inset 1px 1px #808080,inset -1px -1px #fff; color: #343434; font-size: 11px; min-height: 22px; }
+.win-resize { position: absolute; bottom: 3px; right: 3px; border: 0; width: 18px; height: 18px; background: repeating-linear-gradient(135deg,transparent 0 3px,#808080 3px 4px,#fff 4px 5px); clip-path: polygon(100% 0,100% 100%,0 100%); cursor: nwse-resize; touch-action: none; }
+.win.maximized .win-resize { display: none; }
+.desktop-taskbar { position: absolute; bottom: 0; left: 0; right: 0; height: 44px; z-index: 10000; background: #c0c0c0; border-top: 2px solid #fff; display: flex; align-items: center; gap: 8px; padding: 4px; }
+.start-button { display: flex; gap: 6px; align-items: center; font-weight: 800; padding: 3px 10px; height: 33px; }.start-button .pixel-icon { width: 22px; height: 22px; }
+.task-list { flex: 1; display: flex; gap: 5px; min-width: 0; overflow-x: auto; scrollbar-width: thin; }.task-button { display: flex; gap: 6px; align-items: center; min-width: 90px; max-width: 170px; flex: 1 0 90px; padding: 4px 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; height: 32px; }.task-button .pixel-icon { width: 18px; height: 18px; }.task-button span { text-overflow: ellipsis; overflow: hidden; }.task-button[aria-pressed="true"] { font-weight: bold; }
+.desktop-clock { font-size: 12px; padding: 7px 12px; box-shadow: inset 1px 1px #808080,inset -1px -1px #fff; white-space: nowrap; }
+.start-menu { position: absolute; bottom: 44px; left: 3px; z-index: 10001; background: #c0c0c0; padding: 4px 4px 4px 35px; width: 246px; max-height: calc(100svh - 50px); overflow: auto; box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px #808080,inset 2px 2px #dfdfdf; }
+.start-brand { position: absolute; left: 3px; bottom: 4px; top: 4px; background: #808080; color: #e1e1e1; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 22px; font-weight: 700; padding: 12px 2px; letter-spacing: -.05em; }
+.start-menu button { display: flex; align-items: center; gap: 13px; width: 100%; min-height: 43px; border: 0; background: none; padding: 6px 10px; text-align: left; font: inherit; color: #111; }.start-menu button:hover,.start-menu button:focus-visible { background: #000080; color: #fff; outline: none; }.start-menu .pixel-icon { width: 24px; height: 24px; }.start-menu hr { border: 0; height: 2px; background: linear-gradient(#888 50%,#fff 50%); margin: 3px 0; }
+.explorer-toolbar { display: flex; align-items: center; gap: 8px; padding: 3px 6px 7px; border-bottom: 1px solid #888; }.explorer-toolbar .win-button { font-size: 12px; }.explorer-address { flex: 1; background: white; color: #222; border: 1px solid #808080; padding: 5px 8px; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.explorer-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(110px,1fr)); gap: 8px; background: white; padding: 15px; min-height: calc(100% - 46px); align-content: start; }
+.explorer-item { background: none; border: 1px solid transparent; color: #111; display: flex; flex-direction: column; align-items: center; padding: 12px 5px; gap: 8px; font-size: 12px; line-height: 1.3; text-align: center; min-height: 94px; }.explorer-item:hover { background: #eff3ff; }.explorer-item:focus { background: #000080; color: white; outline: 1px dotted #111; }.explorer-item small { font-size: 10px; color: #535353; }.explorer-item:focus small { color: #eee; }
+.desktop-document { background: #fff; color: #222; min-height: 100%; padding: 24px; font-size: 13px; line-height: 1.6; }.desktop-document h2 { font: 700 18px/1.3 Tahoma,Verdana,Arial,sans-serif; position: static; margin: 0 0 15px; }.desktop-document a { color: #000080; }.desktop-document p { margin: 0 0 16px; }.desktop-document .detail-image { max-width: 100%; height: auto; border: 1px solid #888; margin-bottom: 16px; }.desktop-document .detail-category { font: 10px/1.5 var(--mono); text-transform: uppercase; color: #555; }.desktop-document .detail-credit { font-size: 11px; margin-top: 24px; }.desktop-document .action { color: #000080; border: 1px solid #888; padding: 5px 14px; text-decoration: none; }.desktop-document address { font-style: normal; overflow-wrap: anywhere; }
+.notepad { display: flex; flex-direction: column; height: 100%; }.notepad-tools { padding: 3px 5px 7px; display: flex; align-items: center; gap: 10px; }.notepad-tools span { font-size: 11px; }.notepad textarea { resize: none; min-height: 0; flex: 1; width: 100%; background: #fff; color: #111; border: 2px inset #ddd; padding: 10px; font: 14px/1.6 var(--mono); border-radius: 0; }
+.mines-app { padding: 12px; }.mines-controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; padding: 10px; border: 2px inset #ddd; }.mine-counter { background: #161616; color: #ff5b48; padding: 3px 6px; font: bold 22px var(--mono); }.mine-reset { font-size: 21px; padding: 0 10px; height: 36px; }.mine-board { display: grid; grid-template-columns: repeat(9,minmax(0,1fr)); border: 3px inset #ddd; max-width: 300px; margin: auto; }
+.mine-cell { aspect-ratio: 1; width: 100%; height:auto; padding: 0; min-height: 0; font: 700 18px/1 var(--mono); border: 0; background: #c0c0c0; color: #000080; box-shadow: inset -1px -1px #777,inset 1px 1px #fff,inset -2px -2px #888,inset 2px 2px #ddd; }.mine-cell.revealed { box-shadow: none; border: 1px solid #999; }.mine-cell[data-number="2"]{color:#006300}.mine-cell[data-number="3"]{color:#b00000}.mine-cell[data-number="4"]{color:#000060}.mine-cell.mine { background: #f69082; color: #151515; }.mine-cell:focus-visible{outline:2px solid #000080;outline-offset:-4px;}
+.mine-bottom { display: flex; align-items: center; gap: 12px; justify-content: space-between; margin: 12px 0 0; font-size: 11px; }.mine-bottom p { margin: 0; }.mine-message { font-size: 12px; margin: 10px 0 0; }
+.win .terminal-panel { height: 100%; border: 0; border-radius: 0; }.win .terminal-content { padding: 16px; background: #15221c; color: var(--terminal-ink); height: 100%; overflow: auto; }.win .terminal-log { max-height: 230px; min-height: 100px; }.win .terminal-banner { font-size: 11px; }.win .terminal-welcome { font-size: 12px; }.win .terminal-content .terminal-suggestions { padding: 7px 0 12px; }.win .command-line { margin-top: 10px; }.win .terminal-output h2 { color: var(--terminal-ink); }
+@media(max-width:680px) { .desktop-icons { grid-template-rows: repeat(3,94px); grid-auto-columns: 94px; top: 64px; gap: 8px; }.desktop-help {top:12px;right:12px;}.desktop-help p {display:none;}.desktop-clock { padding: 8px; font-size: 11px; }.win { min-width: 0; }.win .win-titlebar { min-height: 38px; }.win-controls .win-button { width: 32px; height: 30px; }.win:not(.active) { visibility: hidden; }.win .win-resize { display: none; }.desktop-document { padding: 20px; }.win .terminal-log { max-height: 35svh; }.task-button { min-width: 80px; flex-basis: 80px; }.mine-cell { font-size: 16px; }.mines-app { max-width: 380px; margin: auto; } }
+@media(max-height:620px) and (min-width:681px) { .desktop-icons { grid-template-rows: repeat(4,80px); }.desktop-icon { min-height: 76px; }.desktop-icon .pixel-icon { width: 28px; height: 28px; } }
+
+/* The terminal prompt stays reachable when its desktop window is resized. */
+.win[data-window="terminal"] .win-content {overflow:hidden;}
+.win .terminal-content {display:flex;flex-direction:column;background:var(--terminal-bg);}
+.win .terminal-log {flex:1;min-height:45px;max-height:none;}
+.win .terminal-banner,.win .terminal-welcome,.win .terminal-suggestions,.win .command-line,.win .boot-feedback {flex-shrink:0;}
+.win .terminal-welcome {display:none;}
+.win .terminal-suggestions {padding:4px 0 12px;}
+.win .command-line {font-size:11px;}
+@media(max-width:680px) {.mine-board {max-width:324px;}.mine-cell {min-height:32px;}.win-controls .win-button {width:38px;height:34px;}.win .terminal-content {padding:12px;}}
+.pointer-schemes {display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-bottom:14px;}
+.pointer-scheme {display:flex;align-items:center;gap:6px;min-height:52px;text-align:left;}.pointer-scheme span {margin-left:4px;}

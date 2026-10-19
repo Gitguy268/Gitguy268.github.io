@@ -1,0 +1,311 @@
+
+  @font-face {
+    font-family: "Anybody";
+    src: url("../fonts/anybody-latin.woff2") format("woff2");
+    font-weight: 100 900;
+    font-stretch: 50% 150%;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Atkinson Hyperlegible Next";
+    src: url("../fonts/atkinson-hyperlegible-next-latin.woff2") format("woff2");
+    font-weight: 200 800;
+    font-display: swap;
+  }
+
+  :root {
+    --teal: #008080;   /* the Windows 9x desktop */
+    --paper: #f4f6f5;
+    --ink: #0e1f1f;
+    --grey: #c0c0c0;   /* the Windows 9x button face */
+    --red: #c8102e;    /* Spot's collar */
+
+    --bg: var(--paper);
+    --text: var(--ink);
+    --quiet: #465757;
+    --link: var(--red);
+    --rule: var(--grey);
+    --glass-fill: 255 255 255;
+    --glass-thick: 72%;
+    --glass-thin: 56%;
+    --glass-glare: rgb(255 255 255 / 0.5);
+    --glass-bevel:
+      inset 1px 1px 0 rgb(255 255 255 / 0.85),
+      inset -1px -1px 0 rgb(255 255 255 / 0.45),
+      inset 0 -2px 3px rgb(26 31 44 / 0.06);
+    --glass-shadow: 0 0 0 0.5px rgb(14 31 31 / 0.16), 0 1px 3px rgb(14 31 31 / 0.1), 0 14px 34px rgb(14 31 31 / 0.18);
+
+    --gutter: clamp(20px, 5vw, 72px);
+    --display: "Anybody", "Arial Black", system-ui, sans-serif;
+
+    color-scheme: light dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: var(--ink);
+      --text: var(--paper);
+      --quiet: #a8b8b7;
+      --link: #ff8f99;
+      --rule: #3a4b4b;
+      --glass-fill: 30 44 44;
+      --glass-thick: 80%;
+      --glass-thin: 66%;
+      --glass-glare: rgb(255 255 255 / 0.09);
+      --glass-bevel:
+        inset 1px 1px 0 rgb(255 255 255 / 0.22),
+        inset -1px -1px 0 rgb(255 255 255 / 0.08);
+      --glass-shadow: 0 1px 3px rgb(0 0 0 / 0.3), 0 14px 34px rgb(0 0 0 / 0.5);
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 1.125rem/1.5 "Atkinson Hyperlegible Next", system-ui, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  a { color: var(--link); text-underline-offset: 0.18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+
+  .skip {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 20;
+    padding: 10px 16px;
+    background: var(--bg);
+    color: var(--text);
+    transform: translateY(-200%);
+  }
+  .skip:focus { transform: none; }
+
+  /* ------------------------------------------------------------------ hero */
+
+  /* Drawn here in full, so the page is complete without glass.js. When the script has
+     WebGL2 it paints the same field and text on the canvas, and the text in the page
+     goes clear so the lens can bend the painted copy. */
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: var(--gutter) var(--gutter) 128px;
+    overflow: hidden;
+    background: var(--teal);
+    color: #fff;
+    touch-action: pan-y;
+  }
+  .hero canvas {
+    position: absolute;
+    inset: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .glass-on .hero canvas { display: block; }
+  .glass-on .hero [data-glass] { -webkit-text-fill-color: transparent; }
+  .hero h1, .hero p { position: relative; }
+
+  h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 900;
+    font-stretch: 150%;
+    font-size: clamp(2.75rem, 15.5vw, 12.5rem);
+    /* and by height, so on a short laptop screen the text stays clear of the dock */
+    font-size: clamp(2.75rem, min(15.5vw, 20svh), 12.5rem);
+    line-height: 0.86;
+  }
+  /* as wide as its word, so glass.js can find where the name ends */
+  h1 span { display: block; width: fit-content; }
+
+  .hero p {
+    max-width: 30em;
+    margin: clamp(20px, 3vw, 40px) 0 0;
+    font-size: clamp(1.1875rem, 1.9vw, 1.5rem);
+    line-height: 1.4;
+  }
+
+  /* ------------------------------------------------------------------ dock */
+
+  /* The material is the recipe from my Textarea fork (LiquidGlass-UI's fill, bevel and
+     glare). It sits on ::before so it can fade out while the shader draws the dock's
+     glass, which is only at the very top of the page. */
+  .dock {
+    position: fixed;
+    left: 50%;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    z-index: 10;
+    display: flex;
+    gap: 2px;
+    padding: 6px;
+    border-radius: 999px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: var(--text);
+  }
+  .dock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background:
+      linear-gradient(155deg, var(--glass-glare) 0%, transparent 34%),
+      linear-gradient(155deg, rgb(var(--glass-fill) / var(--glass-thick)), rgb(var(--glass-fill) / var(--glass-thin)));
+    -webkit-backdrop-filter: blur(10px) saturate(1.6);
+    backdrop-filter: blur(10px) saturate(1.6);
+    box-shadow: var(--glass-shadow), var(--glass-bevel);
+    transition: opacity 0.2s;
+  }
+  .dock a {
+    padding: 9px 18px;
+    border-radius: 999px;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .dock a:hover { background: color-mix(in srgb, currentColor 12%, transparent); }
+  .glass-on:not(.scrolled) .dock { color: #fff; }
+  .glass-on:not(.scrolled) .dock::before { opacity: 0; }
+
+  @media (prefers-contrast: more), (forced-colors: active) {
+    .dock::before {
+      background: var(--bg);
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      box-shadow: none;
+      border: 1px solid;
+    }
+  }
+
+  /* ------------------------------------------------------------------ page */
+
+  main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: clamp(40px, 7vw, 96px) var(--gutter) 0;
+  }
+
+  .group {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 2.6fr);
+    gap: 28px clamp(24px, 4vw, 64px);
+    padding-block: clamp(32px, 5vw, 56px);
+    border-top: 1px solid var(--rule);
+    scroll-margin-top: 16px;
+  }
+  .group:first-child { border-top: 0; padding-top: 0; }
+
+  h2 {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 900;
+    font-stretch: 150%;
+    font-size: clamp(1.5rem, 2.3vw, 2rem);
+    line-height: 1;
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: clamp(16px, 2.5vw, 32px);
+    align-items: start;
+  }
+  .project + .project { margin-top: clamp(28px, 4vw, 44px); }
+
+  /* square corners and the sunken bevel of a Windows 9x picture well */
+  .project img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top center;
+    border: 2px solid;
+    border-color: #808080 #fff #fff #808080;
+    background: var(--grey);
+  }
+
+  h3 {
+    margin: 0 0 6px;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .project p, .plain p, .about p { max-width: 34em; margin: 0 0 8px; }
+  .note { color: var(--quiet); font-size: 1rem; }
+
+  .plain { margin: 0; padding: 0; list-style: none; }
+  .plain li + li { margin-top: 28px; }
+
+  .about address { margin-top: 24px; font-style: normal; }
+  .about address a {
+    display: inline-block;
+    font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+    font-weight: 700;
+  }
+
+  footer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--gutter) 128px;
+    color: var(--quiet);
+    font-size: 1rem;
+  }
+  footer p { max-width: 44em; margin: 0 0 8px; }
+
+  @media (max-width: 900px) {
+    .group { grid-template-columns: minmax(0, 1fr); }
+    h2 { position: static; }
+  }
+  @media (max-width: 520px) {
+    .project { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .dock a { padding: 9px 14px; }
+  }
+
+  /* a phone on its side: less air above the name, so the text ends above the dock */
+  @media (max-height: 520px) {
+    .hero { padding-top: 16px; }
+    h1 { font-size: min(15.5vw, 17svh); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .dock::before, .dock a { transition: none; }
+  }
+
+  /* --------------------------------------------------------------- cursors */
+
+  /* Set on body and inherited, so explicit cursors (move, resize, text) still win. */
+  @media (pointer: fine) {
+    [data-cursor="vinyl"] body { cursor: url("../cursors/vinyl.svg") 3 2, auto; }
+    [data-cursor="vinyl"] :where(a[href], button, summary, label[for], [data-command]) { cursor: url("../cursors/vinyl-hand.svg") 11 2, pointer; }
+    [data-cursor="glass"] body { cursor: url("../cursors/glass.svg") 3 2, auto; }
+    [data-cursor="glass"] :where(a[href], button, summary, label[for], [data-command]) { cursor: url("../cursors/glass-hand.svg") 11 2, pointer; }
+    [data-cursor="spot"] body { cursor: url("../cursors/spot.svg") 3 2, auto; }
+    [data-cursor="spot"] :where(a[href], button, summary, label[for], [data-command]) { cursor: url("../cursors/spot-paw.svg") 11 3, pointer; }
+    [data-cursor] :where(input:not([type="button"], [type="submit"], [type="checkbox"], [type="radio"]), textarea) { cursor: text; }
+    [data-cursor] button:disabled { cursor: inherit; }
+  }
+  @media (pointer: coarse) {
+    .cursor-picker { display: none; }
+  }
+  .cursor-picker button { background: none; border: 0; padding: 4px 6px; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; }
+  .cursor-picker button[aria-pressed="true"] { font-weight: 700; text-decoration: none; }
+  .cursor-picker img { width: 16px; height: 16px; vertical-align: -3px; margin-right: 4px; }
