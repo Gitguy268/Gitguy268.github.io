@@ -17,6 +17,26 @@
 
 Plain HTML, CSS, and JavaScript, with locally hosted fonts and screenshots. Nothing to install and no build step.
 
+<!-- run-steps:start -->
+## Run it locally, step by step
+
+1. **Get the code:**
+
+   ```sh
+   git clone https://github.com/Gitguy268/Gitguy268.github.io.git
+   cd Gitguy268.github.io
+   ```
+
+2. **Start a local web server** (Python 3 comes with macOS and most Linux systems):
+
+   ```sh
+   python3 -m http.server 8000
+   ```
+
+3. **Open <http://localhost:8000/>** in your browser. Press `Ctrl+C` in the terminal to stop.
+
+<!-- run-steps:end -->
+
 ## Three ways in
 
 The root page is a terminal-style chooser. Click a choice or type `1`, `2`, `3`, `website`, `terminal`, or `desktop`. It always appears on a new root visit; it does not store a preferred mode.
