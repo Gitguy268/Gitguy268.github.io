@@ -92,3 +92,17 @@ copied from:
   raphamorim/rio (MIT) — the scanlines and glow of the crt terminal theme
   saadpasta/developerFolio (GPL-3.0) — the back-to-top button
 TabShell, shown in images/tabshell.webp, is my own project (MIT).
+
+Project screenshots added 2026-11-02
+------------------------------------
+The new images in images/ show my own projects. Each project's licence and
+third-party owners are on its docs page. They show or name other owners' work:
+  images/ultra-realistic-vinyl-player.webp — a model of a Thorens deck; Thorens
+    is a trademark of its owner, and the project is not affiliated with it
+  images/stem-player.webp — an unofficial replica, not affiliated with the
+    makers of the original device
+  images/blacklab-store-yeezy.webp, images/blacklabspots-storefront.webp —
+    product photographs and names belong to Black Lab Spots
+  images/hillium.webp — shows a Wikipedia article (CC BY-SA) in the browser
+  images/better-aiko.webp — icons from tw93/aiko (MIT) with additions; some
+    glyphs may derive from OpenAI's icon assets, which are outside that licence

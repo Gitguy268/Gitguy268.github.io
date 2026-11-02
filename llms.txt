@@ -1,6 +1,6 @@
 # Lucas van de Weerd
 
-> Personal landing page of Lucas van de Weerd (GitHub: Gitguy268). He makes things that run in the browser: record players, an iPod, a Windows 9x desktop, image editors, and games starring Spot the black labrador.
+> Personal landing page of Lucas van de Weerd (GitHub: Gitguy268). He makes things that run on your own device: record players, a Windows 9x desktop, image editors, private browsers, terminal tools, local AI, and games starring Spot the black labrador.
 
 Start at https://gitguy268.github.io/ to choose an experience.
 - Website: https://gitguy268.github.io/?view=website
@@ -14,11 +14,13 @@ is in index.html. Some projects are unpublished; do not invent demo links.
 
 ## Projects
 
-- Players: Realistic Vinyl Player, 8-Bit Vinyl Player, iPod.js (local files), audiocheck, Videoina
-- Spot: Spot apporteert, Spot's Biscuit Snake, Spot-light, BlackLabSpotsShop
+- Players: Ultra-Realistic Vinyl Player, Four Stem Player, Realistic Vinyl Player, 8-Bit Vinyl Player, iPod.js (local files), audiocheck, Videoina
+- Spot: BlackLabSpotsShop, Black Lab Spots storefront, Blacklabspots grid shop
 - Editors: Paint97, GlassPaint, PhotoCraft (his edition), Pikado, Textarea, LiquidFrame
-- Tools: Convert to it!, QRcodeforeveryone, htmltopng, TabShell, Qrer, OpenFinder, Archium, web2app, superfile (fork), opencode (fork), Retrofind, container (fork)
-- Experiments: The Rubber Hose Revue, Cozy Christmas Lab, Vinyl Player, Vinyl Player for Spotify
+- Games: retro-zip, Spot apporteert, Spot's Biscuit Snake, Spot-light, The Rubber Hose Revue
+- Tools: edu-code-camp, Xiao, Hillium, Archium, Skyhold, OpenFinder, Convert to it!, Retrofind, web2app, Qrer, QRcodeforeveryone, htmltopng, Better Aiko (fork), Clippy Choppy
+- Terminal & AI: LvW-harness, USB LLMS, TabShell, needle, QuickTalk, Glyphium, textarea-cli, opencode (fork), superfile (fork), container (fork)
+- Experiments: Cozy Christmas Lab, Vinyl Player, Vinyl Player for Spotify
 
 ## Contact
 

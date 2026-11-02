@@ -6,7 +6,7 @@
     return {w,h,x:Math.min(Math.max(0,box.x),Math.max(0,bounds.width-w)),y:Math.min(Math.max(0,box.y),Math.max(0,bounds.height-h))};
   };
   if (typeof window === 'undefined') return;
-  const { $, escape:e, projects, categories, about, contact, details, navigate, loadScript, cursors } = window.Portfolio;
+  const { $, escape:e, projects, categories, categoryLabel, about, contact, details, navigate, loadScript, cursors } = window.Portfolio;
   // Small original SVG icons, drawn on a 24-pixel grid and served inline.
   const art = {
     folder:'<path fill="#685300" d="M1 5h9l2 3h11v13H1z"/><path fill="#ffe393" d="M2 4h8l2 3h10v12H2z"/><path fill="#c49127" d="M2 10h20v10H2z"/><path fill="#ffe393" d="M4 11h20l-3 10H1z"/><path fill="#fff1b7" d="M4 11h20v2H4z"/>',
@@ -87,7 +87,7 @@
     function projectWindow(project) {const win=createWindow('project-'+project.id,{name:project.title,icon:'note',width:590,height:500});if(!win)return;win.content.innerHTML=`<article class="desktop-document">${details(project)}</article>`;win.status.textContent=project.status==='public'?'Links open in your browser.':'Not published yet.';}
     function explorer(win,category=null) {
       const list=category?projects.filter(p=>category==='all'||p.category===category):null;
-      win.content.innerHTML=`<div class="explorer-toolbar"><button class="win-button" data-back ${category?'':'disabled'}>← Back</button><span class="explorer-address">C:\\My Projects${category?'\\'+e(category):''}</span></div><div class="explorer-grid">${list?list.map(p=>`<button class="explorer-item" data-project-id="${e(p.id)}">${icon(p.status==='public'?'computer':'note')}<span>${e(p.title)}</span><small>${p.status==='public'?'Available online':'Not published yet'}</small></button>`).join(''):['all',...categories].map(c=>`<button class="explorer-item" data-folder="${c}">${icon('folder')}<span>${c==='all'?'All projects':c[0].toUpperCase()+c.slice(1)}</span><small>${c==='all'?projects.length:projects.filter(p=>p.category===c).length} projects</small></button>`).join('')}</div>`;
+      win.content.innerHTML=`<div class="explorer-toolbar"><button class="win-button" data-back ${category?'':'disabled'}>← Back</button><span class="explorer-address">C:\\My Projects${category?'\\'+e(category==='all'?'All projects':categoryLabel(category)):''}</span></div><div class="explorer-grid">${list?list.map(p=>`<button class="explorer-item" data-project-id="${e(p.id)}">${icon(p.status==='public'?'computer':'note')}<span>${e(p.title)}</span><small>${p.status==='public'?'Available online':'Not published yet'}</small></button>`).join(''):['all',...categories].map(c=>`<button class="explorer-item" data-folder="${c}">${icon('folder')}<span>${c==='all'?'All projects':e(categoryLabel(c))}</span><small>${c==='all'?projects.length:projects.filter(p=>p.category===c).length} projects</small></button>`).join('')}</div>`;
       win.status.textContent=list?`${list.length} projects · Select one to take a look.`:`${projects.length} projects · Open a folder to explore.`;
       $('[data-back]',win.content).addEventListener('click',()=>explorer(win));
       for(const button of win.content.querySelectorAll('[data-folder]'))button.addEventListener('click',()=>explorer(win,button.dataset.folder));

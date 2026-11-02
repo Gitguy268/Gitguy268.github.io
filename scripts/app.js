@@ -3,11 +3,12 @@
   const $ = (s, root = document) => root.querySelector(s);
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const categories = ['players', 'spot', 'editors', 'tools', 'experiments'];
+  const categories = ['players', 'spot', 'editors', 'games', 'tools', 'terminal-ai', 'experiments'];
+  const categoryLabel = c => ({ 'terminal-ai': 'Terminal & AI' })[c] || c[0].toUpperCase() + c.slice(1);
   const projects = $$('#website [data-project]').map(card => ({
     id: card.dataset.project, category: card.dataset.category, status: card.dataset.status,
     title: $('h3', card).textContent, description: $('p:not(.note)', card).textContent,
-    credit: $('.project-credit', card).innerHTML, demo: card.dataset.demo || '', source: card.dataset.source || '',
+    credit: $('.project-credit', card).innerHTML, demo: card.dataset.demo || '', demoLabel: $('.demo-link', card)?.textContent.trim() || 'Try it ↗', source: card.dataset.source || '',
     image: $('img', card)?.getAttribute('src') || '', alt: $('img', card)?.alt || '', card,
   }));
   const about = $$('#about p').map(p => p.textContent);
@@ -31,10 +32,10 @@
     return styles.get(path);
   }
   function links(project) {
-    return `<div class="project-actions"><a class="action" href="docs/index.html#${escape(project.id)}">Docs</a>${project.demo ? `<a class="action" href="${escape(project.demo)}" target="_blank" rel="noopener noreferrer">Try it ↗</a>` : ''}${project.source ? `<a class="action" href="${escape(project.source)}" target="_blank" rel="noopener noreferrer">Source ↗</a>` : ''}</div>`;
+    return `<div class="project-actions"><a class="action" href="docs/index.html#${escape(project.id)}">Docs</a>${project.demo ? `<a class="action" href="${escape(project.demo)}" target="_blank" rel="noopener noreferrer">${escape(project.demoLabel)}</a>` : ''}${project.source ? `<a class="action" href="${escape(project.source)}" target="_blank" rel="noopener noreferrer">Source ↗</a>` : ''}</div>`;
   }
   function details(project, image = true) {
-    return `${image && project.image ? `<img class="detail-image" src="${escape(project.image)}" alt="${escape(project.alt)}" width="720" height="450">` : ''}<p class="detail-category">${escape(project.category)} / ${project.status === 'public' ? 'Available online' : 'Not published yet'}</p><h2>${escape(project.title)}</h2><p>${escape(project.description)}</p>${links(project)}<p class="detail-credit">${project.credit}</p>`;
+    return `${image && project.image ? `<img class="detail-image" src="${escape(project.image)}" alt="${escape(project.alt)}" width="720" height="450">` : ''}<p class="detail-category">${escape(categoryLabel(project.category))} / ${project.status === 'public' ? 'Available online' : 'Not published yet'}</p><h2>${escape(project.title)}</h2><p>${escape(project.description)}</p>${links(project)}<p class="detail-credit">${project.credit}</p>`;
   }
   const cursors = ['system', 'vinyl', 'glass', 'spot'];
   function setCursor(name, save = true) {
@@ -49,9 +50,9 @@
   if (!setCursor(savedCursor, false)) setCursor('system', false);
   document.addEventListener('click', event => { const pick = event.target.closest('[data-cursor-pick]'); if (pick) setCursor(pick.dataset.cursorPick); });
   $('#cursor-picker').hidden = false;
-  window.Portfolio = { $, $$, escape, projects, categories, about, contact, details, links, loadScript, loadStyle, navigate, cursors, setCursor };
+  window.Portfolio = { $, $$, escape, projects, categories, categoryLabel, about, contact, details, links, loadScript, loadStyle, navigate, cursors, setCursor };
   // The semantic project articles above are the single source of content for every experience.
-  for (const id of ['qrcodeforeveryone', 'htmltopng', 'blacklabspotsshop']) {
+  for (const id of ['stem-player', 'ultra-realistic-vinyl-player', 'edu-code-camp']) {
     const project = projects.find(p => p.id === id);
     const card = project.card.cloneNode(true); card.removeAttribute('id');
     for (const key of Object.keys(card.dataset)) delete card.dataset[key];
@@ -69,7 +70,7 @@
     for (const group of $$('#website .group:not(.about)')) group.hidden = !$('.project:not([hidden])', group);
     $('#empty-results').hidden = count > 0;
     const status = $('#results-summary'); status.hidden = false;
-    status.textContent = `${count} of ${projects.length} projects${filter !== 'all' ? ` in ${filter}` : ''}${query ? ` matching “${$('#project-search').value.trim()}”` : ''}`;
+    status.textContent = `${count} of ${projects.length} projects${filter !== 'all' ? ` in ${categoryLabel(filter)}` : ''}${query ? ` matching “${$('#project-search').value.trim()}”` : ''}`;
     for (const button of $$('[data-filter]')) button.setAttribute('aria-pressed', String(button.dataset.filter === filter));
   }
   for (const button of $$('[data-filter]')) button.addEventListener('click', () => { filter = button.dataset.filter; filterProjects(); });

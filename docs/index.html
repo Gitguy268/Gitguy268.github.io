@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#008080">
 <link rel="canonical" href="https://gitguy268.github.io/docs/">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="docs.css?v=20261019-1">
+<link rel="stylesheet" href="docs.css?v=20261102-1">
 <script>try{const m=localStorage.getItem('lucas-docs-mode');if(m==='light'||m==='dark')document.documentElement.dataset.mode=m}catch{}</script>
 </head>
 <body>
@@ -30,6 +30,8 @@
       <ul><li><a href="#start">Running my projects</a></li></ul>
       <h2>Players</h2>
       <ul>
+        <li><a href="#ultra-realistic-vinyl-player">Ultra-Realistic Vinyl Player</a></li>
+        <li><a href="#stem-player">Four Stem Player</a></li>
         <li><a href="#realistic-vinyl-player">Realistic Vinyl Player</a></li>
         <li><a href="#8-bit-vinyl-player">8-Bit Vinyl Player</a></li>
         <li><a href="#ipod">iPod.js (local files)</a></li>
@@ -38,10 +40,9 @@
       </ul>
       <h2>Spot</h2>
       <ul>
-        <li><a href="#spot-fetch">Spot apporteert</a></li>
-        <li><a href="#spot-snake">Spot’s Biscuit Snake</a></li>
-        <li><a href="#spot-light">Spot-light</a></li>
         <li><a href="#blacklabspotsshop">BlackLabSpotsShop</a></li>
+        <li><a href="#blacklabspots-storefront">Black Lab Spots storefront</a></li>
+        <li><a href="#blacklab-store-yeezy">Blacklabspots grid shop</a></li>
       </ul>
       <h2>Editors</h2>
       <ul>
@@ -52,24 +53,46 @@
         <li><a href="#textarea">Textarea</a></li>
         <li><a href="#liquidframe">LiquidFrame</a></li>
       </ul>
+      <h2>Games</h2>
+      <ul>
+        <li><a href="#retro-zip">retro-zip</a></li>
+        <li><a href="#spot-fetch">Spot apporteert</a></li>
+        <li><a href="#spot-snake">Spot’s Biscuit Snake</a></li>
+        <li><a href="#spot-light">Spot-light</a></li>
+        <li><a href="#rubber-hose-revue">The Rubber Hose Revue</a></li>
+      </ul>
       <h2>Tools</h2>
       <ul>
+        <li><a href="#edu-code-camp">edu-code-camp</a></li>
+        <li><a href="#xiao">Xiao</a></li>
+        <li><a href="#hillium">Hillium</a></li>
+        <li><a href="#archium">Archium</a></li>
+        <li><a href="#skyhold">Skyhold</a></li>
+        <li><a href="#openfinder">OpenFinder</a></li>
         <li><a href="#convert">Convert to it!</a></li>
+        <li><a href="#retrofind">Retrofind</a></li>
+        <li><a href="#web2app">web2app</a></li>
+        <li><a href="#qrer">Qrer</a></li>
         <li><a href="#qrcodeforeveryone">QRcodeforeveryone</a></li>
         <li><a href="#htmltopng">htmltopng</a></li>
+        <li><a href="#better-aiko">Better Aiko</a></li>
+        <li><a href="#clippy-choppy">Clippy Choppy</a></li>
+      </ul>
+      <h2>Terminal &amp; AI</h2>
+      <ul>
+        <li><a href="#lvw-harness">LvW-harness</a></li>
+        <li><a href="#usb-llms">USB LLMS</a></li>
         <li><a href="#tabshell">TabShell</a></li>
-        <li><a href="#qrer">Qrer</a></li>
-        <li><a href="#openfinder">OpenFinder</a></li>
-        <li><a href="#archium">Archium</a></li>
-        <li><a href="#web2app">web2app</a></li>
-        <li><a href="#superfile">superfile, my edition</a></li>
+        <li><a href="#needle">needle</a></li>
+        <li><a href="#quicktalk">QuickTalk</a></li>
+        <li><a href="#glyphium">Glyphium</a></li>
+        <li><a href="#textarea-cli">textarea-cli</a></li>
         <li><a href="#opencode">opencode, my edition</a></li>
-        <li><a href="#retrofind">Retrofind</a></li>
+        <li><a href="#superfile">superfile, my edition</a></li>
         <li><a href="#container">container, my edition</a></li>
       </ul>
       <h2>Experiments</h2>
       <ul>
-        <li><a href="#rubber-hose-revue">The Rubber Hose Revue</a></li>
         <li><a href="#cozy-christmas-lab">Cozy Christmas Lab</a></li>
         <li><a href="#vinyl-player">Vinyl Player</a></li>
         <li><a href="#vinyl-player-for-spotify">Vinyl Player for Spotify</a></li>
@@ -97,12 +120,13 @@
     <tr><td>Not published yet</td><td>The project works on my computer but isn’t public yet. Its page still explains how to run it once it is.</td></tr>
   </table></div>
 
-  <h2 id="start-kinds">Three ways a project starts</h2>
+  <h2 id="start-kinds">Four ways a project starts</h2>
   <p>You can tell which kind a project is from the “Run it” part of its page.</p>
   <ol class="flow">
     <li><strong>One HTML file</strong>Double-click <code>index.html</code>. The Realistic and 8-Bit Vinyl Players, Spot’s Biscuit Snake and Spot-light work straight from disk, even offline.</li>
     <li><strong>A web app that needs a server</strong>Browsers won’t run modules, workers or WebAssembly from a <code>file://</code> address. These ship a <code>start.command</code>, or use any static server.</li>
     <li><strong>An app with a helper</strong>TabShell, LiquidFrame, web2app and Retrofind run a small server on your own computer, on <code>127.0.0.1</code> only. <code>start.command</code> starts it and opens the page.</li>
+    <li><strong>A program you install or build</strong>Terminal tools and desktop apps don’t run from a web page. Skyhold, needle, textarea-cli and USB LLMS need Go, Glyphium needs Rust and Zig, QuickTalk needs Rust and Node, Hillium needs Node, and LvW-harness needs Bun. Their pages list the steps, and “Project page” on their cards links to the same steps.</li>
   </ol>
   <p>To serve a folder yourself, run this inside it and open the address it prints:</p>
   <pre><code>python3 -m http.server 8000</code></pre>
@@ -122,7 +146,107 @@
   <p>Most of my own projects are MIT licensed. Videoina and Archium are GPL-3.0, OpenFinder and web2app GPL-3.0 or later, to fit what they build on or will use: mpv, Helium, FFmpeg and Pake. Nine projects are forks: I took an open-source project I liked and kept adding to it. Their pages say whose work they start from and list what my edition adds.</p>
 </article>
 
-<!-- ================================================================ Players -->
+<article class="doc" id="ultra-realistic-vinyl-player" data-look="vinyl" style="--accent:#d4893a">
+  <header class="banner">
+    <div class="banner-art" aria-hidden="true"></div>
+    <h1>Ultra-Realistic Vinyl Player</h1>
+    <p class="tagline">A Thorens TD 115 MK II in your browser: every part modelled in 3D from photographs, with a physically modelled motor, tonearm and playback chain.</p>
+    <ul class="facts"><li>Players</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/ultra-realistic-vinyl-player.webp" width="1440" height="900" loading="lazy" alt="A 3D Thorens turntable with a dust cover raised and an orange-label record on the platter, next to panels of VU meters and sound controls"></figure>
+
+
+  <h2 id="ultra-realistic-vinyl-player-run">Run it</h2>
+  <p>Open the <a href="https://gitguy268.github.io/ultra-realistic-vinyl-player/">live version</a>, or run it yourself with Node 22.12 or newer:</p>
+  <pre><code>npm ci
+npm run dev</code></pre>
+  <p>Open <code>http://localhost:5173/</code>, press <strong>Add files</strong>, then <strong>Start</strong>, or drag the headshell onto the record. Adding <code>?demo</code> to the address plays three synthesized tracks without touching your library. <code>npm start</code> builds and serves the production version. Opening <code>index.html</code> by double-click doesn’t work, and the page says so.</p>
+
+  <h2 id="ultra-realistic-vinyl-player-use">Use it</h2>
+  <ul>
+    <li>The speed plate reads <code>78 45 OFF 33</code>, as on the real deck, and 78 stays locked until you press the pin beside it. Pitch is ±6 %, or ±8 % as an option.</li>
+    <li>Strobe slots in the rim stand still under the neon lamp at exact speed, for 50 or 60 Hz mains.</li>
+    <li>Your whole queue is laid on one record, with bands by length and loudness, gaps, a lead-in, a run-out and a locked groove. Sides of about 22 minutes turn over in 3D.</li>
+    <li>Put a hand on the record to scratch it, forwards or backwards.</li>
+    <li>Surface noise goes from Mint to Beat-up, and scratches tick exactly as their drawn mark passes the stylus.</li>
+    <li>There is a Winamp ten-band EQ with 17 presets and <code>.eqf</code> import, a visualizer on the label, six finishes, and daylight and dusk lighting.</li>
+    <li>The library keeps files in the browser, with tags, cover art and liner notes. It installs as an offline app.</li>
+  </ul>
+
+  <h2 id="ultra-realistic-vinyl-player-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The source</strong>A decoded file, or a streaming <code>&lt;audio&gt;</code> element for big files</li>
+    <li><strong>The worklet</strong>RIAA stage, wow and flutter, scratch ticks and pops. It also holds the record’s true angle</li>
+    <li><strong>Tone and EQ</strong>Bass, mid, treble and the ten graphic bands, with a trim so nothing clips</li>
+    <li><strong>The cut chain</strong>Mono bass, crosstalk, roll-off and saturation, which you can bypass</li>
+    <li><strong>The output</strong>Surface noise joins after the worklet, then volume and your speakers</li>
+  </ol>
+  <p>The drawn record locks to the worklet’s angle, so what you see and hear stay together. The maths for RIAA, the motor, the strobe and the arm lives in modules without DOM or Web Audio code, and is unit-tested. A check keeps 18 features of the model within 2 % of the plinth width against the reference photograph.</p>
+
+  <h2 id="ultra-realistic-vinyl-player-limits">Limits</h2>
+  <ul>
+    <li>Scratching needs the file decoded in memory, so it is off for files over 150 MiB or 20 minutes, which play in streaming mode.</li>
+    <li>Very slow or very fast hand movement sounds rougher than real vinyl.</li>
+    <li>The sub-chassis springs, motor and belt aren’t modelled, because the platter doesn’t lift and nothing below it is ever seen.</li>
+    <li>The 3D deck needs WebGL 2. Without it, a 2D deck with every control takes over.</li>
+    <li>No real phone has been tested. Phone layouts are checked by emulation.</li>
+  </ul>
+
+  <h2 id="ultra-realistic-vinyl-player-credits">Credits</h2>
+  <p>MIT licence, with third-party notices in the repository’s NOTICE. Thorens is a trademark of its owner, and this project isn’t affiliated with it. The deck’s name and wordmark appear on the model because this is a study of that object. Source: <a href="https://github.com/Gitguy268/ultra-realistic-vinyl-player">Gitguy268/ultra-realistic-vinyl-player</a>.</p>
+</article>
+
+<article class="doc" id="stem-player" data-look="glass" style="--accent:#b45309;--glow-1:#e7d3b3;--glow-2:#f0abfc">
+  <header class="banner">
+    <div class="pane">
+      <h1>Four Stem Player</h1>
+      <p class="tagline">An unofficial browser replica of both generations of the four-stem hardware music player, in real-time 3D. It splits any song into stems on your own machine.</p>
+      <ul class="facts"><li>Players</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/stem-player.webp" width="1440" height="900" loading="lazy" alt="A round tan handheld music player in 3D with four grooves of pink and purple lights forming a cross, on a pale background"></figure>
+
+
+  <h2 id="stem-player-run">Run it</h2>
+  <p>Open the <a href="https://gitguy268.github.io/stem-player/">live version</a>, or run it yourself with Node 22.12 or newer. On a Mac, double-click <code>start.command</code>. Elsewhere:</p>
+  <pre><code>npm ci
+npm start    # http://localhost:8791</code></pre>
+  <p>Opening <code>index.html</code> by double-click can’t work, because browsers block the audio workers on local files. The page tells you this.</p>
+
+  <h2 id="stem-player-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th></th><th>Handheld (v1)</th><th>Speaker (v2)</th></tr>
+    <tr><td>Controls</td><td>4 grooves with 16 lights, centre button, edge buttons</td><td>5 touch points, edge buttons, port panel</td></tr>
+    <tr><td>Mix</td><td>Slide or isolate each stem</td><td>Isolate, or swap a stem in from another song</td></tr>
+    <tr><td>Loops</td><td>¼ to 16 bars, locked or instant</td><td>¼ to 2 beats, slip or standard</td></tr>
+    <tr><td>Speed</td><td>50 to 125 %, forward and reverse</td><td>Speed and pitch set separately, plus a scratch</td></tr>
+    <tr><td>Extras</td><td>8 effects, 60 s recordings, 4 slots</td><td>Staged transitions, minimal mode, storage mode</td></tr>
+  </table></div>
+  <p>Drag the surface to turn the device, and press <kbd>L</kbd> for the library. You can add music by splitting any audio file, by importing four stem files, or with demo tracks that are synthesised when first played. The Help button lists each device’s full controls.</p>
+
+  <h2 id="stem-player-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Spec</strong>Every number and mapping for both devices</li>
+    <li><strong>Controllers</strong>Pure state machines, with no audio or graphics in them</li>
+    <li><strong>Engine</strong>Web Audio: two decks of four stems on one clock, plus effects, pitch and a recorder</li>
+    <li><strong>Scene</strong>Procedural geometry and LED shading, with no model files or product images</li>
+    <li><strong>Separation</strong>Demucs in a worker through WebGPU, with the model cached in your browser</li>
+  </ol>
+  <p>Your music never leaves your computer. The first split downloads a model of about 172 MB.</p>
+
+  <h2 id="stem-player-limits">Limits</h2>
+  <ul>
+    <li>Some details are best guesses, including the names of the 8 handheld effects. The repository’s <code>docs/PARITY.md</code> lists each one.</li>
+    <li>Song links, streaming and online sessions are left out, since they need a backend.</li>
+    <li>Splitting without WebGPU falls back to the processor, which is slower. On an Apple silicon Mac, 12 s of audio took 5 to 7 s on the graphics card and about 25 s on one processor thread.</li>
+    <li>WebKit’s private file storage wasn’t available in testing, so songs may last only for the session there.</li>
+    <li>A stem pack of 4 minutes takes around 340 MB of memory while playing, and double in reverse.</li>
+  </ul>
+
+  <h2 id="stem-player-credits">Credits</h2>
+  <p>MIT licence. Not affiliated with or endorsed by the makers of the original devices, and no logos, product media or commercial music are in the repository. The separation model is downloaded at run time from a repository that states no licence, so it falls outside this project’s licence. Source: <a href="https://github.com/Gitguy268/stem-player">Gitguy268/stem-player</a>.</p>
+</article>
+
 <article class="doc" id="realistic-vinyl-player" data-look="vinyl" style="--accent:#d4893a">
   <header class="banner">
     <div class="banner-art" aria-hidden="true"></div>
@@ -376,128 +500,6 @@ cmake --build build
   <p>A separate project inspired by <a href="https://github.com/iina/iina">IINA</a>, sharing only its key-binding file, and not affiliated with IINA or Apple. Playback is <a href="https://mpv.io">mpv</a>, the interface is Qt.</p>
 </article>
 
-<!-- ================================================================ Spot -->
-<article class="doc" id="spot-fetch" data-look="spot" style="--accent:#d7263d">
-  <header class="banner">
-    <div class="card">
-      <h1>Spot apporteert</h1>
-      <p class="tagline">A fetch game. Throw a ball across a park for Spot, a black labrador, and look after him: he gets tired, hungry and thirsty.</p>
-      <ul class="facts"><li>Spot</li><li>In Dutch</li><li>MIT licence</li><li>Available online</li></ul>
-    </div>
-  </header>
-  <figure><img src="../images/spot-fetch.webp" width="1440" height="810" loading="lazy" alt="Spot, a black labrador, running back across the grass with a tennis ball in his mouth"></figure>
-
-  <h2 id="spot-fetch-run">Run it</h2>
-  <p>Needs Node 20.19 or newer. From a copy of the repository:</p>
-  <pre><code>npm ci
-npm run dev</code></pre>
-  <p><code>npm run build</code> makes a static bundle in <code>dist/</code> for any static host.</p>
-
-  <h2 id="spot-fetch-use">Play</h2>
-  <p>Drag the ball upwards and let go to throw. Aim for the flag: a throw scores up to 100 points, more the closer its first bounce lands, and nothing beyond 6 m. Tap Spot to pet him.</p>
-  <div class="table-wrap"><table>
-    <tr><th>Button</th><th>What it does</th></tr>
-    <tr><td>Zit, Blijf, Bring, Aus</td><td>Sit, stay, fetch, drop. The bar under each shows how well Spot has learnt it.</td></tr>
-    <tr><td>Beloon</td><td>Reward him</td></tr>
-    <tr><td>Voer, Water</td><td>Fill his bowls</td></tr>
-    <tr><td>Foto</td><td>Photo mode: move around Spot, set a lens from 14 to 200 mm and the exposure from −2 to +2 EV, pick one of five filters, save a PNG</td></tr>
-    <tr><td>Geluid, Volledig scherm</td><td>Sound on or off, full screen on or off. The full-screen button hides where the browser can’t do it, as on an iPhone.</td></tr>
-  </table></div>
-  <p>The four bars in the corner are his energy, hunger, thirst and trust. He listens better the more he trusts you. The park has a day and night cycle and weather; <code>?tijd=18</code> fixes the hour, <code>?weer=helder</code>, <code>regen</code> or <code>sneeuw</code> the weather, and <code>?reset</code> starts without the saved game.</p>
-
-  <h2 id="spot-fetch-how">How it works</h2>
-  <ol class="flow">
-    <li><strong>three.js</strong>Draws the park, Spot and his fur, all generated in code</li>
-    <li><strong>Physics</strong>The throw, the bounces and Spot’s run are unit tested</li>
-    <li><strong>localStorage</strong>Keeps Spot’s state and your best throw; no network requests</li>
-  </ol>
-</article>
-
-<article class="doc" id="spot-snake" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-conic-gradient(#7cc057 0 25%, #6aac48 0 50%) 0 0 / 44px 44px">
-  <header class="banner">
-    <div class="card">
-      <h1>Spot’s Biscuit Snake</h1>
-      <p class="tagline">A snake game in one HTML file. Spot licks up biscuits to grow, and has to mind the fence, the flowers and his own tail.</p>
-      <ul class="facts"><li>Spot</li><li>MIT licence</li><li>Available online</li></ul>
-    </div>
-  </header>
-  <figure><img src="../images/spot-snake.webp" width="1272" height="1298" loading="lazy" alt="Spot, a black labrador with a red collar, winding across a lawn towards a biscuit"></figure>
-
-  <h2 id="spot-snake-run">Run it</h2>
-  <p>Open <code>index.html</code> in a browser. There is nothing to install or build.</p>
-
-  <h2 id="spot-snake-use">Controls</h2>
-  <div class="table-wrap"><table>
-    <tr><th>Input</th><th>What it does</th></tr>
-    <tr><td><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td><td>Steer</td></tr>
-    <tr><td><kbd>Space</kbd></td><td>Pause and resume</td></tr>
-    <tr><td><kbd>M</kbd></td><td>Sound: all, effects only, off</td></tr>
-    <tr><td>Gamepad</td><td>D-pad or left stick; A or Start pauses. It rumbles on a crash and on a golden biscuit.</td></tr>
-    <tr><td>Phone</td><td>Swipe on the lawn, or use the on-screen pad</td></tr>
-    <tr><td>AI plays</td><td>Spot steers himself. Any steering key, a swipe or a second press takes over again.</td></tr>
-  </table></div>
-  <p>Pick a speed first: Puppy, Normal or Zoomies. Spot speeds up as the biscuits add up, and gold ones score 5.</p>
-
-  <h2 id="spot-snake-how">How it works</h2>
-  <ol class="flow">
-    <li><strong>Input queue</strong>Turns wait their turn; reversing into yourself is refused</li>
-    <li><strong>Tile grid</strong>The tail leaves a cell before the head arrives</li>
-    <li><strong>Biscuits</strong>Dropped only on empty cells, with crumbs flying off</li>
-  </ol>
-  <p>The best score per speed and your settings stay in <code>localStorage</code>. Until you press AI plays, the only request is for two Google Fonts, with fonts on your device as the fallback.</p>
-
-  <h2 id="spot-snake-ai">AI plays</h2>
-  <p>The moves come from <a href="https://huggingface.co/convaiinnovations/laya">Laya</a>, a small decision model by Convai Innovations that scores a list of options instead of writing text. Each step the game keeps the moves that don’t crash Spot and leave him room, describes each one (“goes toward the biscuit, leaves 212 open squares”) and lets Laya pick. On its own Laya tends to walk in circles, which is why the game narrows the options first.</p>
-  <ul>
-    <li>It needs WebGPU. Without it the button is greyed out.</li>
-    <li>The first press downloads the model, about 851 MB, from Hugging Face and loads ONNX Runtime Web and tokenizers.js from jsDelivr. The model stays in Cache Storage, so later presses start in a few seconds.</li>
-    <li>Spot waits on each square while Laya thinks, so the speed buttons don’t apply.</li>
-  </ul>
-
-  <h2 id="spot-snake-credits">Credits</h2>
-  <p>Ideas from epidemian/snake (Unlicense), janbodnar/Java-Snake-Game (BSD-2-Clause) and Phaser (MIT), written from scratch. Fonts: Press Start 2P and VT323 (SIL Open Font License). AI plays runs Laya by Convai Innovations (Apache-2.0) on ONNX Runtime Web (MIT), with tokenizers.js (Apache-2.0).</p>
-</article>
-
-<article class="doc" id="spot-light" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-linear-gradient(#c8925a 0 34px, #a87645 34px 36px)">
-  <header class="banner">
-    <div class="card">
-      <h1>Spot-light</h1>
-      <p class="tagline">Spot chases a laser dot around the living room, and you keep it out of his paws. Three games, in 2D or 3D, and in 8-bit if you like.</p>
-      <ul class="facts"><li>Spot</li><li>MIT licence</li><li>Available online</li></ul>
-    </div>
-  </header>
-  <figure><img src="../images/spot-light.webp" width="1440" height="900" loading="lazy" alt="Spot, a black labrador with a red collar, chasing a red laser dot across a rug on a wooden floor"></figure>
-
-  <h2 id="spot-light-run">Run it</h2>
-  <p>Double-click <code>index.html</code>. It is one file with three.js beside it in <code>vendor/</code>, so it runs from disk with nothing to install.</p>
-
-  <h2 id="spot-light-use">Play</h2>
-  <p>The pointer is the laser. Move it and Spot runs after the dot.</p>
-  <div class="table-wrap"><table>
-    <tr><th>Game</th><th>Goal</th></tr>
-    <tr><td>Dodge</td><td>60 seconds and 3 lives. Keep the dot out of his paws. He gets faster as the clock runs down.</td></tr>
-    <tr><td>Endless</td><td>No clock. Count how often he gets it, and beat your longest dodge streak.</td></tr>
-    <tr><td>Lure</td><td>90 seconds to steer him into the cup, the sock and the ball.</td></tr>
-  </table></div>
-  <div class="table-wrap"><table>
-    <tr><th>Key</th><th>What it does</th></tr>
-    <tr><td><kbd>V</kbd></td><td>Switch between 2D and 3D</td></tr>
-    <tr><td><kbd>B</kbd></td><td>Switch between Normal and 8-bit</td></tr>
-    <tr><td><kbd>Esc</kbd></td><td>Pause</td></tr>
-  </table></div>
-
-  <h2 id="spot-light-how">How it works</h2>
-  <ol class="flow">
-    <li><strong>The dot</strong>Follows your pointer across the room</li>
-    <li><strong>Spot</strong>Chases it, faster with time in Dodge</li>
-    <li><strong>Two renderers</strong>A 2D canvas and a three.js 3D room show the same game</li>
-  </ol>
-  <p>8-bit draws at a fifth of the resolution and scales up without smoothing; in 2D it also snaps every colour to a 16-colour palette.</p>
-
-  <h2 id="spot-light-limits">Limits</h2>
-  <p>No sound, touch controls or saved high scores yet. The fonts come from Google Fonts, with fonts on your device as the fallback when offline.</p>
-</article>
-
 <article class="doc" id="blacklabspotsshop" data-look="spot" style="--accent:#d7263d;--banner-bg:linear-gradient(135deg, #1c1b20, #3b3a48)">
   <header class="banner">
     <div class="card">
@@ -531,7 +533,82 @@ npm run dev</code></pre>
   <p>A particle background sits behind the products. The wishlist is kept in <code>localStorage</code>.</p>
 </article>
 
-<!-- ================================================================ Editors -->
+<article class="doc" id="blacklabspots-storefront" data-look="paper" style="--accent:#0f766e">
+  <header class="banner">
+    <h1>Black Lab Spots storefront</h1>
+    <p class="tagline">A custom storefront for Black Lab Spots: the existing catalogue and Printify fulfilment, a Stripe checkout, and a fast Next.js site in warm paper and black type.</p>
+    <ul class="facts"><li>Spot</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/blacklabspots-storefront.webp" width="1200" height="630" loading="lazy" alt="The Black Lab Spots share image: the headline Good things for good dogs in heavy black type on warm paper, with one teal dot"></figure>
+
+
+  <h2 id="blacklabspots-storefront-run">Run it</h2>
+  <p>There is no public shop at this address. To try it, install Node 22 or newer and pnpm, then:</p>
+  <pre><code>pnpm install
+cp .env.example .env.local
+pnpm dev</code></pre>
+  <p>Open <code>http://localhost:3000/</code>. Without Stripe keys the checkout validates the bag and shows a confirmation, but charges nobody. Without Printify keys, paid orders are logged and not forwarded.</p>
+
+  <h2 id="blacklabspots-storefront-use">Use it</h2>
+  <ul>
+    <li>Browse the full catalogue with search and sorting, or by collection: apparel, home, accessories and personalized.</li>
+    <li>Every current product accepts a free-text personalization request, shown in the cart, the order summary and the Stripe line item.</li>
+    <li>Checkout collects a shipping address and charges a flat $6.95, free over $75.</li>
+    <li><code>pnpm catalog:scrape</code> and <code>pnpm catalog:sync</code> refresh <code>data/catalog.json</code> from the public store and Printify.</li>
+  </ul>
+
+  <h2 id="blacklabspots-storefront-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Next.js</strong>App Router pages for the shop, products, cart and checkout</li>
+    <li><strong>Stripe Checkout</strong>The server validates prices and creates the session</li>
+    <li><strong>Webhook</strong>A paid order creates a Printify order and an optional confirmation email</li>
+    <li><strong>Printify</strong>Orders start as drafts for review, until you turn on sending to production</li>
+  </ol>
+
+  <h2 id="blacklabspots-storefront-limits">Limits</h2>
+  <ul>
+    <li>It isn’t live. The repository’s checklist still lists a test purchase, tax handling, shipping rates and a legal review.</li>
+    <li>Stripe Tax isn’t turned on.</li>
+    <li>A failed Printify call is logged, not retried. A durable queue is still to be added.</li>
+    <li>The flat shipping rate applies to every allowed country.</li>
+  </ul>
+
+  <h2 id="blacklabspots-storefront-credits">Credits</h2>
+  <p>MIT licence for the code. Product photography and product names belong to Black Lab Spots. The design is inspired by minimal direct-to-consumer shops and uses no code, copy or assets from them. Source: <a href="https://github.com/Gitguy268/blacklabspots-storefront">Gitguy268/blacklabspots-storefront</a>.</p>
+</article>
+
+<article class="doc" id="blacklab-store-yeezy" data-look="note" style="--accent:#6b7280">
+  <header class="banner">
+    <h1>Blacklabspots grid shop</h1>
+    <p class="tagline">A separate, buildless storefront inspired by a minimal product grid, with all 35 Black Lab Spots products as seen on 22 October 2026.</p>
+    <ul class="facts"><li>Spot</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/blacklab-store-yeezy.webp" width="1440" height="900" loading="lazy" alt="A white product grid with mono labels showing a T-shirt, a hoodie and a cap with Spot on it, in three columns"></figure>
+
+
+  <h2 id="blacklab-store-yeezy-run">Run it</h2>
+  <p>Open the <a href="https://gitguy268.github.io/blacklab-store-yeezy/">live version</a>, or serve the <code>dist</code> folder yourself:</p>
+  <pre><code>python3 -m http.server 8000 --directory dist</code></pre>
+
+  <h2 id="blacklab-store-yeezy-use">Use it</h2>
+  <ul>
+    <li>Filter by category, search, and open a product in a dialog.</li>
+    <li>To edit it, change <code>dist/products.json</code> for names, prices and links, <code>dist/style.css</code> for the layout, and <code>dist/app.js</code> for the behaviour.</li>
+  </ul>
+
+  <h2 id="blacklab-store-yeezy-how">How it works</h2>
+  <p>It is static HTML, CSS and JavaScript with no build step. Product images are bundled locally, and there is no tracking or backend. The layout is an independent implementation of patterns visible on the public page that inspired it.</p>
+
+  <h2 id="blacklab-store-yeezy-limits">Limits</h2>
+  <ul>
+    <li>The catalogue and prices are a snapshot, not live inventory.</li>
+    <li>There is no cart or payment. Options, availability and purchases stay on the original store.</li>
+  </ul>
+
+  <h2 id="blacklab-store-yeezy-credits">Credits</h2>
+  <p>MIT licence for the code. Products and photographs belong to Black Lab Spots. It contains none of the source, imagery, branding or backend of the Yeezy site it takes its look from, and isn’t affiliated with it. Source: <a href="https://github.com/Gitguy268/blacklab-store-yeezy">Gitguy268/blacklab-store-yeezy</a>.</p>
+</article>
+
 <article class="doc" id="paint97" data-look="win98" style="--accent:#1084d0">
   <header class="banner">
     <div class="window">
@@ -795,7 +872,509 @@ docker run --rm -p 8080:80 pikado</code></pre>
   <p>LiquidFrame’s own code is MIT. The photobook companion is <a href="https://github.com/ente-toys/photobook">Ente Photobook</a>, a separate program under AGPL-3.0; its source and my changes to it are kept apart in <code>companions/photobook/</code>.</p>
 </article>
 
-<!-- ================================================================ Tools -->
+<article class="doc" id="retro-zip" data-look="pixel" style="--accent:#db2777;--banner-bg:#1e1b4b">
+  <header class="banner">
+    <div class="banner-art" aria-hidden="true"></div>
+    <h1>retro-zip</h1>
+    <p class="tagline">A retro game library with two modes: emulated games in the browser, and six original games in a real terminal or on a CRT-style screen.</p>
+    <ul class="facts"><li>Games</li><li>GPL-3.0 licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/retro-zip.webp" width="1280" height="860" loading="lazy" alt="A neon pink and purple arcade page with a pixel-art retro-zip wordmark, a game on a small screen and a line-up of games to play"></figure>
+
+
+  <h2 id="retro-zip-run">Run it</h2>
+  <p>On a Mac, double-click <code>start.command</code>. Elsewhere, with Node 22 or newer:</p>
+  <pre><code>npm install
+npm run vendor    # downloads about 310 MB, keeps about 85 MB
+npm start         # http://127.0.0.1:8642</code></pre>
+  <p>Terminal mode, from the repository folder, in a window of at least 80×24:</p>
+  <pre><code>node bin/retro-zip.mjs              # menu
+node bin/retro-zip.mjs play rocks   # one game</code></pre>
+
+  <h2 id="retro-zip-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>What you can play</th><th>Where it comes from</th></tr>
+    <tr><td>Rocks, Snake, Swarm, Bricks, Paddle, Hop</td><td>Built in</td></tr>
+    <tr><td>Doom shareware episode</td><td>Built into the Doom engine</td></tr>
+    <tr><td>36 homebrew and free arcade games, including Freedoom</td><td>Each author’s permitted source</td></tr>
+    <tr><td>Your own files, including the Top 500 list</td><td>Your copies, kept in your browser</td></tr>
+  </table></div>
+  <p>retro-zip doesn’t download commercial games. They are listed so you can add your own copy. Doom III runs as a native Mac app through dhewm3 with your own game files.</p>
+
+  <h2 id="retro-zip-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Local server</strong>Listens on <code>127.0.0.1</code> only, and accepts a catalogue ID, never an address</li>
+    <li><strong>Downloads</strong>HTTPS from approved hosts, with exact size and SHA-256 checked</li>
+    <li><strong>Games</strong>Run in a sandboxed iframe with no origin, so they can’t reach your library or other sites</li>
+  </ol>
+  <p>The emulators need <code>unsafe-eval</code>, so that permission exists only inside the sandbox. Zip files are unpacked in memory with caps on count and size, and program files are refused.</p>
+
+  <h2 id="retro-zip-limits">Limits</h2>
+  <ul>
+    <li>The browser Doom engine has no sound.</li>
+    <li>Nintendo 64, Saturn, DS, Dreamcast, PSP and PlayStation 2 aren’t supported, and GameCube and Wii files are refused.</li>
+    <li>PlayStation games may need BIOS files that aren’t included.</li>
+    <li>Your library lives in one browser’s storage, so clearing site data deletes it.</li>
+    <li>Several emulator cores restrict commercial use, so retro-zip must not be sold.</li>
+  </ul>
+
+  <h2 id="retro-zip-credits">Credits</h2>
+  <p>GPL-3.0 licence, with the emulators and game sources listed in the repository’s NOTICE. Built on EmulatorJS and doom.wasm. Not affiliated with any game publisher. Source: <a href="https://github.com/Gitguy268/retro-zip">Gitguy268/retro-zip</a>.</p>
+</article>
+
+<article class="doc" id="spot-fetch" data-look="spot" style="--accent:#d7263d">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot apporteert</h1>
+      <p class="tagline">A fetch game. Throw a ball across a park for Spot, a black labrador, and look after him: he gets tired, hungry and thirsty.</p>
+      <ul class="facts"><li>Games</li><li>In Dutch</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-fetch.webp" width="1440" height="810" loading="lazy" alt="Spot, a black labrador, running back across the grass with a tennis ball in his mouth"></figure>
+
+  <h2 id="spot-fetch-run">Run it</h2>
+  <p>Needs Node 20.19 or newer. From a copy of the repository:</p>
+  <pre><code>npm ci
+npm run dev</code></pre>
+  <p><code>npm run build</code> makes a static bundle in <code>dist/</code> for any static host.</p>
+
+  <h2 id="spot-fetch-use">Play</h2>
+  <p>Drag the ball upwards and let go to throw. Aim for the flag: a throw scores up to 100 points, more the closer its first bounce lands, and nothing beyond 6 m. Tap Spot to pet him.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Button</th><th>What it does</th></tr>
+    <tr><td>Zit, Blijf, Bring, Aus</td><td>Sit, stay, fetch, drop. The bar under each shows how well Spot has learnt it.</td></tr>
+    <tr><td>Beloon</td><td>Reward him</td></tr>
+    <tr><td>Voer, Water</td><td>Fill his bowls</td></tr>
+    <tr><td>Foto</td><td>Photo mode: move around Spot, set a lens from 14 to 200 mm and the exposure from −2 to +2 EV, pick one of five filters, save a PNG</td></tr>
+    <tr><td>Geluid, Volledig scherm</td><td>Sound on or off, full screen on or off. The full-screen button hides where the browser can’t do it, as on an iPhone.</td></tr>
+  </table></div>
+  <p>The four bars in the corner are his energy, hunger, thirst and trust. He listens better the more he trusts you. The park has a day and night cycle and weather; <code>?tijd=18</code> fixes the hour, <code>?weer=helder</code>, <code>regen</code> or <code>sneeuw</code> the weather, and <code>?reset</code> starts without the saved game.</p>
+
+  <h2 id="spot-fetch-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>three.js</strong>Draws the park, Spot and his fur, all generated in code</li>
+    <li><strong>Physics</strong>The throw, the bounces and Spot’s run are unit tested</li>
+    <li><strong>localStorage</strong>Keeps Spot’s state and your best throw; no network requests</li>
+  </ol>
+</article>
+
+<article class="doc" id="spot-snake" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-conic-gradient(#7cc057 0 25%, #6aac48 0 50%) 0 0 / 44px 44px">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot’s Biscuit Snake</h1>
+      <p class="tagline">A snake game in one HTML file. Spot licks up biscuits to grow, and has to mind the fence, the flowers and his own tail.</p>
+      <ul class="facts"><li>Games</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-snake.webp" width="1272" height="1298" loading="lazy" alt="Spot, a black labrador with a red collar, winding across a lawn towards a biscuit"></figure>
+
+  <h2 id="spot-snake-run">Run it</h2>
+  <p>Open <code>index.html</code> in a browser. There is nothing to install or build.</p>
+
+  <h2 id="spot-snake-use">Controls</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Input</th><th>What it does</th></tr>
+    <tr><td><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td><td>Steer</td></tr>
+    <tr><td><kbd>Space</kbd></td><td>Pause and resume</td></tr>
+    <tr><td><kbd>M</kbd></td><td>Sound: all, effects only, off</td></tr>
+    <tr><td>Gamepad</td><td>D-pad or left stick; A or Start pauses. It rumbles on a crash and on a golden biscuit.</td></tr>
+    <tr><td>Phone</td><td>Swipe on the lawn, or use the on-screen pad</td></tr>
+    <tr><td>AI plays</td><td>Spot steers himself. Any steering key, a swipe or a second press takes over again.</td></tr>
+  </table></div>
+  <p>Pick a speed first: Puppy, Normal or Zoomies. Spot speeds up as the biscuits add up, and gold ones score 5.</p>
+
+  <h2 id="spot-snake-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Input queue</strong>Turns wait their turn; reversing into yourself is refused</li>
+    <li><strong>Tile grid</strong>The tail leaves a cell before the head arrives</li>
+    <li><strong>Biscuits</strong>Dropped only on empty cells, with crumbs flying off</li>
+  </ol>
+  <p>The best score per speed and your settings stay in <code>localStorage</code>. Until you press AI plays, the only request is for two Google Fonts, with fonts on your device as the fallback.</p>
+
+  <h2 id="spot-snake-ai">AI plays</h2>
+  <p>The moves come from <a href="https://huggingface.co/convaiinnovations/laya">Laya</a>, a small decision model by Convai Innovations that scores a list of options instead of writing text. Each step the game keeps the moves that don’t crash Spot and leave him room, describes each one (“goes toward the biscuit, leaves 212 open squares”) and lets Laya pick. On its own Laya tends to walk in circles, which is why the game narrows the options first.</p>
+  <ul>
+    <li>It needs WebGPU. Without it the button is greyed out.</li>
+    <li>The first press downloads the model, about 851 MB, from Hugging Face and loads ONNX Runtime Web and tokenizers.js from jsDelivr. The model stays in Cache Storage, so later presses start in a few seconds.</li>
+    <li>Spot waits on each square while Laya thinks, so the speed buttons don’t apply.</li>
+  </ul>
+
+  <h2 id="spot-snake-credits">Credits</h2>
+  <p>Ideas from epidemian/snake (Unlicense), janbodnar/Java-Snake-Game (BSD-2-Clause) and Phaser (MIT), written from scratch. Fonts: Press Start 2P and VT323 (SIL Open Font License). AI plays runs Laya by Convai Innovations (Apache-2.0) on ONNX Runtime Web (MIT), with tokenizers.js (Apache-2.0).</p>
+</article>
+
+<article class="doc" id="spot-light" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-linear-gradient(#c8925a 0 34px, #a87645 34px 36px)">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot-light</h1>
+      <p class="tagline">Spot chases a laser dot around the living room, and you keep it out of his paws. Three games, in 2D or 3D, and in 8-bit if you like.</p>
+      <ul class="facts"><li>Games</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-light.webp" width="1440" height="900" loading="lazy" alt="Spot, a black labrador with a red collar, chasing a red laser dot across a rug on a wooden floor"></figure>
+
+  <h2 id="spot-light-run">Run it</h2>
+  <p>Double-click <code>index.html</code>. It is one file with three.js beside it in <code>vendor/</code>, so it runs from disk with nothing to install.</p>
+
+  <h2 id="spot-light-use">Play</h2>
+  <p>The pointer is the laser. Move it and Spot runs after the dot.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Game</th><th>Goal</th></tr>
+    <tr><td>Dodge</td><td>60 seconds and 3 lives. Keep the dot out of his paws. He gets faster as the clock runs down.</td></tr>
+    <tr><td>Endless</td><td>No clock. Count how often he gets it, and beat your longest dodge streak.</td></tr>
+    <tr><td>Lure</td><td>90 seconds to steer him into the cup, the sock and the ball.</td></tr>
+  </table></div>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>What it does</th></tr>
+    <tr><td><kbd>V</kbd></td><td>Switch between 2D and 3D</td></tr>
+    <tr><td><kbd>B</kbd></td><td>Switch between Normal and 8-bit</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Pause</td></tr>
+  </table></div>
+
+  <h2 id="spot-light-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The dot</strong>Follows your pointer across the room</li>
+    <li><strong>Spot</strong>Chases it, faster with time in Dodge</li>
+    <li><strong>Two renderers</strong>A 2D canvas and a three.js 3D room show the same game</li>
+  </ol>
+  <p>8-bit draws at a fifth of the resolution and scales up without smoothing; in 2D it also snaps every colour to a 16-colour palette.</p>
+
+  <h2 id="spot-light-limits">Limits</h2>
+  <p>No sound, touch controls or saved high scores yet. The fonts come from Google Fonts, with fonts on your device as the fallback when offline.</p>
+</article>
+
+<article class="doc" id="rubber-hose-revue" data-look="reel" style="--accent:#b45309">
+  <header class="banner">
+    <h1>The Rubber Hose Revue</h1>
+    <p class="tagline">A programme in two parts: a rooftop cartoon with a musical saw, and Cannonball Capers, an asteroids game drawn the same way.</p>
+    <ul class="facts"><li>Games</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+
+  <h2 id="rubber-hose-revue-run">Run it</h2>
+  <p>Open <code>index.html</code> and pick the picture or the game. Everything, including the music and the crackle, is made in the page; there are no image or sound files.</p>
+
+  <h2 id="rubber-hose-revue-use">Controls</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>The picture</th><th>The game</th></tr>
+    <tr><td>Click</td><td>Start</td><td></td></tr>
+    <tr><td>Arrows</td><td></td><td>Steer and thrust</td></tr>
+    <tr><td>Space</td><td></td><td>Fire</td></tr>
+    <tr><td>P</td><td></td><td>Pause</td></tr>
+    <tr><td>M</td><td>Mute</td><td>Mute</td></tr>
+    <tr><td>S</td><td>Sepia on or off</td><td>Sepia on or off</td></tr>
+    <tr><td>F</td><td>Steady the picture</td><td>Steady the picture</td></tr>
+  </table></div>
+  <p>The game has buttons on touch screens, and a gamepad works too.</p>
+
+  <h2 id="rubber-hose-revue-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Drawing</strong>Rubber-hose characters drawn in code</li>
+    <li><strong>Film</strong>Sepia and a wobbling picture, which F steadies</li>
+    <li><strong>Sound</strong>A narrow band like a gramophone horn, over surface crackle</li>
+  </ol>
+</article>
+
+<article class="doc" id="edu-code-camp" data-look="win98" style="--accent:#0f766e">
+  <header class="banner">
+    <div class="window">
+      <div class="titlebar"><span>edu-code-camp</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="window-body">
+        <h1>edu-code-camp</h1>
+        <p class="tagline">Learn to code by writing real code. Short lessons, hidden tests, XP and a local AI tutor, all offline in your browser.</p>
+        <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/edu-code-camp.webp" width="1440" height="900" loading="lazy" alt="A Windows 98 style learning dashboard on a teal background, with XP progress, daily quests, a streak, and courses in JavaScript, Python, SQL and Linux"></figure>
+
+
+  <h2 id="edu-code-camp-run">Run it</h2>
+  <p>Open the <a href="https://gitguy268.github.io/edu-code-camp/">live version</a>. On a Mac, you can also double-click <code>start.command</code>. With Node 20 or newer:</p>
+  <pre><code>npm ci
+npm run build
+npx vite preview   # http://localhost:5281</code></pre>
+  <p>Opening <code>index.html</code> by double-click doesn’t work, because browsers block the code runners on <code>file://</code> pages. The page tells you so.</p>
+
+  <h2 id="edu-code-camp-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Track</th><th>Lessons</th><th>Runs on</th></tr>
+    <tr><td>JavaScript basics</td><td>8</td><td>A Web Worker, stopped after 4 s if a loop never ends</td></tr>
+    <tr><td>Python basics</td><td>8</td><td>Pyodide</td></tr>
+    <tr><td>SQL basics</td><td>6</td><td>sql.js, with a fresh database per run</td></tr>
+    <tr><td>Linux command line</td><td>6</td><td>Alpine Linux in v86, booted in the tab</td></tr>
+    <tr><td>Project: camp to-do list</td><td>5 steps</td><td>Python</td></tr>
+    <tr><td>Project: shell scavenger hunt</td><td>4 steps</td><td>Linux</td></tr>
+  </table></div>
+  <p>Passing earns XP, keeps your streak going and fills your chest. There are also 17 badges and three daily quests, and <strong>Settings</strong> has eight looks plus export and import of your progress.</p>
+  <p><strong>Spot the tutor</strong> is a black labrador with a red collar who gives hints, not answers. His model is a 672 MB download, made only when you press <strong>Download Spot</strong>.</p>
+
+  <h2 id="edu-code-camp-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Lessons</strong>A folder each: <code>lesson.md</code>, a starter file, hidden tests and a solution</li>
+    <li><strong>Runners</strong>One Web Worker per language. A run that takes too long is stopped by ending the worker</li>
+    <li><strong>Linux</strong>Alpine i386 in v86. Checks go over the serial port, so they never show in your terminal</li>
+    <li><strong>Spot</strong>MiniCPM-V 4.7 1B through wllama, with every 64 MiB part checked against a pinned SHA-256</li>
+    <li><strong>Offline</strong>A service worker precaches the app, Pyodide and sql.js on the first visit</li>
+  </ol>
+
+  <h2 id="edu-code-camp-limits">Limits</h2>
+  <ul>
+    <li>Building it yourself without the Linux image (<code>npm run image</code>, needs Docker) leaves out the Linux lessons and the scavenger hunt.</li>
+    <li>Your code, progress and the Linux VM stay in this browser until you clear it, so export a backup to move them.</li>
+    <li>The leaderboard only lists campers on this device.</li>
+  </ul>
+
+  <h2 id="edu-code-camp-credits">Credits</h2>
+  <p>MIT licence, and all lessons are original. Pyodide is MPL-2.0, the Linux image contains GPL software, and Spot’s model is Apache-2.0 and not part of the MIT grant. Not affiliated with freeCodeCamp, boot.dev or Microsoft. Source: <a href="https://github.com/Gitguy268/edu-code-camp">Gitguy268/edu-code-camp</a>.</p>
+</article>
+
+<article class="doc" id="xiao" data-look="paper" style="--accent:#b91c1c">
+  <header class="banner">
+    <h1>Xiao</h1>
+    <p class="tagline">A calm, private browser built on Zen: ad and tracker blocking built into the browser, stricter privacy settings, Tor tabs, and a search of your own.</p>
+    <ul class="facts"><li>Tools</li><li>MPL-2.0 licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/xiao.webp" width="1440" height="900" loading="lazy" alt="A dark file library with a search box, a sidebar of downloads, notes and collections, and a long list of PDF, image and archive files"></figure>
+
+
+  <h2 id="xiao-run">Install</h2>
+  <p>Xiao comes as a kit that makes its own copy of the Zen you already have, with a profile of its own. Your normal Zen isn’t touched. Download <code>xiao-kit.zip</code> from the <a href="https://github.com/Gitguy268/xiao/releases/latest">latest release</a>, unzip it and run:</p>
+  <pre><code>sh install.sh --tor --search                    # macOS and Linux
+powershell -ExecutionPolicy Bypass -File install.ps1 -Tor   # Windows</code></pre>
+  <p>Then open <strong>Xiao</strong> from your applications. <code>--uninstall</code> removes everything it added.</p>
+
+  <h2 id="xiao-use">Use it</h2>
+  <ul>
+    <li>Blocking is built into the browser, with a per-site switch on the Xiao button.</li>
+    <li>82 settings are hardened, and strict mode adds 10 more, including fingerprinting resistance.</li>
+    <li>Tor tabs are a container with a circuit per site. If Tor stops they fail, and never fall back to a direct connection.</li>
+    <li>Search goes through SearXNG by default, or through your own local copy with Xiao Search.</li>
+    <li>Silent mode makes the browser connect to nothing by itself. A 10-minute idle test logs every connection and finds none.</li>
+    <li>Optional features stay off until you add them: a Library of your files built from OpenFinder, a sticky note, Send to a device, a reader, a converter and PDF tools.</li>
+    <li>The start page has four styles: Normal, Liquid glass, Terminal and Retrofind.</li>
+  </ul>
+
+  <h2 id="xiao-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The kit</strong>Copies Zen, adds the loader and Xiao’s code, and swaps the name and icons</li>
+    <li><strong>The loader</strong>Firefox’s AutoConfig loads Xiao’s code from the app folder before any window opens</li>
+    <li><strong>The blocker</strong>Matches every request against Ghostery’s engine in the parent process</li>
+    <li><strong>The launcher</strong>Rebuilds the copy when Zen updates, starts Tor and search, and stops them when Xiao quits</li>
+  </ol>
+  <p>Updates are signed with Xiao’s own key, installed at the next start, and undone if that start fails.</p>
+
+  <h2 id="xiao-limits">Limits</h2>
+  <ul>
+    <li>It isn’t anonymity. Tor tabs hide your address, but Xiao doesn’t look like Tor Browser. Use Tor Browser when that matters.</li>
+    <li>Fingerprint noise isn’t invisibility, and web workers aren’t covered.</li>
+    <li>Silent mode has a cost: new bad sites and revoked certificates stop being caught, and security fixes wait until you check.</li>
+    <li>Windows is tested only by CI, and has no Xiao Search. NixOS and Alpine aren’t supported.</li>
+    <li>Full builds from Zen’s source are set up, but none has been compiled yet.</li>
+  </ul>
+
+  <h2 id="xiao-credits">Credits</h2>
+  <p>Mozilla Public License 2.0, built on <a href="https://github.com/zen-browser/desktop">Zen Browser</a> and Firefox. Blocking is <a href="https://github.com/ghostery/adblocker">Ghostery’s engine</a>, and Xiao Search is <a href="https://github.com/searxng/searxng">SearXNG</a>. Not affiliated with or endorsed by Zen, Mozilla, Mullvad, the Tor Project, Ghostery, SearXNG or The Browser Company. Source: <a href="https://github.com/Gitguy268/xiao">Gitguy268/xiao</a>.</p>
+</article>
+
+<article class="doc" id="hillium" data-look="glass" style="--accent:#7c3aed;--glow-1:#c4b5fd;--glow-2:#fbcfe8">
+  <header class="banner">
+    <div class="pane">
+      <h1>Hillium</h1>
+      <p class="tagline">An Arc and Zen style browser with Helium’s privacy defaults, for Linux (Arch) and macOS. It runs on Electron’s Chromium rather than a Helium build.</p>
+      <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/hillium.webp" width="1440" height="900" loading="lazy" alt="A browser with a purple sidebar of tabs and spaces next to a Wikipedia article about liquids"></figure>
+
+
+  <h2 id="hillium-run">Run it</h2>
+  <p>With Node 24 or newer. On a Mac you can double-click <code>app/start.command</code>. The first run installs Electron and the ad blocker, about 350 MB.</p>
+  <pre><code>cd app
+npm ci
+npm start</code></pre>
+  <p>On Arch Linux, <code>npm run dist:linux</code> builds a package that <code>makepkg -si</code> in <code>packaging/arch</code> installs. Spaces import from Arc or Zen, and bookmarks from Chrome, Brave, Helium, Vivaldi or Chromium.</p>
+
+  <h2 id="hillium-use">Use it</h2>
+  <ul>
+    <li><strong>Spaces</strong> each have a name, an emoji and a colour gradient, and can have their own cookies and logins. Favourites sit on top, with pinned tabs and folders under them.</li>
+    <li><strong>Today</strong> tabs go to an archive after 12 hours, a day or a week.</li>
+    <li><kbd>⌘T</kbd> opens a command bar that searches tabs in every space, history, the archive and commands.</li>
+    <li>Also: Glance and Peek, split view of up to four pages, compact mode, and Boosts and Zap for changing a site.</li>
+    <li>Four looks: Arc, Zen, Liquid Glass and Retro 98.</li>
+    <li>Turn on Settings › Agents, and the <code>hillium-cli</code> command and an MCP server let AI apps list, open and read your tabs. Private windows stay invisible to them.</li>
+  </ul>
+
+  <h2 id="hillium-how">How it works</h2>
+  <p>A transparent window holds the interface, with one Chromium view per visible tab placed in the card. A single request filter runs per session.</p>
+  <ul>
+    <li>Blocking uses Ghostery’s engine with EasyList, EasyPrivacy, uBlock Origin’s lists and cookie notices.</li>
+    <li>68 tracking parameters are removed before a page loads, and http addresses are tried over HTTPS first.</li>
+    <li>Third parties get no cookies, and caches, connections and storage are kept per site.</li>
+    <li>On a subset of privacytests.org’s tests it passes 67 of 76. Electron with its defaults passes 11 of 63.</li>
+  </ul>
+
+  <h2 id="hillium-limits">Limits</h2>
+  <ul>
+    <li>It is Electron, not Helium, so Chromium updates arrive with Electron releases.</li>
+    <li>There is no fingerprint noise. Use Tor Browser when you need to be anonymous.</li>
+    <li>No Chrome extensions, password saving or sync yet.</li>
+    <li>It is unsigned on macOS, so right-click and choose Open the first time.</li>
+    <li>Arc wasn’t decompiled. Its features are rebuilt from how Arc behaves.</li>
+  </ul>
+
+  <h2 id="hillium-credits">Credits</h2>
+  <p>MIT licence. Files from <a href="https://github.com/zen-browser/desktop">Zen</a> stay MPL-2.0, and the glass is by Archis Vaze (MIT). The repository’s NOTICE lists everything it uses. Not affiliated with The Browser Company, Zen, imputnet, Brave or Ghostery. Source: <a href="https://github.com/Gitguy268/hillium">Gitguy268/hillium</a>.</p>
+</article>
+
+<article class="doc" id="archium" data-look="glass" style="--accent:#6b3fa0;--glow-1:#c4b5fd;--glow-2:#5eead4">
+  <header class="banner">
+    <div class="pane">
+      <h1>Archium</h1>
+      <p class="tagline">A privacy layer for the Helium browser: an offline new tab, search that runs on your own Mac, a Tor switch with a kill switch, and a URL cleaner. Plus Archium Browser, a runnable browser with the same protection, three looks, Glance and a local assistant.</p>
+      <ul class="facts"><li>Tools</li><li>GPL-3.0 licence</li><li>macOS</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/archium.webp" width="1440" height="855" loading="lazy" alt="A browser new tab page with a clock, a search box and quick links"></figure>
+  <p class="note">Archium is a companion kit for now: an extension and scripts on top of a stock <a href="https://helium.computer">Helium</a> release, not a browser you download. Its own builds are planned.</p>
+
+  <h2 id="archium-run">Install</h2>
+  <p>You need macOS, Helium and Homebrew.</p>
+  <ol>
+    <li>Start local search: double-click <code>searxng/install.command</code>. SearXNG starts now and at every login, on <code>127.0.0.1:8888</code>, without Docker.</li>
+    <li>In Helium open <code>chrome://extensions</code>, turn on Developer mode, click Load unpacked and choose the <code>extension</code> folder.</li>
+    <li>Add a search engine with the URL <code>http://127.0.0.1:8888/search?q=%s</code> and make it the default.</li>
+    <li>For Tor, run <code>brew install tor &amp;&amp; brew services start tor</code>, then pick Tor in the Archium popup.</li>
+  </ol>
+
+  <h2 id="archium-use">Features</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Feature</th><th>What it does</th></tr>
+    <tr><td>Offline new tab</td><td>Clock, search box and quick links, with no network requests</td></tr>
+    <tr><td>Private search</td><td>SearXNG on your Mac, with a public instance as the fallback</td></tr>
+    <tr><td>URL cleaner</td><td>27 rules strip <code>utm_*</code>, <code>fbclid</code>, <code>gclid</code> and other tracking parameters</td></tr>
+    <tr><td>Tor or proxy switch</td><td>One click routes all traffic through your own Tor or a proxy</td></tr>
+    <tr><td>Kill switch</td><td>When Tor stops, pages fail to load; they never fall back to a direct connection</td></tr>
+    <tr><td>WebRTC block</td><td>Stops WebRTC leaking your address, forced on while proxied</td></tr>
+    <tr><td>Own Helium services</td><td>Optional: <code>services/run-local.sh</code> runs Helium’s services server on your Mac, so filter lists, !bangs and extensions never come through imputnet’s servers. Needs Docker and mkcert.</td></tr>
+  </table></div>
+
+  <h2 id="archium-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Popup</strong>Your choices go into extension storage</li>
+    <li><strong>Background worker</strong>Applies the proxy, WebRTC policy and redirect rules</li>
+    <li><strong>Chromium</strong>Never falls back to a direct connection from a fixed proxy</li>
+  </ol>
+  <p>Chromium never sends loopback traffic through a proxy, so in Tor mode a redirect rule sends local searches to the public instance, through Tor. The extension asks for access to all sites only because redirect rules need it; it has no content scripts and never reads pages.</p>
+
+  <h2 id="archium-limits">Limits</h2>
+  <ul>
+    <li>Tor through a Chromium browser is not Tor Browser. It hides your IP from sites, but your browser fingerprint still identifies you.</li>
+    <li>Local SearXNG queries Google, Bing and others from your IP outside Tor mode.</li>
+    <li>Nothing is compiled into the browser yet, so the extension can be switched off.</li>
+  </ul>
+
+  <h2 id="archium-credits">Credits</h2>
+  <p>Builds on <a href="https://github.com/imputnet/helium">Helium</a> by imputnet, which builds on ungoogled-chromium. Search is SearXNG. Not affiliated with any of them, Google or the Tor Project.</p>
+</article>
+
+<article class="doc" id="skyhold" data-look="glass" style="--accent:#0369a1;--glow-1:#bae6fd;--glow-2:#fde68a">
+  <header class="banner">
+    <div class="pane">
+      <h1>Skyhold</h1>
+      <p class="tagline">Stage files, back them up to any cloud, then drop the local copies. One Go binary with a command line, a terminal UI and a web UI.</p>
+      <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/skyhold.webp" width="1440" height="900" loading="lazy" alt="The Skyhold web interface with a cloud remote configured, a list of photo files ticked for staging and an Add to vault button"></figure>
+
+
+  <h2 id="skyhold-run">Install</h2>
+  <p>You need Go 1.27 or newer. The first build downloads the rclone backends and takes a few minutes.</p>
+  <pre><code>go install github.com/Gitguy268/skyhold/cmd/skyhold@latest</code></pre>
+  <p>A first backup:</p>
+  <pre><code>skyhold init                                # release password, then write down the cloud key
+skyhold remote add b2 b2:my-bucket/skyhold  # any rclone remote
+skyhold add ~/Documents/Taxes
+skyhold push
+skyhold verify
+skyhold release                             # lists every file, then asks for the password</code></pre>
+
+  <h2 id="skyhold-use">Use it</h2>
+  <ul>
+    <li>Run <code>skyhold</code> with no command for the terminal UI, or <code>skyhold serve</code> for the web UI on <code>127.0.0.1:7480</code>.</li>
+    <li>S3, Backblaze B2, Google Drive, OneDrive, Dropbox, WebDAV, SFTP and about 60 more work through rclone.</li>
+    <li><code>skyhold restore</code> brings files back to their original paths. <code>skyhold recover</code> restores everything on a new machine with only the cloud key and the remote.</li>
+  </ul>
+
+  <h2 id="skyhold-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Stage</strong>Each file is encrypted into the vault with its path, size, mode and SHA-256 recorded</li>
+    <li><strong>Upload</strong>Files go to every cloud, encrypted again with the cloud key</li>
+    <li><strong>Verify</strong>Each cloud copy is downloaded and compared</li>
+    <li><strong>Release</strong>After your password and another check, the vault key, the vault and the originals are deleted</li>
+  </ol>
+  <p>Two keys are kept apart. The vault key lives only in the OS keychain, and release destroys it. The cloud key is separate, so destroying the vault key can’t lock you out of your backup. Nothing is deleted unless every file is verified on every cloud at the moment of release, and an original that changed since you added it is kept.</p>
+
+  <h2 id="skyhold-limits">Limits</h2>
+  <ul>
+    <li>Originals are deleted normally, and on SSDs a deleted file can’t be guaranteed unrecoverable. Release checks for full-disk encryption and warns if it’s off.</li>
+    <li>Time Machine and other snapshots may still hold the originals.</li>
+    <li>After release, the cloud copy is the only copy. Without the cloud key, encrypted copies can’t be decrypted by you or anyone else.</li>
+    <li>Verifying encrypted copies downloads them, which costs money on clouds that charge for it.</li>
+    <li>The SMB backend is left out because of its licence. Use SFTP or WebDAV for a NAS.</li>
+  </ul>
+
+  <h2 id="skyhold-credits">Credits</h2>
+  <p>MIT licence. Skyhold compiles in <a href="https://rclone.org">rclone</a> and other libraries under their own licences, listed in the repository’s NOTICE. Encryption uses <a href="https://age-encryption.org">age</a>. Source: <a href="https://github.com/Gitguy268/skyhold">Gitguy268/skyhold</a>.</p>
+</article>
+
+<article class="doc" id="openfinder" data-look="finder" style="--accent:#0a84ff;--glow-1:#a5b4fc;--glow-2:#f9a8d4">
+  <header class="banner">
+    <div class="mac-window">
+      <div class="mac-side" aria-hidden="true">Favorites<br>Desktop<br>Documents<br>Sandbox<br>Tags</div>
+      <div class="mac-main">
+        <h1>OpenFinder</h1>
+        <p class="tagline">A file manager that runs in your browser, styled after the Finder with liquid glass. It works on real folders on your computer, and inside the <a href="#xiao">Xiao</a> browser it is the Library.</p>
+        <ul class="facts"><li>Tools</li><li>GPL-3.0-or-later licence</li><li>Available online</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/openfinder.webp" width="1280" height="800" loading="lazy" alt="A Finder-style window with a glass sidebar of favourites, and folders shown as icons"></figure>
+
+  <h2 id="openfinder-run">Run it</h2>
+  <pre><code>npm install
+npm run build
+npm start        # then open http://localhost:4627</code></pre>
+  <p>On a Mac, <code>start.command</code> does all three and opens the browser. Use Chrome, Edge, Brave, Opera or Arc.</p>
+
+  <h2 id="openfinder-use">Use it</h2>
+  <p>Click <strong>Allow File Access…</strong>, pick a folder and start working. There is no account, database or config file, and your files never leave your computer. The <strong>Sandbox</strong> is private storage inside the browser, for trying it without your own files.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Milestone</th><th>Contents</th><th>State</th></tr>
+    <tr><td>1</td><td>Window, glass sidebar and toolbar, folder access, Sandbox, light and dark</td><td>Done</td></tr>
+    <tr><td>2</td><td>Icon, List, Column and Gallery views, Quick Look, Get Info, tags, file operations</td><td>Next</td></tr>
+    <tr><td>3–7</td><td>Search, archives, conversion, sharing, offline app</td><td>Planned</td></tr>
+  </table></div>
+
+  <h2 id="openfinder-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Folder picker</strong>You grant one folder through the File System Access API</li>
+    <li><strong>The page</strong>Reads and lists it directly; nothing is uploaded</li>
+    <li><strong>Glass</strong>Edge refraction adapted from Liquid Glass Studio</li>
+  </ol>
+
+  <h2 id="openfinder-limits">Limits</h2>
+  <ul>
+    <li>Chromium browsers only: Firefox and Safari don’t offer folder access.</li>
+    <li>Brave ships with folder access off; enable <code>brave://flags/#file-system-access-api</code>.</li>
+    <li>Browsers refuse Home, Desktop, Documents and Downloads themselves. Pick a folder inside one.</li>
+    <li>Permission is asked again after a browser restart.</li>
+  </ul>
+
+  <h2 id="openfinder-credits">Credits</h2>
+  <p>Not affiliated with Apple. Feature ideas from FileBrowser Quantum (no code used). Icons from Lucide (ISC).</p>
+</article>
+
 <article class="doc" id="convert" data-look="glass" style="--accent:#0d9488;--glow-1:#99f6e4;--glow-2:#fde68a">
   <header class="banner">
     <div class="pane">
@@ -845,6 +1424,132 @@ docker run --rm -p 8080:80 pikado</code></pre>
 
   <h2 id="convert-credits">Credits</h2>
   <p>Fork of <a href="https://github.com/p2r3/convert">p2r3/convert</a> (GPL-2.0). Ideas from VERT, Stirling-PDF, LosslessCut, ConvertX and others are named in its README.</p>
+</article>
+
+<article class="doc" id="retrofind" data-look="win98" style="--accent:#1084d0;--banner-bg:radial-gradient(ellipse at 20% 30%, #fff 0 10%, transparent 28%), radial-gradient(ellipse at 78% 72%, #fff 0 9%, transparent 26%), linear-gradient(#2f6fd0, #79b0ee)">
+  <header class="banner">
+    <div class="window">
+      <div class="titlebar"><span>Retrofind</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="window-body">
+        <h1>Retrofind</h1>
+        <p class="tagline">Private web search on your own Mac, in the style of 1998. SearXNG runs underneath without Docker, under a start page modelled on early Google in a Windows 98 window of liquid glass.</p>
+        <ul class="facts"><li>Tools</li><li>macOS</li><li>MIT licence</li><li>Available online</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/retrofind.webp" width="1440" height="912" loading="lazy" alt="A Windows 98 window over a cloudy sky showing a 1998-style search page with a multicoloured Retrofind wordmark and an I'm Feeling Lucky button"></figure>
+
+  <h2 id="retrofind-run">Install</h2>
+  <p>You need macOS and Homebrew. Run <code>brew install uv</code>, then double-click <code>start.command</code> in a copy of the repository. The first run installs SearXNG, which takes a few minutes; after that it opens <code>http://127.0.0.1:8898/</code>. Both services start again when you log in.</p>
+  <p>To make it your browser’s search engine, add a site search with this address:</p>
+  <pre><code>http://127.0.0.1:8898/search?q=%s</code></pre>
+  <p><code>sh searxng/uninstall.sh</code> stops both services and deletes everything the installer made.</p>
+
+  <h2 id="retrofind-use">Use it</h2>
+  <ul>
+    <li>The start page has a wordmark with a drop shadow, <strong>I’m Feeling Lucky</strong>, and a choice of Web or News.</li>
+    <li>Results come in a blue “Searched the web for…” bar, with green addresses and a “Retroooofind” strip of pages at the bottom.</li>
+    <li>The window frame, title bar, taskbar and Start button are liquid glass that bends the sky behind them. Results stay on solid white, so they are easy to read.</li>
+  </ul>
+
+  <h2 id="retrofind-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The page</strong>Plain HTML, CSS and JavaScript on <code>127.0.0.1:8898</code></li>
+    <li><strong>server.py</strong>Python’s standard library only. It passes on the query, the page and the category, nothing else</li>
+    <li><strong>SearXNG</strong>On <code>127.0.0.1:8893</code>, asking several search engines at once</li>
+  </ol>
+  <p>SearXNG lives in a Python environment made with uv and is kept running by two LaunchAgents, so there is no Docker. <code>server.py</code> strips every result down to its title, link, snippet and engine names. Only <code>http</code> and <code>https</code> links reach the page, and results are inserted as text, never as HTML.</p>
+
+  <h2 id="retrofind-limits">Limits</h2>
+  <ul>
+    <li>No image search, on purpose: 1998 had none, and the thumbnails would load from other servers.</li>
+    <li>No result totals, because SearXNG doesn’t report them.</li>
+    <li>Search engines sometimes block or slow down your address, so results can come from fewer engines.</li>
+    <li>The glass bends only in Chromium browsers; Safari and Firefox get glass that doesn’t bend.</li>
+    <li>macOS only, because the installer uses LaunchAgents.</li>
+  </ul>
+
+  <h2 id="retrofind-credits">Credits</h2>
+  <p>Search is <a href="https://github.com/searxng/searxng">SearXNG</a> (AGPL-3.0), downloaded at a pinned commit and run unchanged as a separate program. Liquid glass from kwlck/liquid-glass-web and the edge highlights of kevinbism/liquid-glass-effect (both MIT). The cloud wallpaper is Qrer’s. The wordmark, icon and Windows chrome are original drawings; Retrofind isn’t affiliated with Google or Microsoft.</p>
+</article>
+
+<article class="doc" id="web2app" data-look="paper" style="--accent:#1c5d33">
+  <header class="banner">
+    <h1>web2app</h1>
+    <p class="tagline">Turn any website into a small Mac app. A page on your own Mac for the Pake command-line tool, with a build queue, a history, offline builds and phone pairing.</p>
+    <ul class="facts"><li>Tools</li><li>macOS</li><li>GPL-3.0-or-later licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/web2app.webp" width="1440" height="900" loading="lazy" alt="A page headed Turn any website into a Mac app, with buttons for popular apps and a build form"></figure>
+
+  <h2 id="web2app-run">Run it</h2>
+  <p>Double-click <code>start.command</code>. It installs Pake the first time, starts the server and opens <code>http://localhost:7417</code>. Building apps needs Rust; web2app tells you if it’s missing.</p>
+
+  <h2 id="web2app-use">Use it</h2>
+  <ol>
+    <li>Start from a popular app, enter a web address, or choose files on this device.</li>
+    <li>Set the name, window size, zoom, title bar, dark mode, tray icon and the other Pake options. The page shows the exact <code>pake</code> command it will run.</li>
+    <li>Press <strong>Build app</strong>. Builds wait in a queue and run one at a time.</li>
+    <li>Download the <code>.dmg</code> or <code>.app</code>, or install it straight away. Every build stays in History.</li>
+  </ol>
+  <p><strong>Use on phone</strong> lets a phone on the same Wi-Fi start builds: scan the QR code on the Mac, then type the 6-digit code it shows. It is off until you turn it on. In History you can cancel a build, build it again, open the app or show it in Finder.</p>
+
+  <h2 id="web2app-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The page</strong>Your options become Pake flags</li>
+    <li><strong>server.js</strong>A plain Node server on 127.0.0.1 queues the build</li>
+    <li><strong>Pake</strong>Wraps the site in a Tauri app with Rust</li>
+    <li><strong>History</strong>Each build keeps its folder and log</li>
+  </ol>
+  <p>One file lists every flag the form may set, and both the server and the page read it, so the command shown is always the command run. Builds work offline once Pake and its Rust cache are installed: about 45 seconds for an app.</p>
+
+  <h2 id="web2app-limits">Limits</h2>
+  <p>Mac only. Phone access needs the macOS firewall to allow Node.</p>
+
+  <h2 id="web2app-credits">Credits</h2>
+  <p>A front end for <a href="https://github.com/tw93/Pake">tw93/Pake</a>. It has its own name because Pake asks derived tools not to use its name or logo.</p>
+</article>
+
+<article class="doc" id="qrer" data-look="win98" style="--accent:#1084d0;--banner-bg:radial-gradient(ellipse at 20% 30%, #fff 0 10%, transparent 28%), radial-gradient(ellipse at 78% 72%, #fff 0 9%, transparent 26%), radial-gradient(ellipse at 60% 10%, #fff 0 6%, transparent 20%), linear-gradient(#2f6fd0, #79b0ee)">
+  <header class="banner">
+    <div class="window">
+      <div class="titlebar"><span>Qrer: QR Editor</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="window-body">
+        <h1>Qrer</h1>
+        <p class="tagline">A QR code editor that looks like Windows 98, with liquid glass on its title bar and taskbar over a cloud desktop. It reads codes as well as making them. Version 2.7 adds an Art look and animated codes, saved as GIF.</p>
+        <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+      </div>
+    </div>
+  </header>
+  <figure><img src="../images/qrer.webp" width="1440" height="900" loading="lazy" alt="A Windows 98 window titled Qrer, QR Editor, over a cloud wallpaper, showing a QR code and export buttons"></figure>
+
+  <h2 id="qrer-run">Run it</h2>
+  <p>Double-click <code>start.command</code>, or serve the folder:</p>
+  <pre><code>python3 serve.py --port 4317    # http://127.0.0.1:4317/</code></pre>
+  <p>There is no build step and no runtime dependency. Clipboard and offline use need HTTPS or localhost.</p>
+
+  <h2 id="qrer-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Tab</th><th>What you set</th></tr>
+    <tr><td>Content</td><td>A link, Unicode text, Wi-Fi credentials or an email draft</td></tr>
+    <tr><td>Style</td><td>Six presets, module, corner and eye shapes, colours, and a caption, outline or card frame. Photo look puts the code over a picture and checks it still scans.</td></tr>
+    <tr><td>Logo</td><td>A local image in the middle; error correction goes up automatically</td></tr>
+  </table></div>
+  <p>Export PNG or SVG at exactly 512, 1024 or 2048 pixels, copy to the clipboard, or make a 1080 × 1440 share card. Ctrl/⌘+Z undoes up to 30 style changes. <strong>Read QR…</strong> reads a code from an image or the camera and never opens links by itself. <strong>Check this code</strong> scans your export.</p>
+  <p>The desktop works like Windows 98: drag the window by its title, minimise to the taskbar, use the Start menu. View › Float export toolbar detaches the export controls.</p>
+
+  <h2 id="qrer-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Encode</strong>Your content becomes a QR matrix in the page</li>
+    <li><strong>Style</strong>Shapes, colours and frames are drawn on top</li>
+    <li><strong>Verify</strong>Photo look decodes the result before it can be exported; any other export is scanned when you press Check this code</li>
+  </ol>
+  <p>Glass goes only on chrome that sits over the wallpaper, because glass bends what is behind it and a flat grey panel gives it nothing to bend. Chromium refracts the live backdrop; WebKit and Gecko refract a copy of the painted cloud wallpaper. The code itself is never under glass. After the first visit everything works offline.</p>
+
+  <h2 id="qrer-limits">Limits</h2>
+  <p>Custom colours, shapes and logos can make a code harder to scan: always test it on the device and at the size you’ll print. Anyone who receives a Wi-Fi code can read the password in it.</p>
+
+  <h2 id="qrer-credits">Credits</h2>
+  <p>Clean codes are encoded with Nayuki’s QR Code generator and read with Nimiq QR Scanner (both MIT). Liquid glass from kwlck/liquid-glass-web, gentpan/liquidglass and Liquid Glass Studio (all MIT). The taskbar and controls adapt Windows 98 Web Edition (MIT), and the Start menu follows WIN98-template (Unlicense). The icons and wallpapers are original; no Windows media is bundled.</p>
 </article>
 
 <article class="doc" id="qrcodeforeveryone" data-look="note" style="--accent:#0f766e">
@@ -905,12 +1610,181 @@ python3 -m http.server 8000</code></pre>
   <p>The picture is drawn by the browser itself, through an SVG copy of the page, so it matches the preview closely. Text previews are drawn with html2canvas.</p>
 </article>
 
+<article class="doc" id="better-aiko" data-look="note" style="--accent:#2563eb">
+  <header class="banner">
+    <h1>Better Aiko</h1>
+    <p class="tagline">Refined icons for the AI era. A fork of Aiko with 101 more icons, every icon named, and a page to browse, recolour and download them.</p>
+    <ul class="facts"><li>Tools</li><li>Fork</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/better-aiko.webp" width="1440" height="900" loading="lazy" alt="A page of line icons in a grid with their names underneath, a search box at the top and a Better Aiko logo"></figure>
+
+
+  <h2 id="better-aiko-run">Run it</h2>
+  <p>Open the <a href="https://gitguy268.github.io/better-aiko/">live page</a>, or serve the folder yourself, because the page loads its icons with <code>fetch</code>. On a Mac, double-click <code>start.command</code>. Elsewhere:</p>
+  <pre><code>python3 -m http.server 8794</code></pre>
+
+  <h2 id="better-aiko-use">Use it</h2>
+  <ul>
+    <li>Search by name, category or tag, and change colours on the fly.</li>
+    <li>Copy the SVG code, or download single SVG or PNG files.</li>
+    <li>There are new icons in AI (26), Developer (25), Files (25) and UI (25).</li>
+    <li>The 132 upstream icons that showed up as “Icon 1a24f4” now have names, categories and search tags.</li>
+  </ul>
+
+  <h2 id="better-aiko-how">How it works</h2>
+  <p>Icons live as stroked sources in <code>icons-src/</code>. <code>scripts/build-icons.py</code> turns them into the filled paths in <code>assets/icons.svg</code> and the metadata in <code>index.html</code>, and CI checks that the two stay in sync. New icons use upstream’s 20×20 grid with the same 1.33 stroke, round caps and corner radius.</p>
+
+  <h2 id="better-aiko-limits">Limits</h2>
+  <ul>
+    <li>The page needs a web server, so it won’t work from a <code>file://</code> address.</li>
+    <li>Many upstream glyphs appear to derive from OpenAI’s icon assets, and the sprite includes OpenAI and Y Combinator marks. Those are outside the MIT grant.</li>
+  </ul>
+
+  <h2 id="better-aiko-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/tw93/aiko">tw93/aiko</a> by Tw93, under its MIT licence. Not affiliated with OpenAI or Tw93. Source: <a href="https://github.com/Gitguy268/better-aiko">Gitguy268/better-aiko</a>.</p>
+</article>
+
+<article class="doc" id="clippy-choppy" data-look="win98" style="--accent:#1084d0">
+  <header class="banner">
+    <div class="window">
+      <div class="titlebar"><span>Clippy Choppy</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="window-body">
+        <h1>Clippy Choppy</h1>
+        <p class="tagline">Clippy on your web page, in plain JavaScript. An unofficial fan project, not affiliated with or endorsed by Microsoft.</p>
+        <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+      </div>
+    </div>
+  </header>
+
+  <h2 id="clippy-choppy-run">Run it</h2>
+  <p>Copy <code>clippy-choppy.js</code>, <code>style.css</code> and the <code>assets</code> folder into your site, then add them to your page:</p>
+  <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;script src=&quot;clippy-choppy.js&quot;&gt;&lt;/script&gt;</code></pre>
+  <p>Serve the folder, because the animation data loads over HTTP:</p>
+  <pre><code>python3 -m http.server 8000</code></pre>
+
+  <h2 id="clippy-choppy-use">Use it</h2>
+  <p>Once the script is on a page, Clippy appears on it. There is nothing to install and no framework involved.</p>
+
+  <h2 id="clippy-choppy-how">How it works</h2>
+  <p>It is one JavaScript file and one stylesheet. The animation data and the character artwork load from the <code>assets</code> folder.</p>
+
+  <h2 id="clippy-choppy-limits">Limits</h2>
+  <ul>
+    <li>It has to be served over HTTP, so it won’t work from a <code>file://</code> address.</li>
+    <li>The MIT licence doesn’t cover the Clippy artwork in <code>assets/clippy/</code>.</li>
+  </ul>
+
+  <h2 id="clippy-choppy-credits">Credits</h2>
+  <p>MIT licence for the code. The Clippy character artwork belongs to its owner. Not affiliated with or endorsed by Microsoft. Source: <a href="https://github.com/Gitguy268/clippy-choppy">Gitguy268/clippy-choppy</a>.</p>
+</article>
+
+<article class="doc" id="lvw-harness" data-look="terminal" style="--accent:#34d399">
+  <header class="banner">
+    <p class="prompt" aria-hidden="true">~ $ lvw model pull hf:owner/model:Q4_K_M</p>
+    <h1>LvW-harness</h1>
+    <p class="tagline">A local-first AI agent with a one-command model manager for Hugging Face, GitHub and GitLab.</p>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/lvw-harness.webp" width="1440" height="900" loading="lazy" alt="The LvW web interface on its Skills page, with an install box and a list of installed skills such as code review, research and test-driven development"></figure>
+
+
+  <h2 id="lvw-harness-run">Install</h2>
+  <p>You need Bun 1.4 or newer on macOS (Apple silicon) or Linux. On a Mac you can also double-click <code>start.command</code> for the web UI.</p>
+  <pre><code>bun install
+bun link     # puts lvw on your PATH
+lvw setup    # downloads llama-server, offers a starter model
+lvw doctor   # checks disk, memory, runtimes, browser and tokens</code></pre>
+
+  <h2 id="lvw-harness-use">Use it</h2>
+  <pre><code>lvw chat                           # terminal chat; asks before it changes anything
+lvw run "add a --verbose flag and run the tests"
+lvw research "how do llama.cpp quant types compare?"
+lvw serve                          # web UI on http://127.0.0.1:7878</code></pre>
+  <ul>
+    <li><code>lvw model pull</code> takes Hugging Face, GitHub and GitLab releases, any URL or Ollama. <code>lvw model rm</code> removes a model with every file it brought.</li>
+    <li>Downloads resume, check sha256 where the host publishes it, and refuse to leave less than 2 GB free.</li>
+    <li>By default it asks before writes and commands that change things. <code>--auto</code>, <code>--readonly</code> and <code>--sandbox docker</code> change that.</li>
+    <li>18 skills are bundled, and tasks, routines, approvals, MCP servers and plugins are built in.</li>
+  </ul>
+
+  <h2 id="lvw-harness-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Models</strong>Run locally through llama.cpp or Ollama. Cloud models work if you add a key</li>
+    <li><strong>Agent</strong>File, shell, web, browser, memory and skill tools, with budgets per run</li>
+    <li><strong>Memory</strong>Markdown notes with full-text search, plus <code>AGENTS.md</code> or <code>CLAUDE.md</code> as project rules</li>
+    <li><strong>Web UI</strong>Chat, Models, Tasks, Memory, Skills and Compare. It loads nothing from the internet</li>
+  </ol>
+  <p>The server listens on <code>127.0.0.1</code> unless you say otherwise, and any other address needs a login token.</p>
+
+  <h2 id="lvw-harness-limits">Limits</h2>
+  <ul>
+    <li>Small local models handle short tasks well, but get unreliable over long chains of tool calls.</li>
+    <li>Only GGUF models run locally. Other formats are stored, not run.</li>
+    <li><code>--sandbox docker</code> covers shell commands only, and file tools still work directly in your folder.</li>
+    <li>The Telegram bot and <code>lvw improve</code> are experimental.</li>
+  </ul>
+
+  <h2 id="lvw-harness-credits">Credits</h2>
+  <p>MIT licence. Bundled skills keep their own MIT licences, and models keep theirs. Ideas from other projects are credited in the repository’s NOTICE.md. Not affiliated with Hugging Face, GitHub, GitLab, Telegram or Ollama. Source: <a href="https://github.com/Gitguy268/LvW-harness">Gitguy268/LvW-harness</a>.</p>
+</article>
+
+<article class="doc" id="usb-llms" data-look="terminal" style="--accent:#22c55e">
+  <header class="banner">
+    <p class="prompt" aria-hidden="true">~ $ usb-llms setup --model llama-3.2-3b</p>
+    <h1>USB LLMS</h1>
+    <p class="tagline">Run AI models from a USB stick on macOS, Windows and Linux, with or without the internet.</p>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/usb-llms.webp" width="1180" height="760" loading="lazy" alt="The USB LLMS model manager in a browser, listing the models on the drive with sizes and a catalogue of suggested models to add"></figure>
+
+
+  <h2 id="usb-llms-run">Start</h2>
+  <ol>
+    <li>Format the stick as exFAT, so all three systems can use it. Plan for at least 16 GB.</li>
+    <li>Copy the release folder onto it.</li>
+    <li>While online, open <code>start.command</code> (macOS), <code>start.bat</code> (Windows) or <code>sh start.sh</code> (Linux), and choose <strong>Set up this computer</strong>.</li>
+  </ol>
+  <p>Each computer type needs its engine once, and models are shared between all of them. To build it yourself, with Go 1.24 or newer:</p>
+  <pre><code>go build -o usb-llms .
+./usb-llms --home ./drive setup --lean --model smollm2-135m</code></pre>
+
+  <h2 id="usb-llms-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Interface</th><th>Command</th></tr>
+    <tr><td>Terminal menus</td><td><code>usb-llms</code></td></tr>
+    <tr><td>Chat and models in a browser</td><td><code>usb-llms web</code></td></tr>
+    <tr><td>The same page in its own window</td><td><code>usb-llms app</code></td></tr>
+    <tr><td>The real Ollama commands, against the drive</td><td><code>usb-llms run</code>, <code>list</code>, <code>ps</code></td></tr>
+    <tr><td>Ollama’s API on port 11435</td><td><code>usb-llms serve</code></td></tr>
+    <tr><td>The full Open WebUI, kept on the drive</td><td><code>usb-llms webui install</code></td></tr>
+  </table></div>
+  <p><code>usb-llms pull</code> takes a catalogue id, <code>hf:</code> and <code>gh:</code> names, a link, a local file or the Ollama library. <code>usb-llms mode offline</code> blocks outside connections, and it can also carry <a href="#lvw-harness">LvW-harness</a>. Stop the engine before you eject the stick.</p>
+
+  <h2 id="usb-llms-how">How it works</h2>
+  <p>The program finds the folder from its own location, so the drive letter doesn’t matter. The drive holds launchers, a program per system, an Ollama engine per system, shared models and your data. The engine’s home and temp files stay on the drive, so it leaves no files on the computer.</p>
+  <p>Offline mode refuses USB LLMS’s own requests, turns off Ollama’s cloud features, and gives the engine, Open WebUI and LvW-harness a dead proxy address. For remote services, only the name of the key’s variable is saved, so a lost stick can’t leak it.</p>
+
+  <h2 id="usb-llms-limits">Limits</h2>
+  <ul>
+    <li><strong>Windows and Linux</strong> build and have CI jobs, but have never been run.</li>
+    <li>It has been tested on an exFAT disk image, not a real USB stick. Real sticks are slower.</li>
+    <li>Intel Macs and NVIDIA and AMD GPUs are untested, because no such hardware was available.</li>
+    <li>The drive isn’t encrypted.</li>
+    <li>Offline mode isn’t a firewall. It stops programs that respect proxy settings.</li>
+    <li>Only GGUF models run. Models labelled uncensored have had safety refusals removed, and can produce harmful or false text.</li>
+  </ul>
+
+  <h2 id="usb-llms-credits">Credits</h2>
+  <p>MIT licence, written from scratch to replace USB-Uncensored-LLM and Portable-AI-USB by techjarves. Ollama, Open WebUI and the models keep their own licences and are downloaded separately. Source: <a href="https://github.com/Gitguy268/usb-llms">Gitguy268/usb-llms</a>.</p>
+</article>
+
 <article class="doc" id="tabshell" data-look="terminal" style="--accent:#4ade80">
   <header class="banner">
     <p class="prompt" aria-hidden="true">~ $ apk add python3</p>
     <h1>TabShell</h1>
     <p class="tagline">A real Linux terminal in a browser tab. Install packages, play terminal games, then press Reset and it’s as if nothing happened.</p>
-    <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>MIT licence</li><li>Available online</li></ul>
   </header>
   <figure><img src="../images/tabshell.webp" width="1440" height="864" loading="lazy" alt="A Linux terminal in a browser tab showing uname and the Alpine release, with Browser VM, Docker and Reset buttons above it"></figure>
 
@@ -957,223 +1831,179 @@ snek                   # arrow keys to steer, q to quit</code></pre>
   <p>Built on xterm.js, v86 and ttyd. The VM’s default relay is Mercury Workshop’s public Wisp server.</p>
 </article>
 
-<article class="doc" id="qrer" data-look="win98" style="--accent:#1084d0;--banner-bg:radial-gradient(ellipse at 20% 30%, #fff 0 10%, transparent 28%), radial-gradient(ellipse at 78% 72%, #fff 0 9%, transparent 26%), radial-gradient(ellipse at 60% 10%, #fff 0 6%, transparent 20%), linear-gradient(#2f6fd0, #79b0ee)">
+<article class="doc" id="needle" data-look="terminal" style="--accent:#e0af68">
   <header class="banner">
-    <div class="window">
-      <div class="titlebar"><span>Qrer: QR Editor</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
-      <div class="window-body">
-        <h1>Qrer</h1>
-        <p class="tagline">A QR code editor that looks like Windows 98, with liquid glass on its title bar and taskbar over a cloud desktop. It reads codes as well as making them.</p>
-        <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
-      </div>
-    </div>
+    <p class="prompt" aria-hidden="true">~ $ needle play ~/Music/Jazz</p>
+    <h1>needle</h1>
+    <p class="tagline">A terminal music player with a full-screen TUI, a no-TUI mode that keeps your shell, a background daemon and a JSON-lines interface for scripts.</p>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>MIT licence</li><li>Available online</li></ul>
   </header>
-  <figure><img src="../images/qrer.webp" width="1440" height="900" loading="lazy" alt="A Windows 98 window titled Qrer, QR Editor, over a cloud wallpaper, showing a QR code and export buttons"></figure>
+  <figure><img src="../images/needle.webp" width="1440" height="850" loading="lazy" alt="A dark terminal music player with columns of artists, albums and tracks, half-block cover art and a progress bar"></figure>
 
-  <h2 id="qrer-run">Run it</h2>
-  <p>Double-click <code>start.command</code>, or serve the folder:</p>
-  <pre><code>python3 serve.py --port 4317    # http://127.0.0.1:4317/</code></pre>
-  <p>There is no build step and no runtime dependency. Clipboard and offline use need HTTPS or localhost.</p>
 
-  <h2 id="qrer-use">Use it</h2>
+  <h2 id="needle-run">Install</h2>
+  <p>needle needs mpv. On a Mac it can also play through the built-in <code>afplay</code>, with fewer controls. Then install it with Go 1.27 or newer:</p>
+  <pre><code>brew install mpv          # or: sudo apt install mpv
+go install github.com/Gitguy268/needle@latest</code></pre>
+
+  <h2 id="needle-use">Use it</h2>
   <div class="table-wrap"><table>
-    <tr><th>Tab</th><th>What you set</th></tr>
-    <tr><td>Content</td><td>A link, Unicode text, Wi-Fi credentials or an email draft</td></tr>
-    <tr><td>Style</td><td>Six presets, module, corner and eye shapes, colours, and a caption, outline or card frame. Photo look puts the code over a picture and checks it still scans.</td></tr>
-    <tr><td>Logo</td><td>A local image in the middle; error correction goes up automatically</td></tr>
+    <tr><th>Mode</th><th>Command</th><th>What you get</th></tr>
+    <tr><td>TUI</td><td><code>needle</code></td><td>Library in three columns, queue, live search, cover art</td></tr>
+    <tr><td>Inline</td><td><code>needle play &lt;files&gt;</code></td><td>A few live lines under your prompt</td></tr>
+    <tr><td>Plain</td><td><code>needle play &lt;files&gt; | cat</code></td><td>One line per track, for pipes and logs</td></tr>
+    <tr><td>Daemon</td><td><code>needle daemon --background</code></td><td>No UI. <code>needle next</code>, <code>status</code>, <code>seek</code> and <code>vol</code> control it</td></tr>
+    <tr><td>JSON lines</td><td><code>needle --headless</code></td><td>Commands on stdin, events on stdout</td></tr>
   </table></div>
-  <p>Export PNG or SVG at exactly 512, 1024 or 2048 pixels, copy to the clipboard, or make a 1080 × 1440 share card. Ctrl/⌘+Z undoes up to 30 style changes. <strong>Read QR…</strong> reads a code from an image or the camera and never opens links by itself. <strong>Check this code</strong> scans your export.</p>
-  <p>The desktop works like Windows 98: drag the window by its title, minimise to the taskbar, use the Start menu. View › Float export toolbar detaches the export controls.</p>
+  <p>The control commands reach whichever needle is running. Optional Pedalboard effects (<code>--fx bass</code>, <code>vocal</code>, <code>warm</code>, <code>loud</code>) start Python only when you ask for them. Nujabes and Ye: Graduation themes are built in, as unofficial tributes.</p>
 
-  <h2 id="qrer-how">How it works</h2>
+  <h2 id="needle-how">How it works</h2>
   <ol class="flow">
-    <li><strong>Encode</strong>Your content becomes a QR matrix in the page</li>
-    <li><strong>Style</strong>Shapes, colours and frames are drawn on top</li>
-    <li><strong>Verify</strong>Photo look decodes the result before it can be exported; any other export is scanned when you press Check this code</li>
+    <li><strong>core</strong>Owns the queue, shuffle, repeat and events, and knows nothing about terminals</li>
+    <li><strong>Backends</strong>mpv as a child process, or afplay per track, behind one interface</li>
+    <li><strong>proto</strong>The JSON-lines protocol, used by the daemon socket, <code>--headless</code> and <code>--raw</code></li>
+    <li><strong>Library</strong>SQLite through pure Go, indexed in parallel and incrementally</li>
   </ol>
-  <p>Glass goes only on chrome that sits over the wallpaper, because glass bends what is behind it and a flat grey panel gives it nothing to bend. Chromium refracts the live backdrop; WebKit and Gecko refract a copy of the painted cloud wallpaper. The code itself is never under glass. After the first visit everything works offline.</p>
+  <p>Tags and stream titles are stripped of control characters before they reach the screen.</p>
 
-  <h2 id="qrer-limits">Limits</h2>
-  <p>Custom colours, shapes and logos can make a code harder to scan: always test it on the device and at the size you’ll print. Anyone who receives a Wi-Fi code can read the password in it.</p>
-
-  <h2 id="qrer-credits">Credits</h2>
-  <p>Clean codes are encoded with Nayuki’s QR Code generator and read with Nimiq QR Scanner (both MIT). Liquid glass from kwlck/liquid-glass-web, gentpan/liquidglass and Liquid Glass Studio (all MIT). The taskbar and controls adapt Windows 98 Web Edition (MIT), and the Start menu follows WIN98-template (Unlicense). The icons and wallpapers are original; no Windows media is bundled.</p>
-</article>
-
-<article class="doc" id="openfinder" data-look="finder" style="--accent:#0a84ff;--glow-1:#a5b4fc;--glow-2:#f9a8d4">
-  <header class="banner">
-    <div class="mac-window">
-      <div class="mac-side" aria-hidden="true">Favorites<br>Desktop<br>Documents<br>Sandbox<br>Tags</div>
-      <div class="mac-main">
-        <h1>OpenFinder</h1>
-        <p class="tagline">A file manager that runs in your browser, styled after the Finder with liquid glass. It works on real folders on your computer.</p>
-        <ul class="facts"><li>Tools</li><li>GPL-3.0-or-later licence</li><li>Available online</li></ul>
-      </div>
-    </div>
-  </header>
-  <figure><img src="../images/openfinder.webp" width="1280" height="800" loading="lazy" alt="A Finder-style window with a glass sidebar of favourites, and folders shown as icons"></figure>
-
-  <h2 id="openfinder-run">Run it</h2>
-  <pre><code>npm install
-npm run build
-npm start        # then open http://localhost:4627</code></pre>
-  <p>On a Mac, <code>start.command</code> does all three and opens the browser. Use Chrome, Edge, Brave, Opera or Arc.</p>
-
-  <h2 id="openfinder-use">Use it</h2>
-  <p>Click <strong>Allow File Access…</strong>, pick a folder and start working. There is no account, database or config file, and your files never leave your computer. The <strong>Sandbox</strong> is private storage inside the browser, for trying it without your own files.</p>
-  <div class="table-wrap"><table>
-    <tr><th>Milestone</th><th>Contents</th><th>State</th></tr>
-    <tr><td>1</td><td>Window, glass sidebar and toolbar, folder access, Sandbox, light and dark</td><td>Done</td></tr>
-    <tr><td>2</td><td>Icon, List, Column and Gallery views, Quick Look, Get Info, tags, file operations</td><td>Next</td></tr>
-    <tr><td>3–7</td><td>Search, archives, conversion, sharing, offline app</td><td>Planned</td></tr>
-  </table></div>
-
-  <h2 id="openfinder-how">How it works</h2>
-  <ol class="flow">
-    <li><strong>Folder picker</strong>You grant one folder through the File System Access API</li>
-    <li><strong>The page</strong>Reads and lists it directly; nothing is uploaded</li>
-    <li><strong>Glass</strong>Edge refraction adapted from Liquid Glass Studio</li>
-  </ol>
-
-  <h2 id="openfinder-limits">Limits</h2>
+  <h2 id="needle-limits">Limits</h2>
   <ul>
-    <li>Chromium browsers only: Firefox and Safari don’t offer folder access.</li>
-    <li>Brave ships with folder access off; enable <code>brave://flags/#file-system-access-api</code>.</li>
-    <li>Browsers refuse Home, Desktop, Documents and Downloads themselves. Pick a folder inside one.</li>
-    <li>Permission is asked again after a browser restart.</li>
+    <li>macOS and Linux only.</li>
+    <li>No gapless playback.</li>
+    <li>The afplay fallback can’t seek or play URLs, and volume changes apply from the next track.</li>
+    <li>Effects are rendered before a track plays, so the first play is slower. Streams play without them.</li>
+    <li>Kitty, iTerm2 and Sixel art is limited to <code>needle art</code>, and hasn’t been tried in those terminals yet.</li>
   </ul>
 
-  <h2 id="openfinder-credits">Credits</h2>
-  <p>Not affiliated with Apple. Feature ideas from FileBrowser Quantum (no code used). Icons from Lucide (ISC).</p>
+  <h2 id="needle-credits">Credits</h2>
+  <p>MIT licence. The design borrows ideas, not code, from cliamp, musikcube, listnr, Kronos and haskell-player, credited in the repository’s NOTICE. Pedalboard is GPL-3.0 and is only used as a separate, optional Python program. Source: <a href="https://github.com/Gitguy268/needle">Gitguy268/needle</a>.</p>
 </article>
 
-<article class="doc" id="archium" data-look="glass" style="--accent:#6b3fa0;--glow-1:#c4b5fd;--glow-2:#5eead4">
+<article class="doc" id="quicktalk" data-look="note" style="--accent:#0891b2">
   <header class="banner">
-    <div class="pane">
-      <h1>Archium</h1>
-      <p class="tagline">A privacy layer for the Helium browser: an offline new tab, search that runs on your own Mac, a Tor switch with a kill switch, and a URL cleaner.</p>
-      <ul class="facts"><li>Tools</li><li>GPL-3.0 licence</li><li>macOS</li><li>Available online</li></ul>
-    </div>
+    <h1>QuickTalk</h1>
+    <p class="tagline">A quiet place for your voice. Local-first desktop dictation and meeting notes, built with Rust, Tauri 2 and Svelte 5.</p>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>MIT licence</li><li>Available online</li></ul>
   </header>
-  <figure><img src="../images/archium.webp" width="1440" height="855" loading="lazy" alt="A browser new tab page with a clock, a search box and quick links"></figure>
-  <p class="note">Archium is a companion kit for now: an extension and scripts on top of a stock <a href="https://helium.computer">Helium</a> release, not a browser you download. Its own builds are planned.</p>
 
-  <h2 id="archium-run">Install</h2>
-  <p>You need macOS, Helium and Homebrew.</p>
-  <ol>
-    <li>Start local search: double-click <code>searxng/install.command</code>. SearXNG starts now and at every login, on <code>127.0.0.1:8888</code>, without Docker.</li>
-    <li>In Helium open <code>chrome://extensions</code>, turn on Developer mode, click Load unpacked and choose the <code>extension</code> folder.</li>
-    <li>Add a search engine with the URL <code>http://127.0.0.1:8888/search?q=%s</code> and make it the default.</li>
-    <li>For Tor, run <code>brew install tor &amp;&amp; brew services start tor</code>, then pick Tor in the Archium popup.</li>
-  </ol>
+  <h2 id="quicktalk-run">Run it</h2>
+  <p>You need Node 22 or newer, current stable Rust, Python 3, Git, CMake and a C++ toolchain. Then:</p>
+  <pre><code>npm ci
+python3 scripts/build-engine.py
+npm run tauri -- dev</code></pre>
+  <p>In the app, choose <strong>Settings → Speech models → Everyday → Download</strong>.</p>
 
-  <h2 id="archium-use">Features</h2>
-  <div class="table-wrap"><table>
-    <tr><th>Feature</th><th>What it does</th></tr>
-    <tr><td>Offline new tab</td><td>Clock, search box and quick links, with no network requests</td></tr>
-    <tr><td>Private search</td><td>SearXNG on your Mac, with a public instance as the fallback</td></tr>
-    <tr><td>URL cleaner</td><td>27 rules strip <code>utm_*</code>, <code>fbclid</code>, <code>gclid</code> and other tracking parameters</td></tr>
-    <tr><td>Tor or proxy switch</td><td>One click routes all traffic through your own Tor or a proxy</td></tr>
-    <tr><td>Kill switch</td><td>When Tor stops, pages fail to load; they never fall back to a direct connection</td></tr>
-    <tr><td>WebRTC block</td><td>Stops WebRTC leaking your address, forced on while proxied</td></tr>
-    <tr><td>Own Helium services</td><td>Optional: <code>services/run-local.sh</code> runs Helium’s services server on your Mac, so filter lists, !bangs and extensions never come through imputnet’s servers. Needs Docker and mkcert.</td></tr>
-  </table></div>
-
-  <h2 id="archium-how">How it works</h2>
-  <ol class="flow">
-    <li><strong>Popup</strong>Your choices go into extension storage</li>
-    <li><strong>Background worker</strong>Applies the proxy, WebRTC policy and redirect rules</li>
-    <li><strong>Chromium</strong>Never falls back to a direct connection from a fixed proxy</li>
-  </ol>
-  <p>Chromium never sends loopback traffic through a proxy, so in Tor mode a redirect rule sends local searches to the public instance, through Tor. The extension asks for access to all sites only because redirect rules need it; it has no content scripts and never reads pages.</p>
-
-  <h2 id="archium-limits">Limits</h2>
+  <h2 id="quicktalk-use">Use it</h2>
   <ul>
-    <li>Tor through a Chromium browser is not Tor Browser. It hides your IP from sites, but your browser fingerprint still identifies you.</li>
-    <li>Local SearXNG queries Google, Bing and others from your IP outside Tor mode.</li>
-    <li>Nothing is compiled into the browser yet, so the extension can be switched off.</li>
+    <li>Press <kbd>Cmd/Ctrl+Shift+Space</kbd> to start and stop dictation. QuickTalk only inserts text if the original app is still active, and the transcript is always saved.</li>
+    <li><strong>Meetings</strong> records the microphone and, optionally, computer audio. Transcription runs after you finish.</li>
+    <li>Import 16-bit WAV audio, and export Markdown, text, SRT or JSON.</li>
+    <li>Add Whisper GGML models from Hugging Face, checked by size and SHA-256.</li>
+    <li>Optional summaries and meeting questions use Ollama or a service you choose. Only text you submit is sent.</li>
   </ul>
 
-  <h2 id="archium-credits">Credits</h2>
-  <p>Builds on <a href="https://github.com/imputnet/helium">Helium</a> by imputnet, which builds on ungoogled-chromium. Search is SearXNG. Not affiliated with any of them, Google or the Tor Project.</p>
+  <h2 id="quicktalk-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Capture</strong>A bounded queue writes audio to disk</li>
+    <li><strong>Chunks</strong>Transcription reads 30 seconds at a time, in a separate model process for each</li>
+    <li><strong>Unload</strong>Models leave memory right after processing, and silence is skipped</li>
+    <li><strong>Storage</strong>Transcripts go in SQLite in the app-data folder</li>
+  </ol>
+  <p>There is no telemetry or account. Keys and tokens use the OS credential store.</p>
+
+  <h2 id="quicktalk-limits">Limits</h2>
+  <ul>
+    <li>This is a 0.1 development build. There is no live meeting transcript, pause and resume, or editable speaker names yet.</li>
+    <li>Local transcripts aren’t encrypted by QuickTalk.</li>
+    <li>Windows and Linux builds are automated, but CI isn’t evidence of a completed test on them.</li>
+    <li>On Wayland, text isn’t inserted automatically, so you copy the transcript yourself.</li>
+    <li>Calendar connections need your own OAuth registration and live account testing.</li>
+  </ul>
+
+  <h2 id="quicktalk-credits">Credits</h2>
+  <p>Original code is MIT licensed, and the repository’s THIRD_PARTY_NOTICES.md lists its dependencies. Speech runs on whisper.cpp. Source: <a href="https://github.com/Gitguy268/quicktalk">Gitguy268/quicktalk</a>.</p>
 </article>
 
-<article class="doc" id="web2app" data-look="paper" style="--accent:#1c5d33">
+<article class="doc" id="glyphium" data-look="terminal" style="--accent:#7dd3fc">
   <header class="banner">
-    <h1>web2app</h1>
-    <p class="tagline">Turn any website into a small Mac app. A page on your own Mac for the Pake command-line tool, with a build queue and a history.</p>
-    <ul class="facts"><li>Tools</li><li>macOS</li><li>GPL-3.0-or-later licence</li><li>Available online</li></ul>
+    <p class="prompt" aria-hidden="true">~ $ cargo run --release -p glyphium</p>
+    <h1>Glyphium</h1>
+    <p class="tagline">A GPU-rendered terminal emulator in Rust, built on libghostty-vt. Early development.</p>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>MIT licence</li><li>Available online</li></ul>
   </header>
-  <figure><img src="../images/web2app.webp" width="1440" height="900" loading="lazy" alt="A page headed Turn any website into a Mac app, with buttons for popular apps and a build form"></figure>
 
-  <h2 id="web2app-run">Run it</h2>
-  <p>Double-click <code>start.command</code>. It installs Pake the first time, starts the server and opens <code>http://localhost:7417</code>. Building apps needs Rust; web2app tells you if it’s missing.</p>
+  <h2 id="glyphium-run">Run it</h2>
+  <p>You need Rust and Zig, which builds the terminal core. Then, from the repository:</p>
+  <pre><code>git clone https://github.com/ghostty-org/ghostty.git .tools/ghostty
+git -C .tools/ghostty checkout cec8b92
+(cd .tools/ghostty &amp;&amp; zig build -Demit-lib-vt -Doptimize=ReleaseFast)
+cargo run --release -p glyphium</code></pre>
+  <p>The first build takes several minutes. Close the window to quit.</p>
 
-  <h2 id="web2app-use">Use it</h2>
-  <ol>
-    <li>Start from a popular app, enter a web address, or choose files on this device.</li>
-    <li>Set the name, window size, zoom, title bar, dark mode, tray icon and the other Pake options. The page shows the exact <code>pake</code> command it will run.</li>
-    <li>Press <strong>Build app</strong>. Builds wait in a queue and run one at a time.</li>
-    <li>Download the <code>.dmg</code> or <code>.app</code>, or install it straight away. Every build stays in History.</li>
-  </ol>
-  <p><strong>Use on phone</strong> lets a phone on the same Wi-Fi start builds: scan the QR code on the Mac, then type the 6-digit code it shows. It is off until you turn it on. In History you can cancel a build, build it again, open the app or show it in Finder.</p>
+  <h2 id="glyphium-use">Use it</h2>
+  <p>It opens as a desktop terminal window. There is no packaged release yet, so for now you build it to try it.</p>
 
-  <h2 id="web2app-how">How it works</h2>
+  <h2 id="glyphium-how">How it works</h2>
   <ol class="flow">
-    <li><strong>The page</strong>Your options become Pake flags</li>
-    <li><strong>server.js</strong>A plain Node server on 127.0.0.1 queues the build</li>
-    <li><strong>Pake</strong>Wraps the site in a Tauri app with Rust</li>
-    <li><strong>History</strong>Each build keeps its folder and log</li>
+    <li><strong>libghostty-vt</strong>Ghostty’s terminal core, built with Zig at a pinned commit</li>
+    <li><strong>Rust</strong>The desktop app around it, drawn on the GPU</li>
   </ol>
-  <p>One file lists every flag the form may set, and both the server and the page read it, so the command shown is always the command run. Builds work offline once Pake and its Rust cache are installed: about 45 seconds for an app.</p>
+  <p>The repository’s <code>docs/adr/0001-core.md</code> records why it uses this core, and <code>docs/PROGRESS.md</code> records where the work stands.</p>
 
-  <h2 id="web2app-limits">Limits</h2>
-  <p>Mac only. Phone access needs the macOS firewall to allow Node.</p>
+  <h2 id="glyphium-limits">Limits</h2>
+  <ul>
+    <li>This is early development. Milestone 1 is closed, which means the app builds, passes real-window end-to-end scripts, and the core passes fuzz tests.</li>
+    <li>You have to build it from source.</li>
+  </ul>
 
-  <h2 id="web2app-credits">Credits</h2>
-  <p>A front end for <a href="https://github.com/tw93/Pake">tw93/Pake</a>. It has its own name because Pake asks derived tools not to use its name or logo.</p>
+  <h2 id="glyphium-credits">Credits</h2>
+  <p>MIT licence, with third-party notices in the repository’s NOTICE. The terminal core comes from <a href="https://github.com/ghostty-org/ghostty">Ghostty</a>. Source: <a href="https://github.com/Gitguy268/glyphium">Gitguy268/glyphium</a>.</p>
 </article>
 
-<article class="doc" id="superfile" data-look="terminal" style="--accent:#c084fc">
+<article class="doc" id="textarea-cli" data-look="terminal" style="--accent:#a78bfa">
   <header class="banner">
-    <p class="prompt" aria-hidden="true">~ $ spf</p>
-    <h1>superfile, my edition</h1>
-    <p class="tagline">The superfile terminal file manager with eleven fixes and features: six from open upstream pull requests and five of my own.</p>
-    <ul class="facts"><li>Tools</li><li>Fork</li><li>MIT licence</li><li>Available online</li></ul>
+    <p class="prompt" aria-hidden="true">~ $ text buy milk #home</p>
+    <h1>textarea-cli</h1>
+    <p class="tagline">Textarea in the terminal. Type text for a menu, or text buy milk to jot something down without opening anything.</p>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>MIT licence</li><li>Available online</li></ul>
   </header>
+  <figure><img src="../images/textarea-cli.webp" width="1440" height="597" loading="lazy" alt="A terminal menu for textarea with numbered rows for a new note, quick capture, today, search, tasks, tags, sync and settings"></figure>
 
-  <h2 id="superfile-run">Run it</h2>
-  <p>Build it from source with Go 1.26 or newer:</p>
-  <pre><code>./build.sh
-./bin/spf</code></pre>
-  <p><code>make build</code> also runs golangci-lint, so it needs that installed.</p>
 
-  <h2 id="superfile-use">What my edition adds</h2>
-  <div class="table-wrap"><table>
-    <tr><th>Change</th><th>From</th></tr>
-    <tr><td>Copy (<kbd>T</kbd>) or move (<kbd>M</kbd>) items straight into the next panel</td><td>New</td></tr>
-    <tr><td>A <code>terminal</code> theme that uses your terminal’s 16 colours</td><td>New</td></tr>
-    <tr><td>Search and sort show up at once in folders with 300+ files</td><td>New</td></tr>
-    <tr><td>Binaries named like man pages (<code>bin.3</code>) are no longer previewed as text</td><td>New</td></tr>
-    <tr><td>Docs for the <code>--chooser-file</code> file picker</td><td>New</td></tr>
-    <tr><td>Copy and paste files through the system clipboard (<kbd>C</kbd> / <kbd>V</kbd>)</td><td>Upstream PR</td></tr>
-    <tr><td><code>theme = "auto"</code> picks light or dark from the terminal background</td><td>Upstream PR</td></tr>
-    <tr><td><code>bat_flags</code> option for the bat previewer</td><td>Upstream PR</td></tr>
-    <tr><td><code>cd_on_quit</code> works with any install</td><td>Upstream PR</td></tr>
-    <tr><td>Cut and paste no longer overwrites a same-named file</td><td>Upstream PR</td></tr>
-    <tr><td>The Nix flake builds again</td><td>Upstream PR</td></tr>
-  </table></div>
-  <p>Merged pull requests keep their original authors on the commits.</p>
+  <h2 id="textarea-cli-run">Install</h2>
+  <p>With Go 1.27 or newer. It is pure Go, so it also cross-compiles for Linux, macOS and Windows.</p>
+  <pre><code>go install github.com/Gitguy268/textarea-cli/cmd/text@latest</code></pre>
 
-  <h2 id="superfile-how">How it works</h2>
-  <ol class="flow">
-    <li><strong>Panels</strong>Several folders side by side, plus preview and process panels</li>
-    <li><strong>Bubble Tea</strong>Go’s terminal UI framework draws them</li>
-    <li><strong>Config</strong>TOML files for settings, hotkeys and themes</li>
-  </ol>
+  <h2 id="textarea-cli-use">Use it</h2>
+  <pre><code>text                          # the menu
+text buy milk #home           # capture a note
+echo "from a script" | text - # capture from stdin
+text today called the bank    # a timestamped line in today's note</code></pre>
+  <ul>
+    <li>Open notes with a fuzzy filter, and edit them in the built-in editor or <code>$EDITOR</code>.</li>
+    <li>Search with words, <code>#tag</code>, <code>on:2026-10-25</code>, <code>is:pinned</code> and <code>is:archived</code>.</li>
+    <li><code>text tasks</code> lists every open <code>- [ ]</code> across your notes, and <kbd>x</kbd> ticks one.</li>
+    <li>Share a note as a link, optionally with a password, and export it to nine formats.</li>
+    <li>Optional speech to text with whisper.cpp, and writing tools with llama.cpp, a llamafile or Ollama, all on your machine.</li>
+  </ul>
 
-  <h2 id="superfile-credits">Credits</h2>
-  <p>Fork of <a href="https://github.com/yorukot/superfile">yorukot/superfile</a> (MIT). It follows upstream; everything not listed here is upstream’s work.</p>
+  <h2 id="textarea-cli-how">How it works</h2>
+  <p>The library is a folder, <code>~/Documents/Textarea</code> by default, and each note is a Markdown file with a short front matter block. It uses the format that the web app’s Folder sync writes, so nothing needs converting. Sync follows the same decision table as the web app, translated to Go and tested against it.</p>
+  <pre><code>text sync --add folder --path ~/Dropbox/Notes
+text sync --add obsidian
+text sync --add applenotes
+text sync --dry-run</code></pre>
+  <p>The newest edit wins. Files that sync never created are only imported, never removed, and the first sync deletes nothing.</p>
+
+  <h2 id="textarea-cli-limits">Limits</h2>
+  <ul>
+    <li>Apple Notes sync is macOS only, and formatting Markdown can’t express doesn’t survive the round trip.</li>
+    <li>Sync runs when you ask, or while <code>text sync --watch</code> is running. There is no background service.</li>
+    <li>Speech and writing tools need separate programs, and are untested in CI.</li>
+  </ul>
+
+  <h2 id="textarea-cli-credits">Credits</h2>
+  <p>MIT licence. Parts are Go translations of textarea’s code, with its copyright lines kept. The repository’s NOTICE lists its libraries and inspirations. Source: <a href="https://github.com/Gitguy268/textarea-cli">Gitguy268/textarea-cli</a>.</p>
 </article>
 
 <article class="doc" id="opencode" data-look="terminal" style="--accent:#fab283">
@@ -1181,7 +2011,7 @@ npm start        # then open http://localhost:4627</code></pre>
     <p class="prompt" aria-hidden="true">~ $ opencode</p>
     <h1>opencode, my edition</h1>
     <p class="tagline">The opencode coding agent with nine additions for the terminal and the desktop app, from session goals to a shell sandbox.</p>
-    <ul class="facts"><li>Tools</li><li>Fork</li><li>MIT licence</li><li>Available online</li></ul>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>Fork</li><li>MIT licence</li><li>Available online</li></ul>
   </header>
 
   <h2 id="opencode-run">Run it</h2>
@@ -1219,51 +2049,46 @@ npm start        # then open http://localhost:4627</code></pre>
   <p>Fork of <a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a> (MIT). Not built by or affiliated with the OpenCode team.</p>
 </article>
 
-<article class="doc" id="retrofind" data-look="win98" style="--accent:#1084d0;--banner-bg:radial-gradient(ellipse at 20% 30%, #fff 0 10%, transparent 28%), radial-gradient(ellipse at 78% 72%, #fff 0 9%, transparent 26%), linear-gradient(#2f6fd0, #79b0ee)">
+<article class="doc" id="superfile" data-look="terminal" style="--accent:#c084fc">
   <header class="banner">
-    <div class="window">
-      <div class="titlebar"><span>Retrofind</span><span aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
-      <div class="window-body">
-        <h1>Retrofind</h1>
-        <p class="tagline">Private web search on your own Mac, in the style of 1998. SearXNG runs underneath without Docker, under a start page modelled on early Google in a Windows 98 window of liquid glass.</p>
-        <ul class="facts"><li>Tools</li><li>macOS</li><li>MIT licence</li><li>Available online</li></ul>
-      </div>
-    </div>
+    <p class="prompt" aria-hidden="true">~ $ spf</p>
+    <h1>superfile, my edition</h1>
+    <p class="tagline">The superfile terminal file manager with eleven fixes and features: six from open upstream pull requests and five of my own.</p>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>Fork</li><li>MIT licence</li><li>Available online</li></ul>
   </header>
-  <figure><img src="../images/retrofind.webp" width="1440" height="912" loading="lazy" alt="A Windows 98 window over a cloudy sky showing a 1998-style search page with a multicoloured Retrofind wordmark and an I'm Feeling Lucky button"></figure>
 
-  <h2 id="retrofind-run">Install</h2>
-  <p>You need macOS and Homebrew. Run <code>brew install uv</code>, then double-click <code>start.command</code> in a copy of the repository. The first run installs SearXNG, which takes a few minutes; after that it opens <code>http://127.0.0.1:8898/</code>. Both services start again when you log in.</p>
-  <p>To make it your browser’s search engine, add a site search with this address:</p>
-  <pre><code>http://127.0.0.1:8898/search?q=%s</code></pre>
-  <p><code>sh searxng/uninstall.sh</code> stops both services and deletes everything the installer made.</p>
+  <h2 id="superfile-run">Run it</h2>
+  <p>Build it from source with Go 1.26 or newer:</p>
+  <pre><code>./build.sh
+./bin/spf</code></pre>
+  <p><code>make build</code> also runs golangci-lint, so it needs that installed.</p>
 
-  <h2 id="retrofind-use">Use it</h2>
-  <ul>
-    <li>The start page has a wordmark with a drop shadow, <strong>I’m Feeling Lucky</strong>, and a choice of Web or News.</li>
-    <li>Results come in a blue “Searched the web for…” bar, with green addresses and a “Retroooofind” strip of pages at the bottom.</li>
-    <li>The window frame, title bar, taskbar and Start button are liquid glass that bends the sky behind them. Results stay on solid white, so they are easy to read.</li>
-  </ul>
+  <h2 id="superfile-use">What my edition adds</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Change</th><th>From</th></tr>
+    <tr><td>Copy (<kbd>T</kbd>) or move (<kbd>M</kbd>) items straight into the next panel</td><td>New</td></tr>
+    <tr><td>A <code>terminal</code> theme that uses your terminal’s 16 colours</td><td>New</td></tr>
+    <tr><td>Search and sort show up at once in folders with 300+ files</td><td>New</td></tr>
+    <tr><td>Binaries named like man pages (<code>bin.3</code>) are no longer previewed as text</td><td>New</td></tr>
+    <tr><td>Docs for the <code>--chooser-file</code> file picker</td><td>New</td></tr>
+    <tr><td>Copy and paste files through the system clipboard (<kbd>C</kbd> / <kbd>V</kbd>)</td><td>Upstream PR</td></tr>
+    <tr><td><code>theme = "auto"</code> picks light or dark from the terminal background</td><td>Upstream PR</td></tr>
+    <tr><td><code>bat_flags</code> option for the bat previewer</td><td>Upstream PR</td></tr>
+    <tr><td><code>cd_on_quit</code> works with any install</td><td>Upstream PR</td></tr>
+    <tr><td>Cut and paste no longer overwrites a same-named file</td><td>Upstream PR</td></tr>
+    <tr><td>The Nix flake builds again</td><td>Upstream PR</td></tr>
+  </table></div>
+  <p>Merged pull requests keep their original authors on the commits.</p>
 
-  <h2 id="retrofind-how">How it works</h2>
+  <h2 id="superfile-how">How it works</h2>
   <ol class="flow">
-    <li><strong>The page</strong>Plain HTML, CSS and JavaScript on <code>127.0.0.1:8898</code></li>
-    <li><strong>server.py</strong>Python’s standard library only. It passes on the query, the page and the category, nothing else</li>
-    <li><strong>SearXNG</strong>On <code>127.0.0.1:8893</code>, asking several search engines at once</li>
+    <li><strong>Panels</strong>Several folders side by side, plus preview and process panels</li>
+    <li><strong>Bubble Tea</strong>Go’s terminal UI framework draws them</li>
+    <li><strong>Config</strong>TOML files for settings, hotkeys and themes</li>
   </ol>
-  <p>SearXNG lives in a Python environment made with uv and is kept running by two LaunchAgents, so there is no Docker. <code>server.py</code> strips every result down to its title, link, snippet and engine names. Only <code>http</code> and <code>https</code> links reach the page, and results are inserted as text, never as HTML.</p>
 
-  <h2 id="retrofind-limits">Limits</h2>
-  <ul>
-    <li>No image search, on purpose: 1998 had none, and the thumbnails would load from other servers.</li>
-    <li>No result totals, because SearXNG doesn’t report them.</li>
-    <li>Search engines sometimes block or slow down your address, so results can come from fewer engines.</li>
-    <li>The glass bends only in Chromium browsers; Safari and Firefox get glass that doesn’t bend.</li>
-    <li>macOS only, because the installer uses LaunchAgents.</li>
-  </ul>
-
-  <h2 id="retrofind-credits">Credits</h2>
-  <p>Search is <a href="https://github.com/searxng/searxng">SearXNG</a> (AGPL-3.0), downloaded at a pinned commit and run unchanged as a separate program. Liquid glass from kwlck/liquid-glass-web and the edge highlights of kevinbism/liquid-glass-effect (both MIT). The cloud wallpaper is Qrer’s. The wordmark, icon and Windows chrome are original drawings; Retrofind isn’t affiliated with Google or Microsoft.</p>
+  <h2 id="superfile-credits">Credits</h2>
+  <p>Fork of <a href="https://github.com/yorukot/superfile">yorukot/superfile</a> (MIT). It follows upstream; everything not listed here is upstream’s work.</p>
 </article>
 
 <article class="doc" id="container" data-look="terminal" style="--accent:#38bdf8">
@@ -1271,7 +2096,7 @@ npm start        # then open http://localhost:4627</code></pre>
     <p class="prompt" aria-hidden="true">~ $ container here alpine uname -a</p>
     <h1>container, my edition</h1>
     <p class="tagline">Apple’s tool for running Linux containers on a Mac, with a VM that lives inside your terminal, a full-screen dashboard, and a set of fixes and new options.</p>
-    <ul class="facts"><li>Tools</li><li>Fork</li><li>macOS 26, Apple silicon</li><li>Apache-2.0 licence</li><li>Available online</li></ul>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>Fork</li><li>macOS 26, Apple silicon</li><li>Apache-2.0 licence</li><li>Available online</li></ul>
   </header>
   <figure><img src="../images/container.webp" width="1100" height="688" loading="lazy" alt="A terminal dashboard listing four containers with their image, state, IP address, CPU and memory, and key hints along the bottom"></figure>
 
@@ -1309,38 +2134,6 @@ bin/container here alpine echo hello</code></pre>
 
   <h2 id="container-credits">Credits</h2>
   <p>Fork of <a href="https://github.com/apple/container">apple/container</a> (Apache-2.0), built on Apple’s <a href="https://github.com/apple/containerization">Containerization</a> package. Not affiliated with or endorsed by Apple.</p>
-</article>
-
-<!-- ================================================================ Experiments -->
-<article class="doc" id="rubber-hose-revue" data-look="reel" style="--accent:#b45309">
-  <header class="banner">
-    <h1>The Rubber Hose Revue</h1>
-    <p class="tagline">A programme in two parts: a rooftop cartoon with a musical saw, and Cannonball Capers, an asteroids game drawn the same way.</p>
-    <ul class="facts"><li>Experiments</li><li>MIT licence</li><li>Available online</li></ul>
-  </header>
-
-  <h2 id="rubber-hose-revue-run">Run it</h2>
-  <p>Open <code>index.html</code> and pick the picture or the game. Everything, including the music and the crackle, is made in the page; there are no image or sound files.</p>
-
-  <h2 id="rubber-hose-revue-use">Controls</h2>
-  <div class="table-wrap"><table>
-    <tr><th>Key</th><th>The picture</th><th>The game</th></tr>
-    <tr><td>Click</td><td>Start</td><td></td></tr>
-    <tr><td>Arrows</td><td></td><td>Steer and thrust</td></tr>
-    <tr><td>Space</td><td></td><td>Fire</td></tr>
-    <tr><td>P</td><td></td><td>Pause</td></tr>
-    <tr><td>M</td><td>Mute</td><td>Mute</td></tr>
-    <tr><td>S</td><td>Sepia on or off</td><td>Sepia on or off</td></tr>
-    <tr><td>F</td><td>Steady the picture</td><td>Steady the picture</td></tr>
-  </table></div>
-  <p>The game has buttons on touch screens, and a gamepad works too.</p>
-
-  <h2 id="rubber-hose-revue-how">How it works</h2>
-  <ol class="flow">
-    <li><strong>Drawing</strong>Rubber-hose characters drawn in code</li>
-    <li><strong>Film</strong>Sepia and a wobbling picture, which F steadies</li>
-    <li><strong>Sound</strong>A narrow band like a gramophone horn, over surface crackle</li>
-  </ol>
 </article>
 
 <article class="doc" id="cozy-christmas-lab" data-look="pixel" style="--accent:#c81d25;--banner-bg:#0f2a1d">
@@ -1431,6 +2224,6 @@ bin/container here alpine echo hello</code></pre>
   <ul></ul>
   <p>↑ and ↓ choose, Enter opens, Esc closes.</p>
 </dialog>
-<script src="../scripts/docs.js?v=20261019-1" defer></script>
+<script src="../scripts/docs.js?v=20261102-1" defer></script>
 </body>
 </html>

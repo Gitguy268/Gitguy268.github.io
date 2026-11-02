@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lucas van de Weerd</title>
-<meta name="description" content="Lucas van de Weerd makes things that run in your browser: record players, an iPod, a Windows 9x desktop, image editors, and games starring Spot the black labrador.">
+<meta name="description" content="Lucas van de Weerd makes things that run on your own device: record players, a Windows 9x desktop, image editors, private browsers, terminal tools, local AI, and games starring Spot the black labrador.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#008080">
 <link rel="canonical" href="https://gitguy268.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Lucas van de Weerd">
-<meta property="og:description" content="Things that run in your browser: record players, an iPod, a Windows 9x desktop, image editors, and games starring Spot the black labrador.">
+<meta property="og:description" content="Things that run on your own device: record players, a Windows 9x desktop, image editors, private browsers, terminal tools, local AI, and games starring Spot the black labrador.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gitguy268.github.io/">
-<link rel="stylesheet" href="styles/base.css?v=20261019-1">
-<link rel="stylesheet" href="styles/site.css?v=20261019-1">
-<link rel="stylesheet" href="styles/shell.css?v=20261019-1">
+<link rel="stylesheet" href="styles/base.css?v=20261102-1">
+<link rel="stylesheet" href="styles/site.css?v=20261102-1">
+<link rel="stylesheet" href="styles/shell.css?v=20261102-1">
 </head>
 <body>
 <div id="chooser" class="experience chooser" hidden>
@@ -28,7 +28,7 @@
 | || |_| | (_| (_| \__ \
 |_| \__,_|\___\__,_|___/</pre>
       <h1 id="boot-title">Lucas van de Weerd</h1>
-      <p class="boot-intro">Record players, image editors, and games with my black labrador, Spot.<span id="boot-typed">Pick a way to browse my projects:</span></p>
+      <p class="boot-intro">Record players, image editors, browsers, terminal tools, local AI, and games with my black labrador, Spot.<span id="boot-typed">Pick a way to browse my projects:</span></p>
       <nav class="experience-options" aria-label="Choose your experience">
         <a class="experience-option" href="?view=website"><span class="option-number">[1]</span><strong>Website</strong><small>Pictures and project notes</small></a>
         <a class="experience-option" href="?view=terminal"><span class="option-number">[2]</span><strong>Terminal</strong><small>Browse with commands</small></a>
@@ -48,7 +48,7 @@
   <canvas aria-hidden="true"></canvas>
   <p class="hero-eyebrow">Hi, I’m</p>
   <h1 data-glass><span>Lucas</span> <span>van de</span> <span>Weerd</span></h1>
-  <p data-glass>I make things that run in your browser: record players, an iPod, a Windows 9x desktop, image editors, and games starring Spot the black labrador.</p>
+  <p data-glass>I make things that run on your own device: record players, a Windows 9x desktop, image editors, private browsers, terminal tools, local AI, and games starring Spot the black labrador.</p>
   <div class="hero-bottom"><a class="hero-cta" href="#projects">Explore projects <span aria-hidden="true">↓</span></a><a class="hero-aside" href="https://github.com/Gitguy268">Gitguy268 on GitHub ↗</a></div>
 </header>
 
@@ -61,13 +61,29 @@
 
 <main id="projects" tabindex="-1">
   <section class="featured-section" id="featured" aria-labelledby="featured-heading" hidden><div class="section-heading"><h2 id="featured-heading">Try these online</h2><p>Three projects you can open now.</p></div><div id="featured-grid" class="featured-grid"></div></section>
-  <div class="collection-heading"><h2>All projects <span id="project-count">31</span></h2><p>Finished things, works in progress, and forks. Each project lists its status and credits.</p></div>
-  <div id="project-controls" class="project-controls" hidden><div class="filter-list" aria-label="Project category"><button type="button" data-filter="all" aria-pressed="true">All <span>31</span></button><button type="button" data-filter="players" aria-pressed="false">Players</button><button type="button" data-filter="spot" aria-pressed="false">Spot</button><button type="button" data-filter="editors" aria-pressed="false">Editors</button><button type="button" data-filter="tools" aria-pressed="false">Tools</button><button type="button" data-filter="experiments" aria-pressed="false">Experiments</button></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Find a project… (press / to jump)" aria-label="Search projects"></label></div>
+  <div class="collection-heading"><h2>All projects <span id="project-count">48</span></h2><p>Finished things, works in progress, and forks. Each project lists its status and credits.</p></div>
+  <div id="project-controls" class="project-controls" hidden><div class="filter-list" aria-label="Project category"><button type="button" data-filter="all" aria-pressed="true">All <span>48</span></button><button type="button" data-filter="players" aria-pressed="false">Players</button><button type="button" data-filter="spot" aria-pressed="false">Spot</button><button type="button" data-filter="editors" aria-pressed="false">Editors</button><button type="button" data-filter="games" aria-pressed="false">Games</button><button type="button" data-filter="tools" aria-pressed="false">Tools</button><button type="button" data-filter="terminal-ai" aria-pressed="false">Terminal &amp; AI</button><button type="button" data-filter="experiments" aria-pressed="false">Experiments</button></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Find a project… (press / to jump)" aria-label="Search projects"></label></div>
   <p class="results-summary" id="results-summary" role="status" hidden></p><div id="empty-results" class="empty-results" hidden><h3>No matching projects.</h3><p>Try another search or explore all projects.</p><button type="button" id="reset-filters">Clear filters</button></div>
 
   <section class="group" aria-labelledby="players">
     <h2 id="players">Players</h2>
     <div class="project-grid">
+      <article class="project" id="project-ultra-realistic-vinyl-player" data-project="ultra-realistic-vinyl-player" data-category="players" data-status="public" data-demo="https://gitguy268.github.io/ultra-realistic-vinyl-player/" data-source="https://github.com/Gitguy268/ultra-realistic-vinyl-player">
+        <img decoding="async" loading="lazy" src="images/ultra-realistic-vinyl-player.webp" width="1440" height="900" alt="A 3D Thorens turntable with a dust cover raised and an orange-label record on the platter, next to panels of VU meters and sound controls">
+        <div>
+          <div class="project-meta"><span>Players</span><span class="status live">Available online</span></div><h3>Ultra-Realistic Vinyl Player</h3>
+          <p>A Thorens TD 115 MK II in the browser, modelled in 3D from 104 photographs. Slide the speed plate, drag the arm, lift the dust cover and scratch your own records.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/ultra-realistic-vinyl-player">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#ultra-realistic-vinyl-player">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/ultra-realistic-vinyl-player/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/ultra-realistic-vinyl-player" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-stem-player" data-project="stem-player" data-category="players" data-status="public" data-demo="https://gitguy268.github.io/stem-player/" data-source="https://github.com/Gitguy268/stem-player">
+        <img decoding="async" loading="lazy" src="images/stem-player.webp" width="1440" height="900" alt="A round tan handheld music player in 3D with four grooves of pink and purple lights forming a cross, on a pale background">
+        <div>
+          <div class="project-meta"><span>Players</span><span class="status live">Available online</span></div><h3>Four Stem Player</h3>
+          <p>An unofficial replica of both generations of the four-stem hardware player, in real-time 3D. Slide or isolate each stem, and split any song into stems on your own machine.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/stem-player">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#stem-player">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/stem-player/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/stem-player" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
       <article class="project" id="project-realistic-vinyl-player" data-project="realistic-vinyl-player" data-category="players" data-status="public" data-demo="https://gitguy268.github.io/realistic-vinyl-player/" data-source="https://github.com/Gitguy268/realistic-vinyl-player">
         <img decoding="async" loading="lazy" src="images/realistic-vinyl-player.webp" width="1440" height="900" alt="A dark turntable playing a record with an orange label, above a tracklist of three demo tracks and the transport buttons">
         <div>
@@ -114,30 +130,6 @@
   <section class="group" aria-labelledby="spot">
     <h2 id="spot">Spot</h2>
     <div class="project-grid">
-      <article class="project" id="project-spot-fetch" data-project="spot-fetch" data-category="spot" data-status="public" data-demo="https://gitguy268.github.io/spot-fetch/" data-source="https://github.com/Gitguy268/spot-fetch">
-        <img decoding="async" src="images/spot-fetch.webp" width="1440" height="810" loading="lazy" alt="Spot, a black labrador, running back across the grass with a tennis ball in his mouth">
-        <div>
-          <div class="project-meta"><span>Spot</span><span class="status live">Available online</span></div><h3>Spot apporteert</h3>
-          <p>A fetch game. Throw a ball across a park for Spot and look after him: he gets tired, hungry and thirsty. The game is in Dutch.</p>
-          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/spot-fetch">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-fetch">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/spot-fetch/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/spot-fetch" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
-      </article>
-      <article class="project" id="project-spot-snake" data-project="spot-snake" data-category="spot" data-status="public" data-demo="https://gitguy268.github.io/spot-snake/" data-source="https://github.com/Gitguy268/spot-snake">
-        <img decoding="async" src="images/spot-snake.webp" width="1272" height="1298" loading="lazy" alt="Spot, a black labrador with a red collar, winding across a lawn towards a biscuit">
-        <div>
-          <div class="project-meta"><span>Spot</span><span class="status live">Available online</span></div><h3>Spot’s Biscuit Snake</h3>
-          <p>A snake game in one HTML file. Spot licks up biscuits to grow, and has to mind the fence, the flowers and his own tail. Press AI plays and a small model steers him.</p>
-          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/spot-snake">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-snake">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/spot-snake/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/spot-snake" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
-      </article>
-      <article class="project" id="project-spot-light" data-project="spot-light" data-category="spot" data-status="public" data-demo="https://gitguy268.github.io/spot-light/" data-source="https://github.com/Gitguy268/spot-light">
-        <img decoding="async" src="images/spot-light.webp" width="1440" height="900" loading="lazy" alt="Spot, a black labrador with a red collar, chasing a red laser dot across a rug on a wooden floor">
-        <div>
-          <div class="project-meta"><span>Spot</span><span class="status live">Available online</span></div><h3>Spot-light</h3>
-          <p>Spot chases a laser dot around the living room and you keep it out of his paws. Three games, in 2D or 3D, and in 8-bit if you like.</p>
-          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/spot-light">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-light">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/spot-light/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/spot-light" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
-      </article>
       <article class="project" id="project-blacklabspotsshop" data-project="blacklabspotsshop" data-category="spot" data-status="public" data-demo="https://blacklabspotsshop.lovable.app/" data-source="https://github.com/Gitguy268/BlackLabSpotsShop">
         <img decoding="async" src="images/blacklabspotsshop.webp" width="1440" height="900" loading="lazy" alt="The shop's front page, headed Spot-powered style">
         <div>
@@ -145,6 +137,22 @@
           <p>A shop site for T-shirts and hoodies with Spot on them.</p>
           <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/BlackLabSpotsShop">Source on GitHub</a>.</p>
         <div class="project-actions"><a class="action docs-link" href="docs/index.html#blacklabspotsshop">Docs</a><a class="action demo-link" href="https://blacklabspotsshop.lovable.app/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/BlackLabSpotsShop" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-blacklabspots-storefront" data-project="blacklabspots-storefront" data-category="spot" data-status="public" data-demo="https://gitguy268.github.io/blacklabspots-storefront/" data-source="https://github.com/Gitguy268/blacklabspots-storefront">
+        <img decoding="async" loading="lazy" src="images/blacklabspots-storefront.webp" width="1200" height="630" alt="The Black Lab Spots share image: the headline Good things for good dogs in heavy black type on warm paper, with one teal dot">
+        <div>
+          <div class="project-meta"><span>Spot</span><span class="status live">Available online</span></div><h3>Black Lab Spots storefront</h3>
+          <p>A custom Next.js shop for the Black Lab Spots catalogue of 35 products, with Stripe checkout and Printify orders. Without keys, the checkout runs in a preview mode that charges nobody.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/blacklabspots-storefront">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#blacklabspots-storefront">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/blacklabspots-storefront/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/blacklabspots-storefront" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-blacklab-store-yeezy" data-project="blacklab-store-yeezy" data-category="spot" data-status="public" data-demo="https://gitguy268.github.io/blacklab-store-yeezy/" data-source="https://github.com/Gitguy268/blacklab-store-yeezy">
+        <img decoding="async" loading="lazy" src="images/blacklab-store-yeezy.webp" width="1440" height="900" alt="A white product grid with mono labels showing a T-shirt, a hoodie and a cap with Spot on it, in three columns">
+        <div>
+          <div class="project-meta"><span>Spot</span><span class="status live">Available online</span></div><h3>Blacklabspots grid shop</h3>
+          <p>A buildless storefront concept with a white canvas, mono labels and a three-column grid of all 35 Black Lab Spots products. Prices are a snapshot, and there is no checkout.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/blacklab-store-yeezy">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#blacklab-store-yeezy">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/blacklab-store-yeezy/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/blacklab-store-yeezy" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
     </div>
   </section>
@@ -203,16 +211,132 @@
     </div>
   </section>
 
+  <section class="group" aria-labelledby="games">
+    <h2 id="games">Games</h2>
+    <div class="project-grid">
+      <article class="project" id="project-retro-zip" data-project="retro-zip" data-category="games" data-status="public" data-demo="https://gitguy268.github.io/retro-zip/" data-source="https://github.com/Gitguy268/retro-zip">
+        <img decoding="async" loading="lazy" src="images/retro-zip.webp" width="1280" height="860" alt="A neon pink and purple arcade page with a pixel-art retro-zip wordmark, a game on a small screen and a line-up of games to play">
+        <div>
+          <div class="project-meta"><span>Games</span><span class="status live">Available online</span></div><h3>retro-zip</h3>
+          <p>A retro game library. Normal mode runs emulated games and Doom in the browser, and terminal mode plays six original games in a real terminal. It includes no commercial ROMs.</p>
+          <p class="note project-credit">GPL-3.0 licence. <a href="https://github.com/Gitguy268/retro-zip">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#retro-zip">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/retro-zip/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/retro-zip" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-spot-fetch" data-project="spot-fetch" data-category="games" data-status="public" data-demo="https://gitguy268.github.io/spot-fetch/" data-source="https://github.com/Gitguy268/spot-fetch">
+        <img decoding="async" src="images/spot-fetch.webp" width="1440" height="810" loading="lazy" alt="Spot, a black labrador, running back across the grass with a tennis ball in his mouth">
+        <div>
+          <div class="project-meta"><span>Games</span><span class="status live">Available online</span></div><h3>Spot apporteert</h3>
+          <p>A fetch game. Throw a ball across a park for Spot and look after him: he gets tired, hungry and thirsty. The game is in Dutch.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/spot-fetch">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-fetch">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/spot-fetch/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/spot-fetch" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-spot-snake" data-project="spot-snake" data-category="games" data-status="public" data-demo="https://gitguy268.github.io/spot-snake/" data-source="https://github.com/Gitguy268/spot-snake">
+        <img decoding="async" src="images/spot-snake.webp" width="1272" height="1298" loading="lazy" alt="Spot, a black labrador with a red collar, winding across a lawn towards a biscuit">
+        <div>
+          <div class="project-meta"><span>Games</span><span class="status live">Available online</span></div><h3>Spot’s Biscuit Snake</h3>
+          <p>A snake game in one HTML file. Spot licks up biscuits to grow, and has to mind the fence, the flowers and his own tail. Press AI plays and a small model steers him.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/spot-snake">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-snake">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/spot-snake/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/spot-snake" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-spot-light" data-project="spot-light" data-category="games" data-status="public" data-demo="https://gitguy268.github.io/spot-light/" data-source="https://github.com/Gitguy268/spot-light">
+        <img decoding="async" src="images/spot-light.webp" width="1440" height="900" loading="lazy" alt="Spot, a black labrador with a red collar, chasing a red laser dot across a rug on a wooden floor">
+        <div>
+          <div class="project-meta"><span>Games</span><span class="status live">Available online</span></div><h3>Spot-light</h3>
+          <p>Spot chases a laser dot around the living room and you keep it out of his paws. Three games, in 2D or 3D, and in 8-bit if you like.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/spot-light">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#spot-light">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/spot-light/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/spot-light" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-rubber-hose-revue" data-project="rubber-hose-revue" data-category="games" data-status="public" data-demo="https://gitguy268.github.io/rubber-hose-revue/" data-source="https://github.com/Gitguy268/rubber-hose-revue">
+        <img decoding="async" loading="lazy" src="images/rubber-hose-revue.webp" width="1440" height="900" alt="A black title card with a gold double border reading The Rubber Hose Revue, listing The Picture and The Game"><div class="project-art" aria-hidden="true"><span>♪</span><small>experiments</small></div><div>
+        <div class="project-meta"><span>Games</span><span class="status live">Available online</span></div><h3>The Rubber Hose Revue</h3>
+        <p>A rooftop cartoon with a musical saw, and Cannonball Capers, an asteroids game drawn the same way.</p>
+        <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/rubber-hose-revue">Source on GitHub</a>.</p>
+      <div class="project-actions"><a class="action docs-link" href="docs/index.html#rubber-hose-revue">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/rubber-hose-revue/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/rubber-hose-revue" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div></article>
+    </div>
+  </section>
+
   <section class="group" aria-labelledby="tools">
     <h2 id="tools">Tools</h2>
     <div class="project-grid">
+      <article class="project" id="project-edu-code-camp" data-project="edu-code-camp" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/edu-code-camp/" data-source="https://github.com/Gitguy268/edu-code-camp">
+        <img decoding="async" loading="lazy" src="images/edu-code-camp.webp" width="1440" height="900" alt="A Windows 98 style learning dashboard on a teal background, with XP progress, daily quests, a streak, and courses in JavaScript, Python, SQL and Linux">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>edu-code-camp</h3>
+          <p>Learn to code by writing real code: short lessons with hidden tests in JavaScript, Python, SQL and Linux, XP and streaks, eight looks, and Spot the tutor. All offline in your browser.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/edu-code-camp">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#edu-code-camp">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/edu-code-camp/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/edu-code-camp" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-xiao" data-project="xiao" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/xiao/" data-source="https://github.com/Gitguy268/xiao">
+        <img decoding="async" loading="lazy" src="images/xiao.webp" width="1440" height="900" alt="A dark file library with a search box, a sidebar of downloads, notes and collections, and a long list of PDF, image and archive files">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Xiao</h3>
+          <p>A calm, private browser built on Zen: built-in ad and tracker blocking, stricter settings, Tor tabs, a randomized fingerprint and a silent mode that connects to nothing by itself.</p>
+          <p class="note project-credit">MPL-2.0 licence. <a href="https://github.com/Gitguy268/xiao">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#xiao">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/xiao/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/xiao" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-hillium" data-project="hillium" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/hillium/" data-source="https://github.com/Gitguy268/hillium">
+        <img decoding="async" loading="lazy" src="images/hillium.webp" width="1440" height="900" alt="A browser with a purple sidebar of tabs and spaces next to a Wikipedia article about liquids">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Hillium</h3>
+          <p>An Arc and Zen style browser with Helium’s privacy defaults, for Arch Linux and macOS. Tabs in a sidebar on coloured spaces, a command bar, split view, four looks, and a CLI and MCP server for AI apps.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/hillium">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#hillium">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/hillium/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/hillium" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-archium" data-project="archium" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/archium/" data-source="https://github.com/Gitguy268/archium">
+        <img decoding="async" src="images/archium.webp" width="1440" height="855" loading="lazy" alt="A browser new tab page with a clock, a search box and quick links">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Archium</h3>
+          <p>A privacy layer for the Helium browser: an offline new tab, search that runs on your own Mac, a Tor switch with a kill switch, and a URL cleaner. Plus Archium Browser, a runnable browser with the same protection, three looks and a local assistant.</p>
+          <p class="note project-credit">GPL-3.0 licence. <a href="https://github.com/Gitguy268/archium">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#archium">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/archium/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/archium" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-skyhold" data-project="skyhold" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/skyhold/" data-source="https://github.com/Gitguy268/skyhold">
+        <img decoding="async" loading="lazy" src="images/skyhold.webp" width="1440" height="900" alt="The Skyhold web interface with a cloud remote configured, a list of photo files ticked for staging and an Add to vault button">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Skyhold</h3>
+          <p>For files you want off your computer but not lost. It encrypts them into a local vault, uploads them to any cloud through rclone, checks every copy, then drops the local files. CLI, TUI and web UI.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/skyhold">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#skyhold">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/skyhold/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/skyhold" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-openfinder" data-project="openfinder" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/openfinder/" data-source="https://github.com/Gitguy268/openfinder">
+        <img decoding="async" src="images/openfinder.webp" width="1280" height="800" loading="lazy" alt="A Finder-style window with a glass sidebar of favourites, and folders shown as icons">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>OpenFinder</h3>
+          <p>A file manager that runs in the browser, styled after the Finder with liquid glass. It works on real folders on your computer, and inside the Xiao browser it is the Library.</p>
+          <p class="note project-credit">GPL-3.0-or-later licence. <a href="https://github.com/Gitguy268/openfinder">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#openfinder">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/openfinder/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/openfinder" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
       <article class="project" id="project-convert" data-project="convert" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/convert/" data-source="https://github.com/Gitguy268/convert">
         <img decoding="async" src="images/convert.webp" width="1440" height="900" loading="lazy" alt="A file converter with an MP4 file loaded and GIF chosen as the output format">
         <div>
           <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Convert to it!</h3>
-          <p>A file converter that works between almost any two formats without uploading anything. My fork adds output settings for each conversion.</p>
+          <p>A file converter that works between almost any two formats without uploading anything. My fork adds output settings for each conversion, and much more.</p>
           <p class="note project-credit">Fork of <a href="https://github.com/p2r3/convert">p2r3/convert</a>. GPL-2.0 licence. <a href="https://github.com/Gitguy268/convert">Source on GitHub</a>.</p>
         <div class="project-actions"><a class="action docs-link" href="docs/index.html#convert">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/convert/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/convert" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-retrofind" data-project="retrofind" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/retrofind/" data-source="https://github.com/Gitguy268/retrofind">
+        <img decoding="async" src="images/retrofind.webp" width="1440" height="912" loading="lazy" alt="A Windows 98 window over a cloudy sky showing a 1998-style search page with a multicoloured Retrofind wordmark and an I'm Feeling Lucky button">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Retrofind</h3>
+          <p>Private web search on your own Mac, in the style of 1998. SearXNG runs underneath without Docker, under a start page modelled on early Google in a Windows 98 window of liquid glass.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/retrofind">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#retrofind">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/retrofind/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/retrofind" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-web2app" data-project="web2app" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/web2app/" data-source="https://github.com/Gitguy268/web2app">
+        <img decoding="async" src="images/web2app.webp" width="1440" height="900" loading="lazy" alt="A page headed Turn any website into a Mac app, with buttons for popular apps and a build form">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>web2app</h3>
+          <p>Turns any website into a small Mac app. A page on your own Mac for the Pake command-line tool, with a build queue, a history, offline builds and phone pairing.</p>
+          <p class="note project-credit">Built on <a href="https://github.com/tw93/Pake">tw93/Pake</a>. GPL-3.0-or-later licence. <a href="https://github.com/Gitguy268/web2app">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#web2app">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/web2app/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/web2app" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-qrer" data-project="qrer" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/qrer/" data-source="https://github.com/Gitguy268/qrer">
+        <img decoding="async" src="images/qrer.webp" width="1440" height="900" loading="lazy" alt="A Windows 98 window titled Qrer, QR Editor, over a cloud wallpaper, showing a QR code and export buttons">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Qrer</h3>
+          <p>A QR code editor that looks like Windows 98, with liquid glass on its title bar and taskbar. It reads codes as well as making them, and 2.7 adds an Art look and animated GIFs.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/qrer">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#qrer">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/qrer/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/qrer" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
       <article class="project" id="project-qrcodeforeveryone" data-project="qrcodeforeveryone" data-category="tools" data-status="public" data-demo="https://qrcodeforeveryone.vercel.app" data-source="https://github.com/Gitguy268/QRcodeforeveryone">
         <img decoding="async" src="images/qrcodeforeveryone.webp" width="1440" height="900" loading="lazy" alt="A QR code generator with fields for the content, two colours and a logo">
@@ -230,74 +354,104 @@
           <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/htmltopng">Source on GitHub</a>.</p>
         <div class="project-actions"><a class="action docs-link" href="docs/index.html#htmltopng">Docs</a><a class="action demo-link" href="https://htmltopngconverter.vercel.app/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/htmltopng" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
-      <article class="project" id="project-tabshell" data-project="tabshell" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/tabshell/" data-source="https://github.com/Gitguy268/tabshell">
+      <article class="project" id="project-better-aiko" data-project="better-aiko" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/better-aiko/" data-source="https://github.com/Gitguy268/better-aiko">
+        <img decoding="async" loading="lazy" src="images/better-aiko.webp" width="1440" height="900" alt="A page of line icons in a grid with their names underneath, a search box at the top and a Better Aiko logo">
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Better Aiko</h3>
+          <p>Aiko icons for AI interfaces, with 101 more of them and every icon named. Browse, search, recolour and download them on one page.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/tw93/aiko">tw93/aiko</a>. MIT licence. <a href="https://github.com/Gitguy268/better-aiko">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#better-aiko">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/better-aiko/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/better-aiko" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-clippy-choppy" data-project="clippy-choppy" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/clippy-choppy/" data-source="https://github.com/Gitguy268/clippy-choppy">
+        <div class="project-art" aria-hidden="true"><span>📎</span><small>tools</small></div>
+        <div>
+          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Clippy Choppy</h3>
+          <p>Clippy on your web page, in plain JavaScript. An unofficial fan project. The character artwork belongs to its owner and is outside the MIT licence.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/clippy-choppy">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#clippy-choppy">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/clippy-choppy/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/clippy-choppy" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="group" aria-labelledby="terminal-ai">
+    <h2 id="terminal-ai">Terminal &amp; AI</h2>
+    <div class="project-grid">
+      <article class="project" id="project-lvw-harness" data-project="lvw-harness" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/LvW-harness/" data-source="https://github.com/Gitguy268/LvW-harness">
+        <img decoding="async" loading="lazy" src="images/lvw-harness.webp" width="1440" height="900" alt="The LvW web interface on its Skills page, with an install box and a list of installed skills such as code review, research and test-driven development">
+        <div>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>LvW-harness</h3>
+          <p>A local-first AI agent with a one-command model manager for Hugging Face, GitHub and GitLab. It edits files, runs commands, browses and remembers, in a terminal or a web UI.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/LvW-harness">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#lvw-harness">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/LvW-harness/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/LvW-harness" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-usb-llms" data-project="usb-llms" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/usb-llms/" data-source="https://github.com/Gitguy268/usb-llms">
+        <img decoding="async" loading="lazy" src="images/usb-llms.webp" width="1180" height="760" alt="The USB LLMS model manager in a browser, listing the models on the drive with sizes and a catalogue of suggested models to add">
+        <div>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>USB LLMS</h3>
+          <p>Run AI models from a USB stick on macOS, Windows and Linux, with or without the internet. One small program plus a folder, with a terminal UI, a web UI and Open WebUI. Nothing is installed on the computer.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/usb-llms">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#usb-llms">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/usb-llms/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/usb-llms" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="project" id="project-tabshell" data-project="tabshell" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/tabshell/" data-source="https://github.com/Gitguy268/tabshell">
         <img decoding="async" src="images/tabshell.webp" width="1440" height="864" loading="lazy" alt="A Linux terminal in a browser tab showing uname and the Alpine release, with Browser VM, Docker and Reset buttons above it">
         <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>TabShell</h3>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>TabShell</h3>
           <p>A real Linux terminal in a browser tab. Install packages, play terminal games, then press Reset and it’s as if nothing happened.</p>
           <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/tabshell">Source on GitHub</a>.</p>
         <div class="project-actions"><a class="action docs-link" href="docs/index.html#tabshell">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/tabshell/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/tabshell" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
-      <article class="project" id="project-qrer" data-project="qrer" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/qrer/" data-source="https://github.com/Gitguy268/qrer">
-        <img decoding="async" src="images/qrer.webp" width="1440" height="900" loading="lazy" alt="A Windows 98 window titled Qrer, QR Editor, over a cloud wallpaper, showing a QR code and export buttons">
+      <article class="project" id="project-needle" data-project="needle" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/needle/" data-source="https://github.com/Gitguy268/needle">
+        <img decoding="async" loading="lazy" src="images/needle.webp" width="1440" height="850" alt="A dark terminal music player with columns of artists, albums and tracks, half-block cover art and a progress bar">
         <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Qrer</h3>
-          <p>A QR code editor that looks like Windows 98, with liquid glass on its title bar and taskbar. It reads codes as well as making them.</p>
-          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/qrer">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#qrer">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/qrer/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/qrer" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>needle</h3>
+          <p>A terminal music player with a full-screen TUI, a mode that keeps your shell, a background daemon and a JSON-lines interface for scripts. It plays what mpv plays.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/needle">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#needle">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/needle/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/needle" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
-      <article class="project" id="project-openfinder" data-project="openfinder" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/openfinder/" data-source="https://github.com/Gitguy268/openfinder">
-        <img decoding="async" src="images/openfinder.webp" width="1280" height="800" loading="lazy" alt="A Finder-style window with a glass sidebar of favourites, and folders shown as icons">
+      <article class="project" id="project-quicktalk" data-project="quicktalk" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/quicktalk/" data-source="https://github.com/Gitguy268/quicktalk">
+        <div class="project-art" aria-hidden="true"><span>◉</span><small>terminal &amp; ai</small></div>
         <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>OpenFinder</h3>
-          <p>A file manager that runs in the browser, styled after the Finder with liquid glass. It works on real folders on your computer.</p>
-          <p class="note project-credit">GPL-3.0-or-later licence. <a href="https://github.com/Gitguy268/openfinder">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#openfinder">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/openfinder/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/openfinder" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>QuickTalk</h3>
+          <p>A quiet place for your voice: local-first desktop dictation and meeting notes, built with Rust, Tauri 2 and Svelte 5. A 0.1 development build.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/quicktalk">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#quicktalk">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/quicktalk/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/quicktalk" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
-      <article class="project" id="project-archium" data-project="archium" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/archium/" data-source="https://github.com/Gitguy268/archium">
-        <img decoding="async" src="images/archium.webp" width="1440" height="855" loading="lazy" alt="A browser new tab page with a clock, a search box and quick links">
+      <article class="project" id="project-glyphium" data-project="glyphium" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/glyphium/" data-source="https://github.com/Gitguy268/glyphium">
+        <div class="project-art" aria-hidden="true"><span>›_</span><small>terminal &amp; ai</small></div>
         <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Archium</h3>
-          <p>A privacy layer for the Helium browser: an offline new tab, search that runs on your own Mac, a Tor switch with a kill switch, and a URL cleaner.</p>
-          <p class="note project-credit">GPL-3.0 licence. <a href="https://github.com/Gitguy268/archium">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#archium">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/archium/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/archium" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>Glyphium</h3>
+          <p>A GPU-rendered terminal emulator in Rust, built on libghostty-vt. Early development: the desktop app, end-to-end scripts and fuzz tests pass.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/glyphium">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#glyphium">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/glyphium/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/glyphium" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
-      <article class="project" id="project-web2app" data-project="web2app" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/web2app/" data-source="https://github.com/Gitguy268/web2app">
-        <img decoding="async" src="images/web2app.webp" width="1440" height="900" loading="lazy" alt="A page headed Turn any website into a Mac app, with buttons for popular apps and a build form">
+      <article class="project" id="project-textarea-cli" data-project="textarea-cli" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/textarea-cli/" data-source="https://github.com/Gitguy268/textarea-cli">
+        <img decoding="async" loading="lazy" src="images/textarea-cli.webp" width="1440" height="597" alt="A terminal menu for textarea with numbered rows for a new note, quick capture, today, search, tasks, tags, sync and settings">
         <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>web2app</h3>
-          <p>Turns any website into a small Mac app. A page on your own Mac for the Pake command-line tool, with a build queue and a history.</p>
-          <p class="note project-credit">Built on <a href="https://github.com/tw93/Pake">tw93/Pake</a>. GPL-3.0-or-later licence. <a href="https://github.com/Gitguy268/web2app">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#web2app">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/web2app/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/web2app" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>textarea-cli</h3>
+          <p>Textarea in the terminal. Type <code>text</code> for a menu, or <code>text buy milk</code> to jot something down without opening anything. Syncs with Obsidian, Apple Notes and any folder.</p>
+          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/textarea-cli">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#textarea-cli">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/textarea-cli/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/textarea-cli" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
-      <article class="project" id="project-superfile" data-project="superfile" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/superfile/" data-source="https://github.com/Gitguy268/superfile">
-        <div class="project-art" aria-hidden="true"><span>▤</span><small>tools</small></div>
+      <article class="project" id="project-opencode" data-project="opencode" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/opencode/" data-source="https://github.com/Gitguy268/opencode">
+        <div class="project-art" aria-hidden="true"><span>›_</span><small>terminal &amp; ai</small></div>
         <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>superfile, my edition</h3>
-          <p>The superfile terminal file manager with eleven fixes and features: six from open upstream pull requests and five of my own.</p>
-          <p class="note project-credit">Fork of <a href="https://github.com/yorukot/superfile">yorukot/superfile</a>. MIT licence. <a href="https://github.com/Gitguy268/superfile">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#superfile">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/superfile/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/superfile" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
-      </article>
-      <article class="project" id="project-opencode" data-project="opencode" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/opencode/" data-source="https://github.com/Gitguy268/opencode">
-        <div class="project-art" aria-hidden="true"><span>›_</span><small>tools</small></div>
-        <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>opencode, my edition</h3>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>opencode, my edition</h3>
           <p>The opencode coding agent with nine additions, among them session goals, a token breakdown, transcript search, Claude Code hooks and a shell sandbox.</p>
           <p class="note project-credit">Fork of <a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a>. MIT licence. <a href="https://github.com/Gitguy268/opencode">Source on GitHub</a>.</p>
         <div class="project-actions"><a class="action docs-link" href="docs/index.html#opencode">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/opencode/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/opencode" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
-      <article class="project" id="project-retrofind" data-project="retrofind" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/retrofind/" data-source="https://github.com/Gitguy268/retrofind">
-        <img decoding="async" src="images/retrofind.webp" width="1440" height="912" loading="lazy" alt="A Windows 98 window over a cloudy sky showing a 1998-style search page with a multicoloured Retrofind wordmark and an I'm Feeling Lucky button">
+      <article class="project" id="project-superfile" data-project="superfile" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/superfile/" data-source="https://github.com/Gitguy268/superfile">
+        <div class="project-art" aria-hidden="true"><span>▤</span><small>terminal &amp; ai</small></div>
         <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>Retrofind</h3>
-          <p>Private web search on your own Mac, in the style of 1998. SearXNG runs underneath without Docker, under a start page modelled on early Google in a Windows 98 window of liquid glass.</p>
-          <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/retrofind">Source on GitHub</a>.</p>
-        <div class="project-actions"><a class="action docs-link" href="docs/index.html#retrofind">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/retrofind/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/retrofind" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>superfile, my edition</h3>
+          <p>The superfile terminal file manager with eleven fixes and features: six from open upstream pull requests and five of my own.</p>
+          <p class="note project-credit">Fork of <a href="https://github.com/yorukot/superfile">yorukot/superfile</a>. MIT licence. <a href="https://github.com/Gitguy268/superfile">Source on GitHub</a>.</p>
+        <div class="project-actions"><a class="action docs-link" href="docs/index.html#superfile">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/superfile/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/superfile" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
       </article>
-      <article class="project" id="project-container" data-project="container" data-category="tools" data-status="public" data-demo="https://gitguy268.github.io/container/" data-source="https://github.com/Gitguy268/container">
+      <article class="project" id="project-container" data-project="container" data-category="terminal-ai" data-status="public" data-demo="https://gitguy268.github.io/container/" data-source="https://github.com/Gitguy268/container">
         <img decoding="async" src="images/container.webp" width="1100" height="688" loading="lazy" alt="A terminal dashboard listing four containers with their image, state, IP address, CPU and memory, and key hints along the bottom">
         <div>
-          <div class="project-meta"><span>Tools</span><span class="status live">Available online</span></div><h3>container, my edition</h3>
+          <div class="project-meta"><span>Terminal &amp; AI</span><span class="status live">Available online</span></div><h3>container, my edition</h3>
           <p>Apple’s tool for running Linux containers on a Mac, with <code>container here</code>, which boots a VM inside your terminal with no background services, and <code>container dash</code>, a full-screen dashboard. Plus fixes and new options.</p>
           <p class="note project-credit">Fork of <a href="https://github.com/apple/container">apple/container</a>. Apache-2.0 licence. <a href="https://github.com/Gitguy268/container">Source on GitHub</a>.</p>
         <div class="project-actions"><a class="action docs-link" href="docs/index.html#container">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/container/" target="_blank" rel="noopener noreferrer">Project page <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/container" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div>
@@ -308,11 +462,6 @@
   <section class="group" aria-labelledby="experiments">
     <h2 id="experiments">Experiments</h2>
     <div class="plain">
-      <article class="project" id="project-rubber-hose-revue" data-project="rubber-hose-revue" data-category="experiments" data-status="public" data-demo="https://gitguy268.github.io/rubber-hose-revue/" data-source="https://github.com/Gitguy268/rubber-hose-revue"><div class="project-art" aria-hidden="true"><span>♪</span><small>experiments</small></div><div>
-        <div class="project-meta"><span>Experiments</span><span class="status live">Available online</span></div><h3>The Rubber Hose Revue</h3>
-        <p>A rooftop cartoon with a musical saw, and Cannonball Capers, an asteroids game drawn the same way.</p>
-        <p class="note project-credit">MIT licence. <a href="https://github.com/Gitguy268/rubber-hose-revue">Source on GitHub</a>.</p>
-      <div class="project-actions"><a class="action docs-link" href="docs/index.html#rubber-hose-revue">Docs</a><a class="action demo-link" href="https://gitguy268.github.io/rubber-hose-revue/" target="_blank" rel="noopener noreferrer">Try it <span aria-hidden="true">↗</span></a><a class="action source-link" href="https://github.com/Gitguy268/rubber-hose-revue" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a></div></div></article>
       <article class="project" id="project-cozy-christmas-lab" data-project="cozy-christmas-lab" data-category="experiments" data-status="public" data-demo="https://gitguy268.github.io/cozy-christmas-lab/" data-source="https://github.com/Gitguy268/cozy-christmas-lab"><div class="project-art" aria-hidden="true"><span>✳</span><small>experiments</small></div><div>
         <div class="project-meta"><span>Experiments</span><span class="status live">Available online</span></div><h3>Cozy Christmas Lab</h3>
         <p>An 8-bit room with a labrador, a Christmas tree and snow falling outside, on a screen of 256 by 144 pixels.</p>
@@ -334,7 +483,7 @@
   <section class="group about" id="about" aria-labelledby="about-heading">
     <h2 id="about-heading">About</h2>
     <div>
-      <p>Most of what I make rebuilds something old, like a record deck or a Windows 9x desktop, with what a browser can do now. Nearly all of it runs on your own device: no account, no server, and your files stay where they are.</p>
+      <p>Most of what I make rebuilds something old, like a record deck or a Windows 9x desktop, with what a browser can do now. Nearly all of it runs on your own device: no account, no server, and your files stay where they are. Lately that has grown to terminal tools, private browsers and AI models that run on your own computer.</p>
       <p>Several projects are forks. I took an open-source project I liked and kept adding to it, and each one names whose work it started from.</p>
       <address>
         <a href="mailto:l.a.vandeweerd@gmail.com">l.a.vandeweerd@gmail.com</a><br>
@@ -356,6 +505,6 @@
 <section id="terminal" class="experience terminal-experience" aria-label="Terminal portfolio" hidden></section>
 <section id="desktop" class="experience desktop-experience" aria-label="Windows 98 desktop" hidden></section>
 <noscript><p class="noscript-note">You’re viewing the complete website. The terminal and desktop experiences use JavaScript.</p></noscript>
-<script src="scripts/app.js?v=20261019-1" defer></script>
+<script src="scripts/app.js?v=20261102-1" defer></script>
 </body>
 </html>

@@ -41,7 +41,7 @@ Plain HTML, CSS, and JavaScript, with locally hosted fonts and screenshots. Noth
 
 The root page is a terminal-style chooser. Click a choice or type `1`, `2`, `3`, `website`, `terminal`, or `desktop`. It always appears on a new root visit; it does not store a preferred mode.
 
-- `/?view=website`: the teal glass introduction, three featured public projects, searchable category filters, all 31 projects, each with a link to its docs page, About, and contact. Press `/` or Ctrl+K (⌘K on a Mac) to jump to a project by name.
+- `/?view=website`: the teal glass introduction, three featured public projects, searchable category filters, all 48 projects in seven categories, each with a link to its docs page, About, and contact. Press `/` or Ctrl+K (⌘K on a Mac) to jump to a project by name.
 - `/?view=terminal`: commands, history with Up/Down, Tab completion, clickable suggestions, and four themes.
 - `/?view=desktop`: a Windows 98-inspired desktop with project folders, About, Contact, Terminal, Notepad, Minesweeper, and Mouse settings.
 
@@ -51,7 +51,7 @@ Every experience has a Switch experience control. Direct links, refresh, browser
 
 `help`, `about`, `projects`, `projects <category>`, `open <project-id>`, `contact`, `github`, `clear`, `history`, `theme mint|amber|hyper|crt`, `cursor system|vinyl|glass|spot`, `neofetch`, `website`, `desktop`, and `exit`.
 
-The categories also work as folders: `ls`, `cd players`, `cat ipod`, `pwd`, and `cd ..`.
+The categories also work as folders: `ls`, `cd players`, `cd terminal-ai`, `cat ipod`, `pwd`, and `cd ..`.
 
 The terminal only interprets this portfolio's commands. It does not execute shell commands or fetch repositories at runtime.
 
@@ -89,7 +89,7 @@ The choice is kept in the browser, so it carries across all three views and late
 
 The presentation lives in `styles/`; terminal behavior, the desktop, and the pure Minesweeper rules live in `scripts/`. Desktop code and CSS load on entry; the terminal loads on entry; `glass.js` loads only for the website. Inactive experiences stop their timers and animations. Assets use a release query value for browser cache invalidation; bump the value in `index.html` and `scripts/app.js` after changing deployed assets.
 
-The three featured projects are QRcodeforeveryone, htmltopng, and BlackLabSpotsShop. Their public destinations were checked in the browser during implementation. Unpublished projects retain that status and have no invented demo links.
+The three featured projects are the Four Stem Player, the Ultra-Realistic Vinyl Player, and edu-code-camp. Their public destinations were checked in the browser during implementation. Unpublished projects retain that status and have no invented demo links.
 
 The terminal-style `404.html` provides links home and to the website. GitHub Pages serves it for missing paths.
 
@@ -136,7 +136,7 @@ node check.mjs
 node --test tests/*.test.mjs
 ```
 
-The checks verify local links and assets (including fonts referenced from CSS), image descriptions and size limits, all 31 canonical projects, unique IDs, publication metadata, deferred experience scripts, and a docs page with a sidebar link for every project. The docs page gets the same link, image and no-outside-requests checks. External link syntax is checked; external availability requires a browser check. The tests exercise all 81 possible first moves, neighbor counts, flagging, wins, losses, and resets, the terminal's folder paths, and how the docs resolve a link and rank search results. See `docs/verification.md` for browser QA and its limits.
+The checks verify local links and assets (including fonts referenced from CSS), image descriptions and size limits, all 48 canonical projects, unique IDs, publication metadata, deferred experience scripts, and a docs page with a sidebar link for every project. The docs page gets the same link, image and no-outside-requests checks. External link syntax is checked; external availability requires a browser check. The tests exercise all 81 possible first moves, neighbor counts, flagging, wins, losses, and resets, the terminal's folder paths, and how the docs resolve a link and rank search results. See `docs/verification.md` for browser QA and its limits.
 
 Pushing to `main` runs the same checks and game tests and then deploys to GitHub Pages (`.github/workflows/pages.yml`).
 
