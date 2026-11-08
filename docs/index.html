@@ -65,8 +65,8 @@
       <ul>
         <li><a href="#edu-code-camp">edu-code-camp</a></li>
         <li><a href="#xiao">Xiao</a></li>
-        <li><a href="#hillium">Hillium</a></li>
         <li><a href="#archium">Archium</a></li>
+        <li><a href="#hillium">Hillium</a></li>
         <li><a href="#skyhold">Skyhold</a></li>
         <li><a href="#openfinder">OpenFinder</a></li>
         <li><a href="#convert">Convert to it!</a></li>
@@ -126,7 +126,7 @@
     <li><strong>One HTML file</strong>Double-click <code>index.html</code>. The Realistic and 8-Bit Vinyl Players, Spot’s Biscuit Snake and Spot-light work straight from disk, even offline.</li>
     <li><strong>A web app that needs a server</strong>Browsers won’t run modules, workers or WebAssembly from a <code>file://</code> address. These ship a <code>start.command</code>, or use any static server.</li>
     <li><strong>An app with a helper</strong>TabShell, LiquidFrame, web2app and Retrofind run a small server on your own computer, on <code>127.0.0.1</code> only. <code>start.command</code> starts it and opens the page.</li>
-    <li><strong>A program you install or build</strong>Terminal tools and desktop apps don’t run from a web page. Skyhold, needle, textarea-cli and USB LLMS need Go, Glyphium needs Rust and Zig, QuickTalk needs Rust and Node, Hillium needs Node, and LvW-harness needs Bun. Their pages list the steps, and “Project page” on their cards links to the same steps.</li>
+    <li><strong>A program you install or build</strong>Terminal tools and desktop apps don’t run from a web page. Skyhold, needle, textarea-cli and USB LLMS need Go, Glyphium needs Rust and Zig, QuickTalk needs Rust and Node, Archium needs Node, and LvW-harness needs Bun. Their pages list the steps, and “Project page” on their cards links to the same steps.</li>
   </ol>
   <p>To serve a folder yourself, run this inside it and open the address it prints:</p>
   <pre><code>python3 -m http.server 8000</code></pre>
@@ -143,7 +143,7 @@
   </ul>
 
   <h2 id="start-licences">Licences and forks</h2>
-  <p>Most of my own projects are MIT licensed. Videoina and Archium are GPL-3.0, OpenFinder and web2app GPL-3.0 or later, to fit what they build on or will use: mpv, Helium, FFmpeg and Pake. Nine projects are forks: I took an open-source project I liked and kept adding to it. Their pages say whose work they start from and list what my edition adds.</p>
+  <p>Most of my own projects are MIT licensed. Videoina and Hillium are GPL-3.0, OpenFinder and web2app GPL-3.0 or later, to fit what they build on or will use: mpv, Helium, FFmpeg and Pake. Nine projects are forks: I took an open-source project I liked and kept adding to it. Their pages say whose work they start from and list what my edition adds.</p>
 </article>
 
 <article class="doc" id="ultra-realistic-vinyl-player" data-look="vinyl" style="--accent:#d4893a">
@@ -1176,35 +1176,35 @@ powershell -ExecutionPolicy Bypass -File install.ps1 -Tor   # Windows</code></pr
   <p>Mozilla Public License 2.0, built on <a href="https://github.com/zen-browser/desktop">Zen Browser</a> and Firefox. Blocking is <a href="https://github.com/ghostery/adblocker">Ghostery’s engine</a>, and Xiao Search is <a href="https://github.com/searxng/searxng">SearXNG</a>. Not affiliated with or endorsed by Zen, Mozilla, Mullvad, the Tor Project, Ghostery, SearXNG or The Browser Company. Source: <a href="https://github.com/Gitguy268/xiao">Gitguy268/xiao</a>.</p>
 </article>
 
-<article class="doc" id="hillium" data-look="glass" style="--accent:#7c3aed;--glow-1:#c4b5fd;--glow-2:#fbcfe8">
+<article class="doc" id="archium" data-look="glass" style="--accent:#7c3aed;--glow-1:#c4b5fd;--glow-2:#fbcfe8">
   <header class="banner">
     <div class="pane">
-      <h1>Hillium</h1>
+      <h1>Archium</h1>
       <p class="tagline">An Arc and Zen style browser with Helium’s privacy defaults, for Linux (Arch) and macOS. It runs on Electron’s Chromium rather than a Helium build.</p>
       <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
     </div>
   </header>
-  <figure><img src="../images/hillium.webp" width="1440" height="900" loading="lazy" alt="A browser with a purple sidebar of tabs and spaces next to a Wikipedia article about liquids"></figure>
+  <figure><img src="../images/archium.webp" width="1440" height="900" loading="lazy" alt="A browser with a purple sidebar of tabs and spaces next to a Wikipedia article about liquids"></figure>
 
 
-  <h2 id="hillium-run">Run it</h2>
+  <h2 id="archium-run">Run it</h2>
   <p>With Node 24 or newer. On a Mac you can double-click <code>app/start.command</code>. The first run installs Electron and the ad blocker, about 350 MB.</p>
   <pre><code>cd app
 npm ci
 npm start</code></pre>
   <p>On Arch Linux, <code>npm run dist:linux</code> builds a package that <code>makepkg -si</code> in <code>packaging/arch</code> installs. Spaces import from Arc or Zen, and bookmarks from Chrome, Brave, Helium, Vivaldi or Chromium.</p>
 
-  <h2 id="hillium-use">Use it</h2>
+  <h2 id="archium-use">Use it</h2>
   <ul>
     <li><strong>Spaces</strong> each have a name, an emoji and a colour gradient, and can have their own cookies and logins. Favourites sit on top, with pinned tabs and folders under them.</li>
     <li><strong>Today</strong> tabs go to an archive after 12 hours, a day or a week.</li>
     <li><kbd>⌘T</kbd> opens a command bar that searches tabs in every space, history, the archive and commands.</li>
     <li>Also: Glance and Peek, split view of up to four pages, compact mode, and Boosts and Zap for changing a site.</li>
     <li>Four looks: Arc, Zen, Liquid Glass and Retro 98.</li>
-    <li>Turn on Settings › Agents, and the <code>hillium-cli</code> command and an MCP server let AI apps list, open and read your tabs. Private windows stay invisible to them.</li>
+    <li>Turn on Settings › Agents, and the <code>archium-cli</code> command and an MCP server let AI apps list, open and read your tabs. Private windows stay invisible to them.</li>
   </ul>
 
-  <h2 id="hillium-how">How it works</h2>
+  <h2 id="archium-how">How it works</h2>
   <p>A transparent window holds the interface, with one Chromium view per visible tab placed in the card. A single request filter runs per session.</p>
   <ul>
     <li>Blocking uses Ghostery’s engine with EasyList, EasyPrivacy, uBlock Origin’s lists and cookie notices.</li>
@@ -1213,7 +1213,7 @@ npm start</code></pre>
     <li>On a subset of privacytests.org’s tests it passes 67 of 76. Electron with its defaults passes 11 of 63.</li>
   </ul>
 
-  <h2 id="hillium-limits">Limits</h2>
+  <h2 id="archium-limits">Limits</h2>
   <ul>
     <li>It is Electron, not Helium, so Chromium updates arrive with Electron releases.</li>
     <li>There is no fingerprint noise. Use Tor Browser when you need to be anonymous.</li>
@@ -1222,31 +1222,31 @@ npm start</code></pre>
     <li>Arc wasn’t decompiled. Its features are rebuilt from how Arc behaves.</li>
   </ul>
 
-  <h2 id="hillium-credits">Credits</h2>
-  <p>MIT licence. Files from <a href="https://github.com/zen-browser/desktop">Zen</a> stay MPL-2.0, and the glass is by Archis Vaze (MIT). The repository’s NOTICE lists everything it uses. Not affiliated with The Browser Company, Zen, imputnet, Brave or Ghostery. Source: <a href="https://github.com/Gitguy268/hillium">Gitguy268/hillium</a>.</p>
+  <h2 id="archium-credits">Credits</h2>
+  <p>MIT licence. Files from <a href="https://github.com/zen-browser/desktop">Zen</a> stay MPL-2.0, and the glass is by Archis Vaze (MIT). The repository’s NOTICE lists everything it uses. Not affiliated with The Browser Company, Zen, imputnet, Brave or Ghostery. Source: <a href="https://github.com/Gitguy268/archium">Gitguy268/archium</a>.</p>
 </article>
 
-<article class="doc" id="archium" data-look="glass" style="--accent:#6b3fa0;--glow-1:#c4b5fd;--glow-2:#5eead4">
+<article class="doc" id="hillium" data-look="glass" style="--accent:#6b3fa0;--glow-1:#c4b5fd;--glow-2:#5eead4">
   <header class="banner">
     <div class="pane">
-      <h1>Archium</h1>
-      <p class="tagline">A privacy layer for the Helium browser: an offline new tab, search that runs on your own Mac, a Tor switch with a kill switch, and a URL cleaner. Plus Archium Browser, a runnable browser with the same protection, three looks, Glance and a local assistant.</p>
+      <h1>Hillium</h1>
+      <p class="tagline">A privacy layer for the Helium browser: an offline new tab, search that runs on your own Mac, a Tor switch with a kill switch, and a URL cleaner. Plus Hillium Browser, a runnable browser with the same protection, three looks, Glance and a local assistant.</p>
       <ul class="facts"><li>Tools</li><li>GPL-3.0 licence</li><li>macOS</li><li>Available online</li></ul>
     </div>
   </header>
-  <figure><img src="../images/archium.webp" width="1440" height="855" loading="lazy" alt="A browser new tab page with a clock, a search box and quick links"></figure>
-  <p class="note">Archium is a companion kit for now: an extension and scripts on top of a stock <a href="https://helium.computer">Helium</a> release, not a browser you download. Its own builds are planned.</p>
+  <figure><img src="../images/hillium.webp" width="1440" height="855" loading="lazy" alt="A browser new tab page with a clock, a search box and quick links"></figure>
+  <p class="note">Hillium is a companion kit for now: an extension and scripts on top of a stock <a href="https://helium.computer">Helium</a> release, not a browser you download. Its own builds are planned.</p>
 
-  <h2 id="archium-run">Install</h2>
+  <h2 id="hillium-run">Install</h2>
   <p>You need macOS, Helium and Homebrew.</p>
   <ol>
     <li>Start local search: double-click <code>searxng/install.command</code>. SearXNG starts now and at every login, on <code>127.0.0.1:8888</code>, without Docker.</li>
     <li>In Helium open <code>chrome://extensions</code>, turn on Developer mode, click Load unpacked and choose the <code>extension</code> folder.</li>
     <li>Add a search engine with the URL <code>http://127.0.0.1:8888/search?q=%s</code> and make it the default.</li>
-    <li>For Tor, run <code>brew install tor &amp;&amp; brew services start tor</code>, then pick Tor in the Archium popup.</li>
+    <li>For Tor, run <code>brew install tor &amp;&amp; brew services start tor</code>, then pick Tor in the Hillium popup.</li>
   </ol>
 
-  <h2 id="archium-use">Features</h2>
+  <h2 id="hillium-use">Features</h2>
   <div class="table-wrap"><table>
     <tr><th>Feature</th><th>What it does</th></tr>
     <tr><td>Offline new tab</td><td>Clock, search box and quick links, with no network requests</td></tr>
@@ -1258,7 +1258,7 @@ npm start</code></pre>
     <tr><td>Own Helium services</td><td>Optional: <code>services/run-local.sh</code> runs Helium’s services server on your Mac, so filter lists, !bangs and extensions never come through imputnet’s servers. Needs Docker and mkcert.</td></tr>
   </table></div>
 
-  <h2 id="archium-how">How it works</h2>
+  <h2 id="hillium-how">How it works</h2>
   <ol class="flow">
     <li><strong>Popup</strong>Your choices go into extension storage</li>
     <li><strong>Background worker</strong>Applies the proxy, WebRTC policy and redirect rules</li>
@@ -1266,14 +1266,14 @@ npm start</code></pre>
   </ol>
   <p>Chromium never sends loopback traffic through a proxy, so in Tor mode a redirect rule sends local searches to the public instance, through Tor. The extension asks for access to all sites only because redirect rules need it; it has no content scripts and never reads pages.</p>
 
-  <h2 id="archium-limits">Limits</h2>
+  <h2 id="hillium-limits">Limits</h2>
   <ul>
     <li>Tor through a Chromium browser is not Tor Browser. It hides your IP from sites, but your browser fingerprint still identifies you.</li>
     <li>Local SearXNG queries Google, Bing and others from your IP outside Tor mode.</li>
     <li>Nothing is compiled into the browser yet, so the extension can be switched off.</li>
   </ul>
 
-  <h2 id="archium-credits">Credits</h2>
+  <h2 id="hillium-credits">Credits</h2>
   <p>Builds on <a href="https://github.com/imputnet/helium">Helium</a> by imputnet, which builds on ungoogled-chromium. Search is SearXNG. Not affiliated with any of them, Google or the Tor Project.</p>
 </article>
 

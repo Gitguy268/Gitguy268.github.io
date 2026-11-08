@@ -18,7 +18,7 @@ is in index.html. Some projects are unpublished; do not invent demo links.
 - Spot: BlackLabSpotsShop, Black Lab Spots storefront, Blacklabspots grid shop
 - Editors: Paint97, GlassPaint, PhotoCraft (his edition), Pikado, Textarea, LiquidFrame
 - Games: retro-zip, Spot apporteert, Spot's Biscuit Snake, Spot-light, The Rubber Hose Revue
-- Tools: edu-code-camp, Xiao, Hillium, Archium, Skyhold, OpenFinder, Convert to it!, Retrofind, web2app, Qrer, QRcodeforeveryone, htmltopng, Better Aiko (fork), Clippy Choppy
+- Tools: edu-code-camp, Xiao, Archium, Hillium, Skyhold, OpenFinder, Convert to it!, Retrofind, web2app, Qrer, QRcodeforeveryone, htmltopng, Better Aiko (fork), Clippy Choppy
 - Terminal & AI: LvW-harness, USB LLMS, TabShell, needle, QuickTalk, Glyphium, textarea-cli, opencode (fork), superfile (fork), container (fork)
 - Experiments: Cozy Christmas Lab, Vinyl Player, Vinyl Player for Spotify
 
