@@ -52,6 +52,7 @@
         <li><a href="#pikado">Pikado</a></li>
         <li><a href="#textarea">Textarea</a></li>
         <li><a href="#liquidframe">LiquidFrame</a></li>
+        <li><a href="#flashnack">Flashnack</a></li>
       </ul>
       <h2>Games</h2>
       <ul>
@@ -870,6 +871,41 @@ docker run --rm -p 8080:80 pikado</code></pre>
 
   <h2 id="liquidframe-credits">Credits</h2>
   <p>LiquidFrame’s own code is MIT. The photobook companion is <a href="https://github.com/ente-toys/photobook">Ente Photobook</a>, a separate program under AGPL-3.0; its source and my changes to it are kept apart in <code>companions/photobook/</code>.</p>
+</article>
+
+<article class="doc" id="flashnack" data-look="reel" style="--accent:#b45309">
+  <header class="banner">
+    <h1>Flashnack</h1>
+    <p class="tagline">Develop your Flashback ONE35 photos in the browser. Drop a roll, pick a film look, export.</p>
+    <ul class="facts"><li>Editors</li><li>GPL-3.0 licence</li><li>Port of LoFi Logic</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/flashnack.webp" width="1440" height="900" loading="lazy" alt="Flashnack showing a viaduct photo in the Rangefinder look, five film looks on the right and a strip of negatives below"></figure>
+
+  <h2 id="flashnack-run">Run it</h2>
+  <p>Open <a href="https://gitguy268.github.io/flashnack/">gitguy268.github.io/flashnack</a>. To run it yourself you need Node.js 20 or newer:</p>
+  <pre><code>npm ci
+npm run build
+npx vite preview --port 5292    # or double-click start.command on a Mac</code></pre>
+
+  <h2 id="flashnack-use">Use it</h2>
+  <ul>
+    <li>Drop ONE35 V2 DNG files, a V1 negatives .zip from the Flashback app, other RAWs or JPEGs. A whole folder works too.</li>
+    <li>Pick one of five looks: Disposable, Point &amp; Shoot, Rangefinder, Monochrome and Flashback Classic. Keys 1 to 5 switch.</li>
+    <li>Exposure, warmth, tint and push/pull per photo; grain, halation, bloom and the other film effects under Fine-tune the look.</li>
+    <li>Click the tick on a frame in the film strip to leave it out, then export a zip of JPEGs.</li>
+    <li>Hold Space to compare, Z for full screen with drag gestures, Cmd+C and Cmd+V to copy settings between photos.</li>
+  </ul>
+
+  <h2 id="flashnack-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Develop</strong>A worker turns the RAW into a linear ACEScg image with halation baked in</li>
+    <li><strong>Render</strong>LoFi Logic's WGSL shaders on WebGPU, or the same stages in JavaScript without it</li>
+    <li><strong>Export</strong>MozJPEG in WebAssembly, zipped in the browser</li>
+  </ol>
+  <p>On four ONE35 V2 DNGs the renders match the desktop app to within 0.00001 in all five looks.</p>
+
+  <h2 id="flashnack-credits">Credits</h2>
+  <p>A GPL-3.0 port of <a href="https://github.com/lofilogic/flashback-raw-editor">LoFi Logic</a>: its colour pipeline, shaders, LUTs, grain and look settings. Not affiliated with LoFi Logic or Flashback.</p>
 </article>
 
 <article class="doc" id="retro-zip" data-look="pixel" style="--accent:#db2777;--banner-bg:#1e1b4b">

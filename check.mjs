@@ -33,7 +33,7 @@ console.log(`ok: ${links.length} links, ${images.length} images`);
 
 // Every presentation reads these canonical articles. IDs must remain stable and unique.
 const cards = [...html.matchAll(/<article class="project"([^>]*)>([\s\S]*?)<\/article>/g)];
-assert.equal(cards.length, 48, 'preserve all 48 projects');
+assert.equal(cards.length, 49, 'preserve all 49 projects');
 const ids = cards.map(([,attrs]) => attrs.match(/data-project="([^"]+)"/)[1]);
 assert.equal(new Set(ids).size, ids.length, 'duplicate project ID');
 const categories = new Set(['players','spot','editors','games','tools','terminal-ai','experiments']);
@@ -59,10 +59,10 @@ for (const file of ['scripts/app.js','scripts/terminal.js','scripts/desktop.js',
 }
 assert.doesNotMatch(html, /<script[^>]+src="(?:glass.js|scripts\/(?:desktop|mines|terminal).js)"/, 'load experiences only when selected');
 assert.ok(existsSync(local('404.html')));
-assert.equal(cards.filter(([,attrs])=>attrs.includes('data-status="public"')).length,47,'publication status must stay consistent');
+assert.equal(cards.filter(([,attrs])=>attrs.includes('data-status="public"')).length,48,'publication status must stay consistent');
 assert.equal(cards.filter(([,attrs,body])=>body.includes('Fork of')).length,10,'retain all fork credits');
 assert.doesNotMatch(readFileSync(local('scripts/app.js'),'utf8'),/loadScript\('scripts\/mines.js'\)/,'defer the game until its app is opened');
-console.log('ok: 48 canonical projects, unique IDs, local CSS assets, lazy experience scripts');
+console.log('ok: 49 canonical projects, unique IDs, local CSS assets, lazy experience scripts');
 
 // The docs page: same rules for links, images and requests, and one page per project.
 const docsHtml = readFileSync(local('docs/index.html'), 'utf8');

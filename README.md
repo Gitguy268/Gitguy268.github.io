@@ -41,7 +41,7 @@ Plain HTML, CSS, and JavaScript, with locally hosted fonts and screenshots. Noth
 
 The root page is a terminal-style chooser. Click a choice or type `1`, `2`, `3`, `website`, `terminal`, or `desktop`. It always appears on a new root visit; it does not store a preferred mode.
 
-- `/?view=website`: the teal glass introduction, three featured public projects, searchable category filters, all 48 projects in seven categories, each with a link to its docs page, About, and contact. Press `/` or Ctrl+K (⌘K on a Mac) to jump to a project by name.
+- `/?view=website`: the teal glass introduction, three featured public projects, searchable category filters, all 49 projects in seven categories, each with a link to its docs page, About, and contact. Press `/` or Ctrl+K (⌘K on a Mac) to jump to a project by name.
 - `/?view=terminal`: commands, history with Up/Down, Tab completion, clickable suggestions, and four themes.
 - `/?view=desktop`: a Windows 98-inspired desktop with project folders, About, Contact, Terminal, Notepad, Minesweeper, and Mouse settings.
 
@@ -136,7 +136,7 @@ node check.mjs
 node --test tests/*.test.mjs
 ```
 
-The checks verify local links and assets (including fonts referenced from CSS), image descriptions and size limits, all 48 canonical projects, unique IDs, publication metadata, deferred experience scripts, and a docs page with a sidebar link for every project. The docs page gets the same link, image and no-outside-requests checks. External link syntax is checked; external availability requires a browser check. The tests exercise all 81 possible first moves, neighbor counts, flagging, wins, losses, and resets, the terminal's folder paths, and how the docs resolve a link and rank search results. See `docs/verification.md` for browser QA and its limits.
+The checks verify local links and assets (including fonts referenced from CSS), image descriptions and size limits, all 49 canonical projects, unique IDs, publication metadata, deferred experience scripts, and a docs page with a sidebar link for every project. The docs page gets the same link, image and no-outside-requests checks. External link syntax is checked; external availability requires a browser check. The tests exercise all 81 possible first moves, neighbor counts, flagging, wins, losses, and resets, the terminal's folder paths, and how the docs resolve a link and rank search results. See `docs/verification.md` for browser QA and its limits.
 
 Pushing to `main` runs the same checks and game tests and then deploys to GitHub Pages (`.github/workflows/pages.yml`).
 
