@@ -59,7 +59,7 @@ for (const file of ['scripts/app.js','scripts/terminal.js','scripts/desktop.js',
 }
 assert.doesNotMatch(html, /<script[^>]+src="(?:glass.js|scripts\/(?:desktop|mines|terminal).js)"/, 'load experiences only when selected');
 assert.ok(existsSync(local('404.html')));
-assert.equal(cards.filter(([,attrs])=>attrs.includes('data-status="public"')).length,48,'publication status must stay consistent');
+assert.equal(cards.filter(([,attrs])=>attrs.includes('data-status="public"')).length,49,'publication status must stay consistent');
 assert.equal(cards.filter(([,attrs,body])=>body.includes('Fork of')).length,10,'retain all fork credits');
 assert.doesNotMatch(readFileSync(local('scripts/app.js'),'utf8'),/loadScript\('scripts\/mines.js'\)/,'defer the game until its app is opened');
 console.log('ok: 49 canonical projects, unique IDs, local CSS assets, lazy experience scripts');
