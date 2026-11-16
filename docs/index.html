@@ -60,6 +60,7 @@
         <li><a href="#spot-fetch">Spot apporteert</a></li>
         <li><a href="#spot-snake">Spot’s Biscuit Snake</a></li>
         <li><a href="#spot-light">Spot-light</a></li>
+        <li><a href="#spot-light-hd">Spot-light HD</a></li>
         <li><a href="#rubber-hose-revue">The Rubber Hose Revue</a></li>
       </ul>
       <h2>Tools</h2>
@@ -67,6 +68,7 @@
         <li><a href="#edu-code-camp">edu-code-camp</a></li>
         <li><a href="#xiao">Xiao</a></li>
         <li><a href="#archium">Archium</a></li>
+        <li><a href="#web-pak">web-pak</a></li>
         <li><a href="#hillium">Hillium</a></li>
         <li><a href="#skyhold">Skyhold</a></li>
         <li><a href="#openfinder">OpenFinder</a></li>
@@ -1077,6 +1079,86 @@ npm run dev</code></pre>
 
   <h2 id="spot-light-limits">Limits</h2>
   <p>No sound, touch controls or saved high scores yet. The fonts come from Google Fonts, with fonts on your device as the fallback when offline.</p>
+</article>
+
+<article class="doc" id="spot-light-hd" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-linear-gradient(#8a5a32 0 34px, #6e4526 34px 36px)">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot-light HD</h1>
+      <p class="tagline">The realistic Spot-light: a furred Spot chases your laser dot through a living room, a garden and a snowy cabin.</p>
+      <ul class="facts"><li>Games</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-light-hd.webp" width="1440" height="900" loading="lazy" alt="Spot, a furred black labrador with a red collar, running across a wooden floor in a living room at dusk"></figure>
+
+  <h2 id="spot-light-hd-run">Run it</h2>
+  <p>Double-click <code>index.html</code>: the whole game is built into that one file. <code>start.command</code> serves it locally so the browser can install it for offline play.</p>
+
+  <h2 id="spot-light-hd-use">Play</h2>
+  <p>Mouse, finger, keyboard or gamepad steer the dot. Every game ends with a treat for Spot.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Game</th><th>Goal</th></tr>
+    <tr><td>Dodge</td><td>60 seconds and 3 lives.</td></tr>
+    <tr><td>Endless</td><td>Count his catches and your longest dodge.</td></tr>
+    <tr><td>Lure</td><td>Knock over the cup, the sock and the ball.</td></tr>
+    <tr><td>Fetch</td><td>Point at a ball, then lead him to his bed. Five balls.</td></tr>
+    <tr><td>Zoomies</td><td>Lead him through eight rings against the clock.</td></tr>
+    <tr><td>Hide &amp; seek</td><td>Keep the dot where he can't see it.</td></tr>
+    <tr><td>Relax</td><td>No score; he naps when he is tired.</td></tr>
+  </table></div>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>What it does</th></tr>
+    <tr><td><kbd>Space</kbd></td><td>Laser on or off</td></tr>
+    <tr><td><kbd>C</kbd></td><td>Camera: room, follow, low, top</td></tr>
+    <tr><td><kbd>P</kbd></td><td>Photo mode</td></tr>
+    <tr><td><kbd>T</kbd></td><td>Day, evening, night</td></tr>
+    <tr><td><kbd>B</kbd></td><td>8-bit look</td></tr>
+  </table></div>
+
+  <h2 id="spot-light-hd-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>His body</strong>Tubes with shell fur and IK legs that plant on the floor, from Spot apporteert</li>
+    <li><strong>His brain</strong>Grip per floor, line of sight around furniture, pounces, barking, energy and naps</li>
+    <li><strong>The rooms</strong>Textures painted in code, real-time shadows, ambient occlusion and bloom</li>
+  </ol>
+
+  <h2 id="spot-light-hd-limits">Limits</h2>
+  <p>It needs WebGL 2 and wants a recent GPU on High; the Auto preset steps down by itself. The original game lives on in <code>classic/</code>.</p>
+</article>
+
+<article class="doc" id="web-pak" data-look="finder" style="--accent:#c9781f">
+  <header class="banner">
+    <div class="card">
+      <h1>web-pak</h1>
+      <p class="tagline">A file archiver in the browser: compress, extract, encrypt, browse, preview, edit and convert archives. Nothing is uploaded.</p>
+      <ul class="facts"><li>Tools</li><li>MIT licence (7-Zip: LGPL)</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/web-pak.webp" width="1440" height="900" loading="lazy" alt="web-pak with an encrypted 7z archive open and a preview of a packing list"></figure>
+
+  <h2 id="web-pak-run">Run it</h2>
+  <p>Use the live site, or double-click <code>start.command</code>, which serves the built <code>app/</code> folder on localhost. Opening <code>index.html</code> straight from disk doesn't work: browsers only run its WebAssembly engine from a web address.</p>
+
+  <h2 id="web-pak-use">Use it</h2>
+  <p>Drop files or folders to compress them, drop an archive to open it. It makes 7z, zip, tar, tar.gz/bz2/xz/zst/br/lz4, wim, gz, bz2, xz, zst, br, lz4 and age, and opens everything 7-Zip reads, including rar, iso, dmg and split volumes.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>What it does</th></tr>
+    <tr><td><kbd>c</kbd></td><td>Compress view</td></tr>
+    <tr><td><kbd>o</kbd></td><td>Open an archive</td></tr>
+    <tr><td><kbd>x</kbd></td><td>Extract all</td></tr>
+    <tr><td><kbd>/</kbd></td><td>Search in the archive</td></tr>
+    <tr><td><kbd>?</kbd></td><td>All shortcuts</td></tr>
+  </table></div>
+
+  <h2 id="web-pak-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>7-Zip in WebAssembly</strong>A fresh instance per job, reading your files lazily in a worker</li>
+    <li><strong>Extra codecs</strong>zstd, brotli, lz4 and age, which 7-Zip lacks</li>
+    <li><strong>The app</strong>A queue of workers, previews that never trust the archive, saving to a folder or as downloads</li>
+  </ol>
+
+  <h2 id="web-pak-limits">Limits</h2>
+  <p>What 7-Zip writes is held in browser memory until you save it, so very large archives suit the terminal version, pakket, better. Saving into a folder needs a Chromium browser.</p>
 </article>
 
 <article class="doc" id="rubber-hose-revue" data-look="reel" style="--accent:#b45309">
