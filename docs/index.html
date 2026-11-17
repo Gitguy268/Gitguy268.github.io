@@ -31,6 +31,7 @@
       <h2>Players</h2>
       <ul>
         <li><a href="#ultra-realistic-vinyl-player">Ultra-Realistic Vinyl Player</a></li>
+        <li><a href="#ultra-realistic-cassette-deck">Ultra-Realistic Cassette Deck</a></li>
         <li><a href="#stem-player">Four Stem Player</a></li>
         <li><a href="#realistic-vinyl-player">Realistic Vinyl Player</a></li>
         <li><a href="#8-bit-vinyl-player">8-Bit Vinyl Player</a></li>
@@ -197,6 +198,53 @@ npm run dev</code></pre>
 
   <h2 id="ultra-realistic-vinyl-player-credits">Credits</h2>
   <p>MIT licence, with third-party notices in the repository’s NOTICE. Thorens is a trademark of its owner, and this project isn’t affiliated with it. The deck’s name and wordmark appear on the model because this is a study of that object. Source: <a href="https://github.com/Gitguy268/ultra-realistic-vinyl-player">Gitguy268/ultra-realistic-vinyl-player</a>.</p>
+</article>
+
+<article class="doc" id="ultra-realistic-cassette-deck" data-look="reel" style="--accent:#b8452b">
+  <header class="banner">
+    <h1>Ultra-Realistic Cassette Deck</h1>
+    <p class="tagline">A 1980s cassette deck in your browser: a 3D model with a tape transport, auto-reverse, tape hiss, noise reduction, and wow and flutter, playing your own music.</p>
+    <ul class="facts"><li>Players</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/ultra-realistic-cassette-deck.webp" width="1440" height="900" loading="lazy" alt="A 3D silver cassette deck on a wooden credenza, a mixtape behind its smoked door and two VU meters lit, next to panels of transport keys and tape controls"></figure>
+
+  <h2 id="ultra-realistic-cassette-deck-run">Run it</h2>
+  <p>Open the <a href="https://gitguy268.github.io/ultra-realistic-cassette-deck/">live version</a>, or download <code>ultra-realistic-cassette-deck.html</code> from the <a href="https://github.com/Gitguy268/ultra-realistic-cassette-deck/releases/tag/latest">latest release</a> and double-click it. To run it yourself with Node 22.12 or newer:</p>
+  <pre><code>npm ci
+npm run dev</code></pre>
+  <p>Open <code>http://localhost:5190/</code>, press <strong>Add files</strong>, then <strong>Play</strong>. Adding <code>?demo</code> to the address plays three synthesized tracks without touching your library.</p>
+
+  <h2 id="ultra-realistic-cassette-deck-use">Use it</h2>
+  <ul>
+    <li>Your queue is recorded onto a cassette as a mixtape: side A, then side B, with gaps between tracks. A longer queue gets a C90 or C120, or a second cassette.</li>
+    <li>The piano keys latch. Hold fast forward or rewind during play to cue or review at seven times speed; Next and Previous wind to the gap before a track.</li>
+    <li>At the end of side A the head turns over and side B plays: one side, both sides, or round and round.</li>
+    <li>Eject, take the cassette out, turn it over and put it back. The counter counts reel turns, as a real one does.</li>
+    <li>Set the tape type and noise reduction on the deck and on the cassette, and hear what a mismatch does. Tape condition goes from New to Chewed.</li>
+    <li>There is a Winamp ten-band EQ shared with the vinyl player, a visualizer on the cassette’s label, four finishes, and daylight and dusk lighting. It installs as an offline app.</li>
+  </ul>
+
+  <h2 id="ultra-realistic-cassette-deck-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The transport</strong>Where the tape is and how fast it moves: the capstan, the reels, the counter and the read position all follow it</li>
+    <li><strong>The source</strong>The track under the head, played at the tape’s speed</li>
+    <li><strong>The tape worklet</strong>The cassette’s noise reduction encoding, saturation, dropouts and hiss, then the deck’s EQ, head bump, azimuth and decoder</li>
+    <li><strong>Tone and EQ</strong>Bass, mid, treble and the ten graphic bands, with a trim so nothing clips</li>
+    <li><strong>The output</strong>The level, the VU meters, and the mechanism sounds on their own path</li>
+  </ol>
+  <p>The tape speed, cassette sizes, playback EQ and the noise reduction’s reduction per frequency come from cited sources, and unit tests hold the model to them. The deck itself is generic: it copies no real model.</p>
+
+  <h2 id="ultra-realistic-cassette-deck-limits">Limits</h2>
+  <ul>
+    <li>It only plays: the record key is there because the deck had one.</li>
+    <li>The noise reduction is a model written from published descriptions, not any company’s circuit.</li>
+    <li>Cue and review need the file decoded in memory, so they only move the tape for files over 150 MiB or 20 minutes.</li>
+    <li>The 3D deck needs WebGL 2. Without it, a 2D deck with every control takes over.</li>
+    <li>No real phone has been tested. Phone layouts are checked by emulation.</li>
+  </ul>
+
+  <h2 id="ultra-realistic-cassette-deck-credits">Credits</h2>
+  <p>MIT licence, with third-party notices in the repository’s NOTICE. Built on the engine of the Ultra-Realistic Vinyl Player. Dolby and Compact Cassette are trademarks of their owners; the deck shows no maker’s name and this project isn’t affiliated with anyone. Source: <a href="https://github.com/Gitguy268/ultra-realistic-cassette-deck">Gitguy268/ultra-realistic-cassette-deck</a>.</p>
 </article>
 
 <article class="doc" id="stem-player" data-look="glass" style="--accent:#b45309;--glow-1:#e7d3b3;--glow-2:#f0abfc">
