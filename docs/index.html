@@ -88,6 +88,7 @@
         <li><a href="#usb-llms">USB LLMS</a></li>
         <li><a href="#tabshell">TabShell</a></li>
         <li><a href="#needle">needle</a></li>
+        <li><a href="#spot-cli">spot</a></li>
         <li><a href="#quicktalk">QuickTalk</a></li>
         <li><a href="#glyphium">Glyphium</a></li>
         <li><a href="#textarea-cli">textarea-cli</a></li>
@@ -2043,6 +2044,46 @@ go install github.com/Gitguy268/needle@latest</code></pre>
 
   <h2 id="needle-credits">Credits</h2>
   <p>MIT licence. The design borrows ideas, not code, from cliamp, musikcube, listnr, Kronos and haskell-player, credited in the repository’s NOTICE. Pedalboard is GPL-3.0 and is only used as a separate, optional Python program. Source: <a href="https://github.com/Gitguy268/needle">Gitguy268/needle</a>.</p>
+</article>
+
+<article class="doc" id="spot-cli" data-look="spot" style="--accent:#d7263d">
+  <header class="banner">
+    <h1>spot</h1>
+    <p class="tagline">A black labrador who lives in your terminal. He gets hungry, and he wags when your tests pass.</p>
+    <ul class="facts"><li>Terminal &amp; AI</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/spot-cli.webp" width="1440" height="900" loading="lazy" alt="Spot, a pixel-art black labrador with a red collar and gold tag, sits on a purple rug with heart eyes and his tongue out, next to his food bowl and a tennis ball, above bars for food, joy, energy and bond in a dark terminal"></figure>
+
+  <h2 id="spot-cli-run">Install</h2>
+  <pre><code>brew install gitguy268/tap/spot-cli
+# or: go install github.com/Gitguy268/spot-cli/cmd/spot@latest</code></pre>
+  <p>Then add one line to your shell config and open a new terminal. For zsh it's <code>eval "$(spot init zsh --prompt)"</code>; bash, fish and PowerShell have their own lines in the <a href="https://github.com/Gitguy268/spot-cli#set-up">README</a>. Binaries for macOS, Linux and Windows are on the <a href="https://github.com/Gitguy268/spot-cli/releases/latest">releases page</a>.</p>
+
+  <h2 id="spot-cli-use">Use it</h2>
+  <ul>
+    <li>A small <code>U^ᴥ^U</code> in your prompt shows how Spot feels.</li>
+    <li>After a test run (about 75 test commands are known, from <code>go test</code> to <code>pytest</code> and <code>cargo test</code>) he reacts for about a second. Green gets a wag and a treat, red gets his head on your knee, and red then green sets off zoomies across the screen.</li>
+    <li><code>spot</code> opens his room: pet him (or click him), feed him, play fetch and ask for tricks. Tests in other terminals show up there live.</li>
+    <li>Without hooks, <code>spot run -- go test ./...</code> works anywhere and keeps the exit code.</li>
+    <li>Pass streaks and bond teach him five tricks, and there are twelve badges to earn.</li>
+  </ul>
+
+  <h2 id="spot-cli-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The hook</strong>A few lines of zsh, bash, fish or PowerShell that hand each finished command and its exit code to spot</li>
+    <li><strong>The matcher</strong>Decides whether that command was a test run, ignoring <code>VAR=value</code> settings and wrappers like <code>sudo</code></li>
+    <li><strong>Spot's state</strong>One JSON file. Food, joy and energy are worked out from timestamps, so there's no background process</li>
+    <li><strong>The art</strong>Pixel grids of letters, drawn with half-block characters in truecolor, 256 or 16 colours, with a light rim so a black dog shows up on a black terminal</li>
+  </ol>
+
+  <h2 id="spot-cli-limits">Limits</h2>
+  <ul>
+    <li>A reaction can't be skipped with a key, because spot never reads your keyboard (that keeps typed-ahead commands safe). It lasts about a second, and <code>SPOT_QUIET=1</code> turns reactions off.</li>
+    <li>fish and PowerShell are tested in CI only, and nobody has tried it on a Windows machine yet.</li>
+  </ul>
+
+  <h2 id="spot-cli-credits">Credits</h2>
+  <p>MIT licence, with third-party notices in the repository's NOTICE. Spot is a real dog; the pixel art of him was drawn for this project. Built with Bubble Tea and Lip Gloss. Source: <a href="https://github.com/Gitguy268/spot-cli">github.com/Gitguy268/spot-cli</a>.</p>
 </article>
 
 <article class="doc" id="quicktalk" data-look="note" style="--accent:#0891b2">
