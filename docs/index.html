@@ -98,6 +98,7 @@
       </ul>
       <h2>Experiments</h2>
       <ul>
+        <li><a href="#spot-screensaver">Spot Screensaver</a></li>
         <li><a href="#cozy-christmas-lab">Cozy Christmas Lab</a></li>
         <li><a href="#vinyl-player">Vinyl Player</a></li>
         <li><a href="#vinyl-player-for-spotify">Vinyl Player for Spotify</a></li>
@@ -2341,6 +2342,46 @@ bin/container here alpine echo hello</code></pre>
 
   <h2 id="container-credits">Credits</h2>
   <p>Fork of <a href="https://github.com/apple/container">apple/container</a> (Apache-2.0), built on Apple’s <a href="https://github.com/apple/containerization">Containerization</a> package. Not affiliated with or endorsed by Apple.</p>
+</article>
+
+<article class="doc" id="spot-screensaver" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-linear-gradient(#5a3a22 0 34px, #3d271a 34px 36px)">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot Screensaver</h1>
+      <p class="tagline">Spot naps by the fire, dreams, and chases butterflies in his dream: a macOS screen saver and a browser screensaver, in 3D and in vector.</p>
+      <ul class="facts"><li>Experiments</li><li>MIT licence</li><li>Available online</li><li>macOS 12+</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-screensaver.webp" width="1440" height="900" loading="lazy" alt="Spot, a black labrador wrapped in a grey blanket, dozing in front of a stone fireplace in a log cabin at night"></figure>
+
+  <h2 id="spot-screensaver-run">Run it</h2>
+  <p>On a Mac, download <code>SpotScreensaver.saver.zip</code> from the latest release, unzip it and double-click <code>SpotScreensaver.saver</code>. It is not notarized, so allow it once under System Settings → Privacy &amp; Security. In a browser, open the live page and press Full screen, or double-click <code>index.html</code>.</p>
+
+  <h2 id="spot-screensaver-use">The loop</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Part</th><th>What happens</th></tr>
+    <tr><td>Nap</td><td>He dozes in his blanket; his head sinks and catches back up.</td></tr>
+    <tr><td>Dream</td><td>Paws paddle, lips puff, eyes move under the lids.</td></tr>
+    <tr><td>Chase</td><td>In his dream: a butterfly, a ball or a red laser dot in a golden garden.</td></tr>
+    <tr><td>Wake</td><td>He looks around, thumps his tail and dozes off again.</td></tr>
+  </table></div>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>What it does</th></tr>
+    <tr><td><kbd>V</kbd></td><td>3D or vector</td></tr>
+    <tr><td><kbd>1</kbd>–<kbd>4</kbd></td><td>Jump to nap, dream, chase, wake</td></tr>
+    <tr><td><kbd>F</kbd></td><td>Full screen</td></tr>
+    <tr><td><kbd>M</kbd></td><td>Sound</td></tr>
+  </table></div>
+
+  <h2 id="spot-screensaver-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>3D</strong>A 3D model of Spot in his blanket, moved vertex by vertex without a skeleton; the dream dog and the rooms come from Spot-light HD</li>
+    <li><strong>Vector</strong>Spot traced from his portrait into layered SVG shapes, cut into moving parts; the gallop is a traced flipbook</li>
+    <li><strong>macOS</strong>An Objective-C ScreenSaverView with a WKWebView around the same one-file page, and an Options sheet</li>
+  </ol>
+
+  <h2 id="spot-screensaver-limits">Limits</h2>
+  <p>The bundle is ad-hoc signed, not notarized. The 3D model can only doze sitting up, so the chase happens in a dream with the procedural dog. Tested on one Apple-silicon Mac.</p>
 </article>
 
 <article class="doc" id="cozy-christmas-lab" data-look="pixel" style="--accent:#c81d25;--banner-bg:#0f2a1d">
