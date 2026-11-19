@@ -32,6 +32,7 @@
       <ul>
         <li><a href="#ultra-realistic-vinyl-player">Ultra-Realistic Vinyl Player</a></li>
         <li><a href="#ultra-realistic-cassette-deck">Ultra-Realistic Cassette Deck</a></li>
+        <li><a href="#vinyl-shelf">Vinyl Shelf</a></li>
         <li><a href="#stem-player">Four Stem Player</a></li>
         <li><a href="#realistic-vinyl-player">Realistic Vinyl Player</a></li>
         <li><a href="#8-bit-vinyl-player">8-Bit Vinyl Player</a></li>
@@ -247,6 +248,47 @@ npm run dev</code></pre>
 
   <h2 id="ultra-realistic-cassette-deck-credits">Credits</h2>
   <p>MIT licence, with third-party notices in the repository’s NOTICE. Built on the engine of the Ultra-Realistic Vinyl Player. Dolby and Compact Cassette are trademarks of their owners; the deck shows no maker’s name and this project isn’t affiliated with anyone. Source: <a href="https://github.com/Gitguy268/ultra-realistic-cassette-deck">Gitguy268/ultra-realistic-cassette-deck</a>.</p>
+</article>
+
+<article class="doc" id="vinyl-shelf" data-look="vinyl" style="--accent:#e8762a">
+  <header class="banner">
+    <h1>Vinyl Shelf</h1>
+    <p class="tagline">A 3D record shelf over your music folder. Pull out an album and it plays on a vinyl player.</p>
+    <ul class="facts"><li>Players</li><li>MIT licence</li><li>Available online</li></ul>
+  </header>
+  <figure><img src="../images/vinyl-shelf.webp" width="1440" height="900" loading="lazy" alt="An oak cube shelf full of LP records against a plaster wall, a turntable on top, a floor lamp to the left and a plant in one cube"></figure>
+
+  <h2 id="vinyl-shelf-run">Run it</h2>
+  <p>Open the <a href="https://gitguy268.github.io/vinyl-shelf/">live version</a> and press <strong>Open folder</strong>, or try the <a href="https://gitguy268.github.io/vinyl-shelf/?demo">demo shelf</a>. The whole app is one <code>index.html</code>: download <code>vinyl-shelf-web.zip</code> from the <a href="https://github.com/Gitguy268/vinyl-shelf/releases/tag/latest">latest release</a> and double-click it. To build it yourself with Node 22 or newer:</p>
+  <pre><code>npm ci
+npm start</code></pre>
+
+  <h2 id="vinyl-shelf-use">Use it</h2>
+  <ul>
+    <li>Every album in the folder becomes an LP on an oak cube shelf, in sort order with divider cards between letters, decades or genres. Spines take their colours from the covers.</li>
+    <li>Click a spine to pull the record out; click the sleeve to turn it over and read the tracklist by side.</li>
+    <li><strong>Play on</strong> sends the album to the Realistic, Ultra-Realistic, 8-bit or original Vinyl Player, or one of the two 8-bit Player pages, beside the shelf or in a tab. Its record turns on the shelf's own turntable while it plays.</li>
+    <li>Search, five sort orders, a random pick, a list of covers, daylight and dusk, and full keyboard control.</li>
+  </ul>
+
+  <h2 id="vinyl-shelf-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>The folder</strong>Read in the browser: kept with the File System Access API where there is one, picked again elsewhere</li>
+    <li><strong>The tags</strong>music-metadata reads MP3, FLAC, M4A, Ogg, WAV and more; folders name what has no tags</li>
+    <li><strong>The index</strong>Tags and small covers in IndexedDB, so the shelf is back at once and unchanged files are never read twice</li>
+    <li><strong>The shelf</strong>three.js: one instanced mesh for all records, spines painted into texture atlases</li>
+    <li><strong>The hand-off</strong>vinyl-shelf/1: the album's files go by postMessage to the player's own origin, which plays them without touching its saved library</li>
+  </ol>
+
+  <h2 id="vinyl-shelf-limits">Limits</h2>
+  <ul>
+    <li>Brave, Firefox and Safari cannot keep the folder between visits; it is picked again, and only new or changed files are read.</li>
+    <li>The players are web pages, so playing needs them reachable: online, or a local copy whose address you enter.</li>
+    <li>Spine text is LP-sized and small; hover over a spine or search to find a record.</li>
+  </ul>
+
+  <h2 id="vinyl-shelf-credits">Credits</h2>
+  <p>MIT licence, with third-party notices in the repository’s NOTICE (three.js, music-metadata and its dependencies, idb, the Inter typeface). Every record on the demo shelf is made up. Source: <a href="https://github.com/Gitguy268/vinyl-shelf">Gitguy268/vinyl-shelf</a>.</p>
 </article>
 
 <article class="doc" id="stem-player" data-look="glass" style="--accent:#b45309;--glow-1:#e7d3b3;--glow-2:#f0abfc">
