@@ -99,6 +99,7 @@
       </ul>
       <h2>Experiments</h2>
       <ul>
+        <li><a href="#spot-moodboard">Spot Moodboard</a></li>
         <li><a href="#spot-screensaver">Spot Screensaver</a></li>
         <li><a href="#cozy-christmas-lab">Cozy Christmas Lab</a></li>
         <li><a href="#vinyl-player">Vinyl Player</a></li>
@@ -2384,6 +2385,40 @@ bin/container here alpine echo hello</code></pre>
 
   <h2 id="container-credits">Credits</h2>
   <p>Fork of <a href="https://github.com/apple/container">apple/container</a> (Apache-2.0), built on Apple’s <a href="https://github.com/apple/containerization">Containerization</a> package. Not affiliated with or endorsed by Apple.</p>
+</article>
+
+<article class="doc" id="spot-moodboard" data-look="spot" style="--accent:#c8202f;--banner-bg:radial-gradient(ellipse at 50% 0%, #c19163 0%, #a97c4f 55%, #8c633b 100%)">
+  <header class="banner">
+    <div class="card">
+      <h1>Spot Moodboard</h1>
+      <p class="tagline">An interactive moodboard for Spot, a black lab with a red collar: a cork pinboard, a clean gallery and a cozy Christmas wall.</p>
+      <ul class="facts"><li>Experiments</li><li>MIT licence (code)</li><li>Available online</li><li>No build step</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/spot-moodboard.webp" width="1440" height="900" loading="lazy" alt="Polaroid-style pictures of Spot pinned with red pins and tape on a cork board"></figure>
+
+  <h2 id="spot-moodboard-run">Run it</h2>
+  <p>Open the live page, or download the repository and double-click <code>index.html</code>: it runs from your disk without a server.</p>
+
+  <h2 id="spot-moodboard-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Control</th><th>What it does</th></tr>
+    <tr><td>Pinboard / Gallery / Cozy</td><td>Switch the look; the choice is remembered</td></tr>
+    <tr><td>Filters</td><td>All, Cozy, Festive, Studio, Art, Games</td></tr>
+    <tr><td>Drag</td><td>Move pictures on the pinboard; on a phone, press and hold first</td></tr>
+    <tr><td><kbd>−</kbd> <kbd>+</kbd>, Tidy up</td><td>Zoom the pinboard, lay it out neatly again</td></tr>
+    <tr><td>Click a picture</td><td>Opens the viewer with its five main colours; <kbd>←</kbd> <kbd>→</kbd> step, <kbd>Esc</kbd> closes</td></tr>
+  </table></div>
+
+  <h2 id="spot-moodboard-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Pictures</strong>A script strips every bit of metadata, pixelates collar tags, renames the files and measures each picture's colours</li>
+    <li><strong>Page</strong>One index.html with inline CSS and JavaScript; the picture list is a plain script, so it also works from file://</li>
+    <li><strong>Pinboard</strong>Seeded scatter into columns, pointer-event dragging, positions saved per filter in localStorage</li>
+  </ol>
+
+  <h2 id="spot-moodboard-limits">Limits</h2>
+  <p>The pictures of Spot are not under the MIT licence. Board positions live in one browser only. Tested in Chromium and WebKit, on desktop and phone sizes.</p>
 </article>
 
 <article class="doc" id="spot-screensaver" data-look="spot" style="--accent:#d7263d;--banner-bg:repeating-linear-gradient(#5a3a22 0 34px, #3d271a 34px 36px)">
