@@ -71,6 +71,7 @@
         <li><a href="#xiao">Xiao</a></li>
         <li><a href="#archium">Archium</a></li>
         <li><a href="#web-pak">web-pak</a></li>
+        <li><a href="#glassform">glassform</a></li>
         <li><a href="#hillium">Hillium</a></li>
         <li><a href="#skyhold">Skyhold</a></li>
         <li><a href="#openfinder">OpenFinder</a></li>
@@ -1254,6 +1255,39 @@ npm run dev</code></pre>
 
   <h2 id="web-pak-limits">Limits</h2>
   <p>What 7-Zip writes is held in browser memory until you save it, so very large archives suit the terminal version, pakket, better. Saving into a folder needs a Chromium browser.</p>
+</article>
+
+<article class="doc" id="glassform" data-look="glass" style="--accent:#5b4bdb;--glow-1:#a5b4fc;--glow-2:#f9a8d4">
+  <header class="banner">
+    <div class="card">
+      <h1>glassform</h1>
+      <p class="tagline">Liquid glass for the web, in every browser, measured against native SwiftUI glass.</p>
+      <ul class="facts"><li>Tools</li><li>MIT licence</li><li>Available online</li></ul>
+    </div>
+  </header>
+  <figure><img src="../images/glassform.webp" width="1440" height="900" loading="lazy" alt="Three liquid glass shapes melting together over colourful ribbons"></figure>
+
+  <h2 id="glassform-run">Run it</h2>
+  <p>Use the live site, or clone the repository, run <code>pnpm install</code>, <code>pnpm build</code> and <code>pnpm --filter @glassform/site dev</code>, and open <code>http://127.0.0.1:5199</code>. The packages are not on npm yet.</p>
+
+  <h2 id="glassform-use">Use it</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Package</th><th>For</th></tr>
+    <tr><td><code>@glassform/react</code></td><td><code>LiquidCanvas</code> for GPU glass, <code>GlassSurface</code> for glass over page content</td></tr>
+    <tr><td><code>@glassform/css</code></td><td><code>&lt;glass-surface&gt;</code> and <code>glass(element)</code>, no canvas</td></tr>
+    <tr><td><code>@glassform/core</code></td><td>The renderer, scene graph and SwiftUI-style materials</td></tr>
+    <tr><td><code>@glassform/three</code>, <code>@glassform/r3f</code></td><td>Glass over Three.js and React Three Fiber scenes</td></tr>
+  </table></div>
+
+  <h2 id="glassform-how">How it works</h2>
+  <ol class="flow">
+    <li><strong>Two GPU backends</strong>WebGPU where the browser has an adapter, the same passes in WebGL2 everywhere else</li>
+    <li><strong>Any backdrop</strong>Live HTML in Chromium, images, video, canvases, DOM snapshots or 3D scenes</li>
+    <li><strong>Measured</strong>A SwiftUI app captures native glass; the presets are fitted to it (SSIM 0.941, ΔE 2.10)</li>
+  </ol>
+
+  <h2 id="glassform-limits">Limits</h2>
+  <p>Live page content refracts only in Chromium; Firefox and Safari get a snapshot or blur-only CSS glass over plain HTML. Close to native glass, not identical: tints and dark cards differ most.</p>
 </article>
 
 <article class="doc" id="rubber-hose-revue" data-look="reel" style="--accent:#b45309">
